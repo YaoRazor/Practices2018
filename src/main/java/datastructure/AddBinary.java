@@ -1,4 +1,4 @@
-package datastructures;
+package datastructure;
 
 public class AddBinary {
 

@@ -33,7 +33,7 @@ public class PathSum3 {
         return cnt;
     }
 
-    public int pathSum(TreeNode root, int sum) {
+    public int pathSumTwo(TreeNode root, int sum) {
         HashMap<Integer, Integer> preSum = new HashMap<>();
         preSum.put(0, 1);
 
