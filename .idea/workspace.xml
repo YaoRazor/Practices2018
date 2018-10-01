@@ -1,180 +1,302 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d88ed229-d7dd-427c-aeda-25619cab91f0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/array/ArrayPartition.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/array/FindPivotIndex.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/array/FizzBuzz.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/array/LargestNumberAtLeastTwiceAsOhters.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/array/LenghtOfLastWord.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/array/MajorityElement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/array/MaxConsecutiveOnes.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/array/MinimumSizeSubarraySum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/array/MissingRanges.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/array/PascalTriangle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/array/PascalTriangleTwo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/array/ReverseWordsInAString.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/array/ReverseWordsInAStringThree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/array/ReverseWordsInAStringTwo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/array/RotateArray.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/array/ValidPalindromeTwo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bitmanupulation/NumberOf1Bits.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/datastructures/UndirectedGraphNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/design/Codec.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/design/MinStack.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/design/ShuffleAnArray.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dp/ClimbingStairs.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dp/JumpGame.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dp/JumpGameTwo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dp/MaximumSubarray.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dp/MinCostClimbingStairs.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dp/MinimumPathSum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dp/UniquePathTwo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dp/UniquePaths.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/graph/CloneGraph.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/graph/CopyListWithRandomPointer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/linkedlist/OddEvenLinkedList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/linkedlist/PartitionList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/linkedlist/RemoveLinkedListElements.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/miscellaneous/PowerOfThree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tree/AverageOfLevelsInBinaryTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tree/BinaryTreeRightSideView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tree/ConstructBinaryTreeFromInorderAndPostorderTraversal.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tree/ConstructBinaryTreeFromPreorderAndInorderTraversal.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tree/LowestCommonAncestorOfABinaryTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tree/PopulatingNextRightPointersinEachNodeTwo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tree/SumOfLeftLeaves.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/array/TestReverseWordsInAString.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/array/TestReverseWordsInAStringThree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/array/TestReverseWordsInAStringTwo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/array/TestValidPalindromeTwo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/design/CodecTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/dp/TestJumpGameTwo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/linkedlist/PartitionListTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/datastructures/AddBinary.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/datastructures/AddBinary.java" afterPath="$PROJECT_DIR$/src/main/java/datastructure/AddBinary.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tree/BinaryTreeLevelOrderTraversal.class" afterPath="$PROJECT_DIR$/target/classes/tree/BinaryTreeLevelOrderTraversal.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tree/BinaryTreeVerticalOrderTraversal.class" afterPath="$PROJECT_DIR$/target/classes/tree/BinaryTreeVerticalOrderTraversal.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tree/BinaryTreeLevelOrderTraversal.java" afterPath="$PROJECT_DIR$/src/main/java/tree/BinaryTreeLevelOrderTraversal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tree/PathSum3.java" afterPath="$PROJECT_DIR$/src/main/java/tree/PathSum3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tree/PopulatingNextRightPointersinEachNode.java" afterPath="$PROJECT_DIR$/src/main/java/tree/PopulatingNextRightPointersinEachNode.java" />
+    <list default="true" id="ac705035-c858-4b3d-a5ec-1197d6462ea1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/airbnb/ConsecutiveNumbersSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airbnb/IPToCIDR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airbnb/ThreeSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airbnb/ThreeSumCloest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airbnb/ThreeSumSmaller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/CircularArrayLoop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/ContainerWithMostWater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/FindAllAnagramsinaString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/ImplementStr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/IntersectionOfTwoArrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/IsomorphicStrings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/JudgeRouteCircle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/LongestConsecutiveSequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/LongestContinuousIncreasingSubsequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/NextPermutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/PalindromePermutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/PalindromicSubstrings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/PourOfWater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/RemoveDuplicatesFromSortedArrayTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/RotateString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/ShortestDistanceToCharacter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/ShortestWordDistance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/StringCompression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/StringToInteger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/StrobogrammaticNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/SubdomainVisitCount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/array/TaskScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bfs/FindCheapestPrice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bfs/NumberOfIslands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bfs/RemoveInvalidParentheses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bfs/SerializeAndDeserializeBinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bfs/SlidingPuzzle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/binarysearch/FindMinimumInRotatedSortedArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/binarysearch/FindMinimumInRotatedSortedArrayTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/binarysearch/FindPeakElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/binarysearch/SearchA2DMatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/binarysearch/SearchA2DMatrixTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/binarysearch/SearchInRotatedArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/binarysearch/SearchInRotatedArrayTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/LargestNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datastructures/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design/BSTIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design/EncodeAndDecodeTinyURL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design/LRUCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design/NestedIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design/ReadNCharsGivenRead4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design/Vector2D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dfs/CombinationSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dfs/CombinationSumTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dfs/Combinations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dfs/GenerateParentheses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dfs/NQueens.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dfs/NQueensTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dfs/PalindromePartitioning.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dfs/PermutationSequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dfs/Permutations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dfs/PermutationsTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dfs/RestoreIPAddresses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dfs/SubsetsTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dfs/SudokuSolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dfs/WordSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dp/CoinChange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dp/CoinChangeTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dp/DecodeWays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dp/DeleteAndEarn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dp/LongestPalindromicSubstring.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dp/PalindromePartitioningTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dp/RegularExpressionMatching.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dp/Triangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dp/WildCardMatching.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dp/WordBreakTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dp/WorldBreak.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/graph/AllienDictionary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/graph/CourseSchedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/graph/CourseScheduleTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/graph/GraphValidTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/graph/WordLadder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/greedy/BestTimeToBuyAndSellStockTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/heap/KthLargestElementInAnArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/linkedlist/FlattenBinaryTreeToLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/linkedlist/FlattenMultilevelDoublyLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/linkedlist/MergeKSortedLists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/linkedlist/ReverseLinkedListTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/linkedlist/RotateList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/miscellaneous/DivideTwoInteger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/miscellaneous/GoatLatin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/miscellaneous/IntegerToEnglishWords.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/miscellaneous/IntegerToRoman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/miscellaneous/MultiplyStrings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/miscellaneous/PalindromePairs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/miscellaneous/Sqrt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/miscellaneous/TopKFrequentElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/slidingwindow/LongestSubstringWithAtMostTwoDistinctCharacters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/slidingwindow/LongestSubstringWithoutRepeatingCharacters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/slidingwindow/MinimumWindowSubstring.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stack/BasicCalculatorTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stack/DailyTemperatures.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stack/TrappingRainWater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tree/InorderSuccessorinBST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tree/KillProcess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tree/KthSmallestElementInBST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tree/SumRoottoLeafNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/trie/AddAndSearchWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/trie/Trie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/twodimensionarray/DiagonalTraverse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/twodimensionarray/IslandPerimeter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/twodimensionarray/SetMatrixZeroes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/twodimensionarray/SpiralMatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/twodimensionarray/SpiralMatrixTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/twodimensionarray/ValidSudoku.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/twopointers/SortColors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/airbnb/ConsecutiveNumbersSumTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/airbnb/IPToCIDRTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/airbnb/ThreeSumTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/array/StringCompressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/array/TestMinimumWindowSubstring.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/datastructure/LargestNumberTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dp/WordBreakTwoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/heap/SortCharactersByFrequency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/miscellaneous/IntegerToEnglishWordsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/miscellaneous/PalindromePairsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/miscellaneous/TestMultiplyStrings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/number/DivideTwoIntegerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/slidingwindow/TestLongestSubstringWithAtMostTwoDistinctCharacters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/trie/TestAddAndSearchWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/twodimensionarray/TestDiagonalTraverse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_24_0_jre.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SearchInRotatedSortedArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/array/MeetingRoomsTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/array/MeetingRoomsTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/array/ThreeSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bst/TwoSumFour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bst/TwoSumFour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dfs/SubSets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dfs/SubSets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/miscellaneous/ReverseInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/number/ReverseInteger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tree/BinaryTreeInorderTraversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tree/BinaryTreeInorderTraversal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tree/LowestCommonAncestorOfBinaryTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tree/PathSum3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tree/PathSumThree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tree/PathSumTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tree/PathSumTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tree/ValidateBinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tree/ValidateBinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MissingNumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MissingNumberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestCountAndSay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCountAndSay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/array/MeetingRoomsTwo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/array/MeetingRoomsTwo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/array/ThreeSum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dfs/Subsets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dfs/Subsets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/miscellaneous/ReverseInteger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/MissingNumberTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MissingNumberTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestCountAndSay.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestCountAndSay.class" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Practices2018$ExcelSheetColumnTitleTest_test.coverage" NAME="ExcelSheetColumnTitleTest.test Coverage Results" MODIFIED="1523602657016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>miscellaneous.*</FILTER>
-    </SUITE>
+  <component name="FUSProjectUsageTrigger">
+    <session id="552180869">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="23" />
+          <entry key="ts" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="23" />
+          <entry key="TypeScript" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="132" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="132" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+    </session>
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CloneGraph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/graph/CloneGraph.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tree/BinaryTreeInorderTraversal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1452">
-              <caret line="73" column="73" lean-forward="false" selection-start-line="73" selection-start-column="73" selection-end-line="73" selection-end-column="73" />
-              <folding />
+            <state relative-caret-position="552">
+              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CopyListWithRandomPointer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/graph/CopyListWithRandomPointer.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dfs/NQueens.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="600">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AverageOfLevelsInBinaryTree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tree/AverageOfLevelsInBinaryTree.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/graph/WordLadder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-              <folding />
+            <state relative-caret-position="228">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BinaryTreeLevelOrderTraversal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tree/BinaryTreeLevelOrderTraversal.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/design/BSTIterator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dp/DecodeWays.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-162">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dp/DeleteAndEarn.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReverseWordsInAStringThree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAStringThree.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dp/HouseRobber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="36" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="360">
+              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReverseWordsInAString.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAString.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dp/HouseRobberTwo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="38" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="96">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReverseWordsInAStringTwo.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAStringTwo.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/stack/BasicCalculatorTwo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="35" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="264">
+              <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestReverseWordsInAStringTwo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/array/TestReverseWordsInAStringTwo.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastructures/TreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestReverseWordsInAString.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/array/TestReverseWordsInAString.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestReverseWordsInAStringThree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/array/TestReverseWordsInAStringThree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="216">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -190,86 +312,72 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>T</find>
-      <find>TODO</find>
-      <find>b</find>
-      <find>bf</find>
-      <find>bfs</find>
-      <find>L</find>
-      <find>Linked</find>
-      <find>LinkedL</find>
-      <find>LinkedLis</find>
-      <find>LinkedList</find>
-      <find>q</find>
-      <find>que</find>
-      <find>queu</find>
-      <find>queue</find>
-      <find>S</find>
-      <find>Stack</find>
+      <find>Copy</find>
+      <find>Array</find>
+      <find>length</find>
+      <find>swap</find>
+      <find>Priority</find>
+      <find>setEnd</find>
+      <find>equals</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/tree/ConstructBinaryTreeFromPreorderAndInorderTraversal.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tree/ConstructBinaryTreeFromInorderAndPostorderTraversal.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bitmanupulation/NumberOf1Bits.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/RotateArray.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tree/LowestCommonAncestorOfABinaryTree.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/MajorityElement.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dp/ClimbingStairs.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dp/MinCostClimbingStairs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dp/Triangle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bfs/SlidingPuzzle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/array/RotateString.java" />
+        <option value="$PROJECT_DIR$/src/main/java/linkedlist/FlattenBinaryTreeToLinkedList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dfs/PermutationSequence.java" />
+        <option value="$PROJECT_DIR$/src/main/java/array/RemoveDuplicatesFromSortedArrayTwop.java" />
+        <option value="$PROJECT_DIR$/src/main/java/array/RemoveDuplicatesFromSortedArrayTwo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/array/StrobogrammaticNumber.java" />
+        <option value="$PROJECT_DIR$/src/main/java/binarysearch/FindPeakElement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/binarysearch/FindMinimumInRotatedSortedArray.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bfs/RemoveInvalidParentheses.java" />
+        <option value="$PROJECT_DIR$/src/main/java/twodimensionarray/IslandPerimeter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/design/LRUCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/stack/DailyTemperatures.java" />
+        <option value="$PROJECT_DIR$/src/test/java/array/StringCompressionTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/array/StringCompression.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MissingNumberTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/heap/SortCharactersByFrequency.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dfs/NQueensTwo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dfs/NQueens.java" />
+        <option value="$PROJECT_DIR$/src/main/java/array/ShortestDistanceToCharacter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/array/CircularArrayLoop.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dfs/CoinChangeTwo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dp/CoinChangeTwo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dp/CoinChange.java" />
+        <option value="$PROJECT_DIR$/src/main/java/binarysearch/SearchA2DMatrix.java" />
+        <option value="$PROJECT_DIR$/src/main/java/binarysearch/SearchA2DMatrixTwo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/miscellaneous/IntegerToEnglishWordsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/miscellaneous/IntegerToEnglishWords.java" />
+        <option value="$PROJECT_DIR$/src/main/java/twodimensionarray/ValidSudoku.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dfs/SudokuSolver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/graph/GraphValidTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/graph/CourseSchedule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/graph/CourseScheduleTwo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/graph/WordLadder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SearchInRotatedSortedArray.java" />
+        <option value="$PROJECT_DIR$/src/main/java/binarysearch/SearchInRotatedArray.java" />
+        <option value="$PROJECT_DIR$/src/main/java/binarysearch/SearchInRotatedArrayTwo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/binarysearch/FindMinimumInRotatedSortedArrayTwo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/miscellaneous/IntegerToRoman.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bfs/SerializeAndDeserializeBinaryTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bst/TwoSumFour.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tree/KthSmallestElementInBST.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tree/ValidateBinarySearchTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/twopointers/SortColors.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tree/PathSumTwo.java" />
         <option value="$PROJECT_DIR$/src/main/java/tree/PathSum3.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dp/MaximumSubarray.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/PascalTriangle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/PascalTriangleTwo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/FizzBuzz.java" />
-        <option value="$PROJECT_DIR$/src/test/java/design/CodecTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/design/Codec.java" />
-        <option value="$PROJECT_DIR$/src/main/java/miscellaneous/PowerOfThree.java" />
-        <option value="$PROJECT_DIR$/src/main/java/design/MinStack.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/MissingRanges.java" />
-        <option value="$PROJECT_DIR$/src/main/java/design/ShuffleAnArray.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dp/UniquePaths.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dp/UniquePathTwo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dp/MinimumPathSum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/linkedlist/RemoveLinkedListElements.java" />
-        <option value="$PROJECT_DIR$/src/main/java/linkedlist/OddEvenLinkedList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/LargestNumberAtLeastTwiceAsOhters.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/FindPivotIndex.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/ArrayPartition.java" />
-        <option value="$PROJECT_DIR$/src/test/java/linkedlist/PartitionListTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/linkedlist/PartitionList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/MaxConsecutiveOnes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/JumpGame.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dp/JumpGame.java" />
-        <option value="$PROJECT_DIR$/src/test/java/dp/TestJumpGameTwo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dp/JumpGameTwo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/ValidPalindrome.java" />
-        <option value="$PROJECT_DIR$/src/test/java/array/TestValidPalindromeTwo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/ValidPalindromeTwo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/MinimumSizeSubarraySum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tree/SumOfLeftLeaves.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datastructure/AddBinary.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datastructures/UndirectedGraphNode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/graph/CloneGraph.java" />
-        <option value="$PROJECT_DIR$/src/main/java/graph/CopyListWithRandomPointer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tree/AverageOfLevelsInBinaryTree.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tree/BinaryTreeLevelOrderTraversal.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ReverseWordsInAString.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/ReverseWordsInAStringThree.java" />
-        <option value="$PROJECT_DIR$/src/test/java/array/TestReverseWordsInAString.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/ReverseWordsInAString.java" />
-        <option value="$PROJECT_DIR$/src/test/java/array/TestReverseWordsInAStringTwo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/ReverseWordsInAStringTwo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tree/PathSumThree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tree/BinaryTreeInorderTraversal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dp/DeleteAndEarn.java" />
+        <option value="$PROJECT_DIR$/src/main/java/stack/BasicCalculatorTwo.java" />
       </list>
     </option>
   </component>
@@ -279,190 +387,85 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1792" />
-    <option name="y" value="-16" />
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="873" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practices2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practices2018-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practices2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practices2018-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practices2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practices2018-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practices2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practices2018-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="array" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practices2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practices2018-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practices2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practices2018-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practices2018" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practices2018-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="array" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="Practices2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practices2018" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Practices2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practices2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Practices2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practices2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Practices2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practices2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Practices2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practices2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="stack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Practices2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practices2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="SearchEverywhereHistoryKey" value="Hou&#9;PSI&#9;JAVA://dp.HouseRobberTwo&#10;House&#9;PSI&#9;JAVA://dp.HouseRobber&#10;Inorder&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/tree/BinaryTreeInorderTraversal.java&#10;Itera&#9;PSI&#9;JAVA://design.BSTIterator&#10;WordLa&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/graph/WordLadder.java&#10;NQu&#9;PSI&#9;JAVA://dfs.NQueens&#10;Permu&#9;PSI&#9;JAVA://dfs.PermutationsTwo&#10;Combina&#9;PSI&#9;JAVA://dfs.CombinationSum&#10;Sub&#9;PSI&#9;JAVA://dfs.SubsetsTwo&#10;SubSet&#9;PSI&#9;JAVA://dfs.Subsets&#10;Lowe&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/tree/LowestCommonAncestorOfBinaryTree.java&#10;Lowest&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/tree/LowestCommonAncestorOfABinaryTree.java&#10;Pathsu&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/tree/PathSumThree.java&#10;inorder&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/tree/BinaryTreeInorderTraversal.java&#10;postOrde&#9;PSI&#9;JAVA://tree.BinaryTreePostorderTraversal&#10;preorder&#9;PSI&#9;JAVA://tree.BinaryTreePreorderTraversal&#10;PathSum&#9;PSI&#9;JAVA://tree.PathSum3&#10;Pa&#9;PSI&#9;JAVA://miscellaneous.PalindromePairs&#10;Path&#9;PSI&#9;JAVA://tree.PathSum&#10;Bala&#9;PSI&#9;JAVA://tree.BalancedBinaryTree&#10;Valida&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/tree/ValidateBinarySearchTree.java&#10;Binar&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/tree/BinaryTreeInorderTraversal.java&#10;BinaryTreeInor&#9;PSI&#9;JAVA://tree.BinaryTreeInorderTraversal&#10;Validate&#9;PSI&#9;JAVA://tree.ValidateBinarySearchTree&#10;RomanTo&#9;PSI&#9;JAVA://miscellaneous.RomanToInteger&#10;Inte&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/miscellaneous/IntegerToEnglishWords.java&#10;LongestSub&#9;PSI&#9;JAVA://slidingwindow.LongestSubstringWithoutRepeatingCharacters&#10;Find&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/binarysearch/FindMinimumInRotatedSortedArray.java&#10;Search&#9;PSI&#9;JAVA://SearchInRotatedSortedArray&#10;Two&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/array/TwoSum.java&#10;Valid&#9;PSI&#9;JAVA://array.ValidPalindromeTwo&#10;two sum&#9;PSI&#9;JAVA://array.TwoSum&#10;Valid Parentheses&#9;PSI&#9;JAVA://stack.ValidParentheses&#10;Remove&#9;PSI&#9;JAVA://array.RemoveDuplicatesFromSortedArray&#10;PalindromePa&#9;PSI&#9;JAVA://dfs.PalindromePartitioning&#10;Thr&#9;PSI&#9;JAVA://airbnb.ThreeSum&#10;thres&#9;PSI&#9;JAVA://array.ThreeSum&#10;IPT&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/test/java/airbnb/IPToCIDRTest.java&#10;Lev&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/tree/BinaryTreeLevelOrderTraversal.java&#10;MinSt&#9;PSI&#9;JAVA://design.MinStack&#10;Tr&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/trie/Trie.java&#10;Wor&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/dfs/WordSearch.java&#10;WordS&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/dfs/WordSearch.java&#10;Mul&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/miscellaneous/MultiplyStrings.java&#10;Mini&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/array/MinimumWindowSubstring.java&#10;INOR&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/tree/BinaryTreeInorderTraversal.java&#10;Inorde&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/tree/BinaryTreeInorderTraversal.java&#10;P&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/dp/PalindromePartitioningTwo.java&#10;Pali&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/array/PalindromicSubstrings.java&#10;Va&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/array/ValidPalindromeTwo.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538373198476" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="Re&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/ReverseWordsInAString.java&#10;Level&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/tree/BinaryTreeLevelOrderTraversal.java&#10;Remo&#9;PSI&#9;JAVA://array.RemoveElement&#10;Valid&#9;PSI&#9;JAVA://ValidPalindrome&#10;Jum&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/dp/JumpGame.java&#10;Jump&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/dp/JumpGameTwo.java&#10;JumpGa&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/dp/JumpGameTwo.java&#10;Code&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/design/Codec.java&#10;leve&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/tree/BinaryTreeLevelOrderTraversal.java&#10;Hou&#9;PSI&#9;JAVA://dp.HouseRobber&#10;preOr&#9;PSI&#9;JAVA://tree.BinaryTreePreorderTraversal&#10;preOrd&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/tree/BinaryTreePreorderTraversal.java&#10;inOrd&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/tree/BinaryTreeInorderTraversal.java&#10;preord&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/tree/BinaryTreePreorderTraversal.java&#10;Dia&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/tree/DiameterOfBinaryTree.java&#10;Path&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/tree/PathSum3.java&#10;Zig&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/tree/BinaryTreeZigZagLevelOrderTraversal.java&#10;twoSum&#9;PSI&#9;JAVA://array.TwoSum&#10;con&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/tree/ConvertSortedListToBinarySearchTree.java&#10;Conver&#9;PSI&#9;JAVA://tree.ConvertSortedArrayToBinarySearchTree&#10;Bala&#9;PSI&#9;JAVA://tree.BalancedBinaryTree&#10;Singl&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/miscellaneous/SingleNumber.java&#10;Con&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/array/ContainsDuplicateThree.java&#10;Plus&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/array/PlusOne.java&#10;Add&#9;PSI&#9;JAVA://linkedlist.AddTwoNumbers&#10;ADd&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/linkedlist/AddTwoNumbers.java&#10;po&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/pom.xml&#10;pom&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/pom.xml&#10;Sub&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/dfs/SubSets.java&#10;Sear&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/SearchInRotatedSortedArray.java&#10;merg&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/MergeInterval.java&#10;main&#9;PSI&#9;JAVA://AddBinary#main&#10;Count&#9;FILE&#9;file:///Users/yawang/Repo/Practices2018-2/src/main/java/dfs/CountAndSay.java" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="array" />
+      <recent name="dp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -477,771 +480,285 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestReverseWordsInAStringTwo.test">
-    <configuration default="false" name="TestJumpGameTwo.testJumpGameTwo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="dp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Practices2018-2" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="dp" />
-      <option name="MAIN_CLASS_NAME" value="dp.TestJumpGameTwo" />
-      <option name="METHOD_NAME" value="testJumpGameTwo" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestJumpGameTwo.testJumpGameGreedy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="dp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Practices2018-2" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="dp" />
-      <option name="MAIN_CLASS_NAME" value="dp.TestJumpGameTwo" />
-      <option name="METHOD_NAME" value="testJumpGameGreedy" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestValidPalindromeTwo.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="array.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Practices2018-2" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="array" />
-      <option name="MAIN_CLASS_NAME" value="array.TestValidPalindromeTwo" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestReverseWordsInAString.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="array.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Practices2018-2" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="array" />
-      <option name="MAIN_CLASS_NAME" value="array.TestReverseWordsInAString" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestReverseWordsInAStringTwo.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="array.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Practices2018-2" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="array" />
-      <option name="MAIN_CLASS_NAME" value="array.TestReverseWordsInAStringTwo" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.IntegerToEnglishWordsTest.test">
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="AddBinary" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
+    <configuration name="ConsecutiveNumbersSumTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Practices2018" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="airbnb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="airbnb" />
+      <option name="MAIN_CLASS_NAME" value="airbnb.ConsecutiveNumbersSumTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
+    <configuration name="IntegerToEnglishWordsTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Practices2018" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="miscellaneous.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="miscellaneous" />
+      <option name="MAIN_CLASS_NAME" value="miscellaneous.IntegerToEnglishWordsTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
-      <method />
+    <configuration name="LargestNumberTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Practices2018" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="datastructure.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="datastructure" />
+      <option name="MAIN_CLASS_NAME" value="datastructure.LargestNumberTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
+    <configuration name="StringCompressionTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Practices2018" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="array.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="array" />
+      <option name="MAIN_CLASS_NAME" value="array.StringCompressionTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="launchBrowser" value="true" />
-      <setting name="launchBrowserUrl" value="" />
-      <setting name="depsClasspath" value="false" />
-      <method />
+    <configuration name="ThreeSumTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Practices2018" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="airbnb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="airbnb" />
+      <option name="MAIN_CLASS_NAME" value="airbnb.ThreeSumTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SCRATCH_FILE_ID" value="0" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Practices2018-2" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="OdpsJavaConfigurationType" factoryName="MaxCompute Java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <odpsJavaType />
-      <odpsProjectName />
-      <tableName />
-      <tableColumns />
-      <tablePartition />
-      <method />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <setting name="useSbt" value="false" />
-      <setting name="useUiWithSbt" value="false" />
-      <classRegexps />
-      <testRegexps />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <setting name="useSbt" value="false" />
-      <setting name="useUiWithSbt" value="false" />
-      <classRegexps />
-      <testRegexps />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <envs />
-      <method />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
-      <method />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
-      <method />
-    </configuration>
-    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <setting name="useSbt" value="false" />
-      <setting name="useUiWithSbt" value="false" />
-      <classRegexps />
-      <testRegexps />
-      <envs />
-      <method />
-    </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.TestJumpGameTwo.testJumpGameTwo" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TestJumpGameTwo.testJumpGameGreedy" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TestValidPalindromeTwo.test" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TestReverseWordsInAString.test" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TestReverseWordsInAStringTwo.test" />
+    <list>
+      <item itemvalue="JUnit.ConsecutiveNumbersSumTest.test" />
+      <item itemvalue="JUnit.ThreeSumTest.test" />
+      <item itemvalue="JUnit.LargestNumberTest.test" />
+      <item itemvalue="JUnit.StringCompressionTest.test" />
+      <item itemvalue="JUnit.IntegerToEnglishWordsTest.test" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestReverseWordsInAStringTwo.test" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestReverseWordsInAString.test" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestValidPalindromeTwo.test" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestJumpGameTwo.testJumpGameGreedy" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestJumpGameTwo.testJumpGameTwo" />
+      <list>
+        <item itemvalue="JUnit.IntegerToEnglishWordsTest.test" />
+        <item itemvalue="JUnit.StringCompressionTest.test" />
+        <item itemvalue="JUnit.LargestNumberTest.test" />
+        <item itemvalue="JUnit.ThreeSumTest.test" />
+        <item itemvalue="JUnit.ConsecutiveNumbersSumTest.test" />
       </list>
     </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Repo/regla" value="PREVIEW" />
+      </map>
     </option>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d88ed229-d7dd-427c-aeda-25619cab91f0" name="Default" comment="" />
-      <created>1518506947177</created>
+      <changelist id="ac705035-c858-4b3d-a5ec-1197d6462ea1" name="Default" comment="" />
+      <created>1528595151407</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1518506947177</updated>
-      <workItem from="1518506952012" duration="995000" />
-      <workItem from="1519194899045" duration="2858000" />
-      <workItem from="1519367693607" duration="5085000" />
-      <workItem from="1519796608472" duration="2385000" />
-      <workItem from="1520125194932" duration="7014000" />
-      <workItem from="1520405149293" duration="1545000" />
-      <workItem from="1520662143483" duration="1249000" />
-      <workItem from="1520708044240" duration="2694000" />
-      <workItem from="1520724823530" duration="2806000" />
-      <workItem from="1520810554559" duration="295000" />
-      <workItem from="1520812713761" duration="7647000" />
-      <workItem from="1521002755443" duration="1986000" />
-      <workItem from="1522821086439" duration="1415000" />
-      <workItem from="1523165211987" duration="1812000" />
-      <workItem from="1523426869675" duration="1270000" />
-      <workItem from="1523487344551" duration="1223000" />
-      <workItem from="1523491521321" duration="597000" />
-      <workItem from="1523563707512" duration="2012000" />
-      <workItem from="1523575076640" duration="40000" />
-      <workItem from="1523600502077" duration="1092000" />
-      <workItem from="1523641147474" duration="637000" />
-      <workItem from="1523771280481" duration="335000" />
-      <workItem from="1523774373747" duration="1636000" />
-      <workItem from="1523822532149" duration="10669000" />
-      <workItem from="1524116260268" duration="1922000" />
-      <workItem from="1524203149899" duration="95000" />
-      <workItem from="1524203781759" duration="279000" />
-      <workItem from="1524259417414" duration="566000" />
-      <workItem from="1524420606431" duration="5759000" />
-      <workItem from="1524454065692" duration="1234000" />
-      <workItem from="1524588755895" duration="1889000" />
-      <workItem from="1524804747012" duration="1671000" />
-      <workItem from="1524971008121" duration="2307000" />
-      <workItem from="1524983255948" duration="4903000" />
-      <workItem from="1525041269177" duration="9831000" />
-      <workItem from="1525158016358" duration="1151000" />
-      <workItem from="1525241683454" duration="1119000" />
-      <workItem from="1525325331894" duration="3669000" />
-      <workItem from="1526071855974" duration="451000" />
-      <workItem from="1526242999344" duration="6013000" />
-      <workItem from="1526360473698" duration="3956000" />
-      <workItem from="1526856984489" duration="4970000" />
-      <workItem from="1526879520920" duration="1920000" />
-      <workItem from="1526964938161" duration="3215000" />
-      <workItem from="1527632105146" duration="1487000" />
-      <workItem from="1527634131951" duration="2526000" />
-      <workItem from="1527696963244" duration="10044000" />
-      <workItem from="1527738841698" duration="2122000" />
-      <workItem from="1527786873794" duration="9343000" />
-      <workItem from="1527815549222" duration="25768000" />
-      <workItem from="1528154110295" duration="8487000" />
-      <workItem from="1528171189831" duration="1349000" />
+      <updated>1528595151407</updated>
+      <workItem from="1528595155565" duration="15405000" />
+      <workItem from="1528679199821" duration="5261000" />
+      <workItem from="1528693530454" duration="2324000" />
+      <workItem from="1529013759096" duration="308000" />
+      <workItem from="1529272603430" duration="3057000" />
+      <workItem from="1529279806783" duration="5289000" />
+      <workItem from="1529303747299" duration="372000" />
+      <workItem from="1529382188610" duration="3505000" />
+      <workItem from="1529819181428" duration="7386000" />
+      <workItem from="1529887706936" duration="5547000" />
+      <workItem from="1530250594825" duration="2485000" />
+      <workItem from="1530468384676" duration="4993000" />
+      <workItem from="1530495738182" duration="7500000" />
+      <workItem from="1530550185456" duration="2000" />
+      <workItem from="1530599679006" duration="462000" />
+      <workItem from="1530758182723" duration="5961000" />
+      <workItem from="1531017058729" duration="11907000" />
+      <workItem from="1531110792577" duration="4833000" />
+      <workItem from="1531239094003" duration="353000" />
+      <workItem from="1531267483432" duration="3000" />
+      <workItem from="1531267496034" duration="16000" />
+      <workItem from="1532583822073" duration="2965000" />
+      <workItem from="1532725169446" duration="1558000" />
+      <workItem from="1532907860335" duration="3332000" />
+      <workItem from="1533707911741" duration="2139000" />
+      <workItem from="1533748674727" duration="598000" />
+      <workItem from="1533795404946" duration="1382000" />
+      <workItem from="1533877824153" duration="5086000" />
+      <workItem from="1534122909306" duration="2925000" />
+      <workItem from="1534131595146" duration="594000" />
+      <workItem from="1534217899487" duration="3792000" />
+      <workItem from="1534267376739" duration="118000" />
+      <workItem from="1534702848426" duration="11422000" />
+      <workItem from="1534740445866" duration="1779000" />
+      <workItem from="1535350814708" duration="2603000" />
+      <workItem from="1535387598621" duration="1326000" />
+      <workItem from="1535433881803" duration="2662000" />
+      <workItem from="1535522500055" duration="900000" />
+      <workItem from="1535608844530" duration="341000" />
+      <workItem from="1535937820744" duration="3864000" />
+      <workItem from="1535957735556" duration="5144000" />
+      <workItem from="1536036847895" duration="1170000" />
+      <workItem from="1536124653095" duration="1926000" />
+      <workItem from="1536165847453" duration="329000" />
+      <workItem from="1536175878955" duration="1159000" />
+      <workItem from="1536198489925" duration="1734000" />
+      <workItem from="1536250911772" duration="390000" />
+      <workItem from="1536298816806" duration="2022000" />
+      <workItem from="1536449282868" duration="2186000" />
+      <workItem from="1536475390242" duration="5029000" />
+      <workItem from="1536556580814" duration="961000" />
+      <workItem from="1536646533013" duration="908000" />
+      <workItem from="1536733293178" duration="1321000" />
+      <workItem from="1536900967193" duration="1039000" />
+      <workItem from="1537150102835" duration="4263000" />
+      <workItem from="1537210084883" duration="310000" />
+      <workItem from="1537302430972" duration="778000" />
+      <workItem from="1537337916156" duration="1797000" />
+      <workItem from="1537582978031" duration="2839000" />
+      <workItem from="1537722208077" duration="2175000" />
+      <workItem from="1537738034636" duration="557000" />
+      <workItem from="1537741819389" duration="3305000" />
+      <workItem from="1537854356844" duration="88000" />
+      <workItem from="1537854480887" duration="2492000" />
+      <workItem from="1538114673887" duration="1682000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestJumpGameTwo_testJumpGameTwo - 2018.06.04 at 10h 59m 28s.xml">
-      <configuration name="TestJumpGameTwo.testJumpGameTwo" configurationId="JUnit" />
+    <history-entry file="ThreeSumTest_test - 2018.08.19 at 17h 18m 36s.xml">
+      <configuration name="ThreeSumTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJumpGameTwo_testJumpGameTwo - 2018.06.04 at 10h 59m 33s.xml">
-      <configuration name="TestJumpGameTwo.testJumpGameTwo" configurationId="JUnit" />
+    <history-entry file="StringCompressionTest_test - 2018.09.06 at 22h 41m 57s.xml">
+      <configuration name="StringCompressionTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestReverseWordsInAStringTwo_test - 2018.06.04 at 22h 47m 23s.xml">
-      <configuration name="TestReverseWordsInAStringTwo.test" configurationId="JUnit" />
+    <history-entry file="StringCompressionTest_test - 2018.09.06 at 22h 42m 05s.xml">
+      <configuration name="StringCompressionTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestReverseWordsInAString_test - 2018.06.04 at 19h 23m 57s.xml">
-      <configuration name="TestReverseWordsInAString.test" configurationId="JUnit" />
+    <history-entry file="StringCompressionTest_test - 2018.09.06 at 22h 47m 17s.xml">
+      <configuration name="StringCompressionTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestReverseWordsInAString_test - 2018.06.04 at 19h 24m 24s.xml">
-      <configuration name="TestReverseWordsInAString.test" configurationId="JUnit" />
+    <history-entry file="IntegerToEnglishWordsTest_test - 2018.09.11 at 23h 27m 48s.xml">
+      <configuration name="IntegerToEnglishWordsTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestReverseWordsInAString_test - 2018.06.04 at 19h 24m 31s.xml">
-      <configuration name="TestReverseWordsInAString.test" configurationId="JUnit" />
+    <history-entry file="IntegerToEnglishWordsTest_test - 2018.09.11 at 23h 28m 30s.xml">
+      <configuration name="IntegerToEnglishWordsTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestReverseWordsInAString_test - 2018.06.04 at 19h 41m 54s.xml">
-      <configuration name="TestReverseWordsInAString.test" configurationId="JUnit" />
+    <history-entry file="IntegerToEnglishWordsTest_test - 2018.09.11 at 23h 31m 16s.xml">
+      <configuration name="IntegerToEnglishWordsTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestValidPalindromeTwo_test - 2018.06.04 at 11h 36m 54s.xml">
-      <configuration name="TestValidPalindromeTwo.test" configurationId="JUnit" />
+    <history-entry file="IntegerToEnglishWordsTest_test - 2018.09.11 at 23h 31m 28s.xml">
+      <configuration name="IntegerToEnglishWordsTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestValidPalindromeTwo_test - 2018.06.04 at 11h 37m 23s.xml">
-      <configuration name="TestValidPalindromeTwo.test" configurationId="JUnit" />
+    <history-entry file="IntegerToEnglishWordsTest_test - 2018.09.11 at 23h 37m 13s.xml">
+      <configuration name="IntegerToEnglishWordsTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestValidPalindromeTwo_test - 2018.06.04 at 11h 42m 59s.xml">
-      <configuration name="TestValidPalindromeTwo.test" configurationId="JUnit" />
+    <history-entry file="IntegerToEnglishWordsTest_test - 2018.09.11 at 23h 40m 14s.xml">
+      <configuration name="IntegerToEnglishWordsTest.test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177343000" />
+    <option name="totallyTimeSpent" value="181959000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1792" y="-16" width="1440" height="873" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17925736" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="MaxCompute Job" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="MaxCompute Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2996159" sideWeight="0.49713877" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="MaxCompute Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17285532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37772086" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09603073" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2453505" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="MaxCompute Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.098712444" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17039403" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32776618" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.234375" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32948717" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.328125" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1250,807 +767,722 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/datastructure/AddBinary.java</url>
-          <line>3</line>
+          <url>file://$PROJECT_DIR$/src/main/java/twodimensionarray/DiagonalTraverse.java</url>
+          <line>10</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/TestSearchInRotatedSortedArray.java</url>
-          <line>13</line>
+          <url>file://$PROJECT_DIR$/src/main/java/twodimensionarray/DiagonalTraverse.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/twodimensionarray/DiagonalTraverse.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/twodimensionarray/DiagonalTraverse.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/twodimensionarray/DiagonalTraverse.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/twodimensionarray/DiagonalTraverse.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/twodimensionarray/DiagonalTraverse.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/twodimensionarray/DiagonalTraverse.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/TestCountAndSay.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/array/TestMinimumWindowSubstring.java</url>
+          <line>12</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/TestCountAndSay.java</url>
-          <line>12</line>
+          <url>file://$PROJECT_DIR$/src/test/java/array/TestMinimumWindowSubstring.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/slidingwindow/MinimumWindowSubstring.java</url>
+          <line>40</line>
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dfs/CountAndSay.java</url>
-          <line>7</line>
+          <url>file://$PROJECT_DIR$/src/main/java/slidingwindow/MinimumWindowSubstring.java</url>
+          <line>41</line>
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dfs/CountAndSay.java</url>
-          <line>41</line>
+          <url>file://$PROJECT_DIR$/src/main/java/slidingwindow/MinimumWindowSubstring.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/slidingwindow/MinimumWindowSubstring.java</url>
+          <line>32</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/MissingNumber.java</url>
-          <line>14</line>
-          <properties />
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/MissingNumberTest.java</url>
-          <line>16</line>
+          <url>file://$PROJECT_DIR$/src/main/java/slidingwindow/MinimumWindowSubstring.java</url>
+          <line>27</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/MissingNumber.java</url>
-          <line>18</line>
+          <url>file://$PROJECT_DIR$/src/test/java/slidingwindow/TestLongestSubstringWithAtMostTwoDistinctCharacters.java</url>
+          <line>13</line>
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/MissingNumber.java</url>
-          <line>15</line>
+          <url>file://$PROJECT_DIR$/src/test/java/slidingwindow/TestLongestSubstringWithAtMostTwoDistinctCharacters.java</url>
+          <line>11</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/miscellaneous/ExcelSheetColumnTitleTest.java</url>
-          <line>16</line>
+          <url>file://$PROJECT_DIR$/src/main/java/slidingwindow/LongestSubstringWithAtMostTwoDistinctCharacters.java</url>
+          <line>15</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/miscellaneous/ExcelSheetColumnTitleTest.java</url>
-          <line>14</line>
+          <url>file://$PROJECT_DIR$/src/main/java/slidingwindow/LongestSubstringWithAtMostTwoDistinctCharacters.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/slidingwindow/LongestSubstringWithAtMostTwoDistinctCharacters.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/slidingwindow/LongestSubstringWithAtMostTwoDistinctCharacters.java</url>
+          <line>34</line>
           <properties />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/miscellaneous/PowerTest.java</url>
-          <line>19</line>
+          <url>file://$PROJECT_DIR$/src/main/java/slidingwindow/LongestSubstringWithAtMostTwoDistinctCharacters.java</url>
+          <line>36</line>
           <properties />
-          <option name="timeStamp" value="31" />
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/miscellaneous/GroupAnangramsTest.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/MultiplyStrings.java</url>
           <line>11</line>
           <properties />
-          <option name="timeStamp" value="32" />
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/miscellaneous/GroupAnangramsTest.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/dp/WordBreakTwo.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/dp/WordBreakTwoTest.java</url>
           <line>12</line>
           <properties />
-          <option name="timeStamp" value="33" />
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/GroupAnagrams.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/miscellaneous/TestMultiplyStrings.java</url>
           <line>18</line>
           <properties />
-          <option name="timeStamp" value="34" />
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/GroupAnagrams.java</url>
-          <line>24</line>
-          <properties />
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/GroupAnagrams.java</url>
-          <line>25</line>
-          <properties />
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/GroupAnagrams.java</url>
-          <line>28</line>
-          <properties />
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/PalindromeNumber.java</url>
-          <line>12</line>
-          <properties />
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/miscellaneous/TestZigZagConversion.java</url>
-          <line>17</line>
-          <properties />
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/ZigZagConversion.java</url>
-          <line>21</line>
-          <properties />
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/ZigZagConversion.java</url>
-          <line>29</line>
-          <properties />
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/tree/BalancedBinaryTree.java</url>
-          <line>4</line>
-          <properties />
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tree/TestBinaryTreeVerticalOrderTraversal.java</url>
-          <line>25</line>
-          <properties />
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tree/TestBinaryTreeVerticalOrderTraversal.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/design/CodecTest.java</url>
-          <line>24</line>
-          <properties />
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/design/CodecTest.java</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/linkedlist/PartitionListTest.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/linkedlist/PartitionList.java</url>
-          <line>28</line>
-          <properties />
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/linkedlist/PartitionList.java</url>
-          <line>15</line>
+          <url>file://$PROJECT_DIR$/src/test/java/trie/TestAddAndSearchWord.java</url>
+          <line>14</line>
           <properties />
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/dp/TestJumpGameTwo.java</url>
-          <line>27</line>
+          <url>file://$PROJECT_DIR$/src/main/java/trie/AddAndSearchWord.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/trie/AddAndSearchWord.java</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/trie/AddAndSearchWord.java</url>
+          <line>54</line>
           <properties />
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dp/JumpGameTwo.java</url>
-          <line>32</line>
+          <url>file://$PROJECT_DIR$/src/main/java/trie/AddAndSearchWord.java</url>
+          <line>46</line>
           <properties />
-          <option name="timeStamp" value="71" />
+          <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dp/JumpGameTwo.java</url>
-          <line>34</line>
+          <url>file://$PROJECT_DIR$/src/main/java/trie/AddAndSearchWord.java</url>
+          <line>55</line>
           <properties />
           <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/array/TestValidPalindromeTwo.java</url>
-          <line>14</line>
+          <url>file://$PROJECT_DIR$/src/main/java/trie/AddAndSearchWord.java</url>
+          <line>49</line>
           <properties />
           <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ValidPalindromeTwo.java</url>
-          <line>15</line>
+          <url>file://$PROJECT_DIR$/src/main/java/trie/AddAndSearchWord.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/trie/AddAndSearchWord.java</url>
+          <line>89</line>
           <properties />
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ValidPalindromeTwo.java</url>
-          <line>24</line>
+          <url>file://$PROJECT_DIR$/src/main/java/trie/AddAndSearchWord.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/miscellaneous/PalindromePairsTest.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/PalindromePairs.java</url>
+          <line>30</line>
           <properties />
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ValidPalindromeTwo.java</url>
-          <line>10</line>
+          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/PalindromePairs.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/PalindromePairs.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/PalindromePairs.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/PalindromePairs.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/PalindromePairs.java</url>
+          <line>37</line>
           <properties />
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ValidPalindromeTwo.java</url>
-          <line>12</line>
+          <url>file://$PROJECT_DIR$/src/test/java/number/DivideTwoIntegerTest.java</url>
+          <line>15</line>
           <properties />
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/graph/CopyListWithRandomPointer.java</url>
-          <line>53</line>
-          <properties />
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/array/TestReverseWordsInAStringThree.java</url>
-          <line>14</line>
+          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/DivideTwoInteger.java</url>
+          <line>9</line>
           <properties />
           <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAStringThree.java</url>
-          <line>31</line>
-          <properties />
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAStringThree.java</url>
-          <line>32</line>
-          <properties />
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/array/TestReverseWordsInAString.java</url>
-          <line>15</line>
-          <properties />
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAString.java</url>
-          <line>34</line>
-          <properties />
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAString.java</url>
-          <line>14</line>
-          <properties />
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAString.java</url>
-          <line>20</line>
-          <properties />
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAString.java</url>
-          <line>17</line>
-          <properties />
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAString.java</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAString.java</url>
-          <line>30</line>
-          <properties />
-          <option name="timeStamp" value="95" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAString.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/airbnb/IPToCIDR.java</url>
           <line>23</line>
-          <properties />
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAString.java</url>
-          <line>32</line>
-          <properties />
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAString.java</url>
-          <line>16</line>
-          <properties />
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/array/TestReverseWordsInAStringTwo.java</url>
-          <line>15</line>
-          <properties />
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAStringTwo.java</url>
-          <line>20</line>
           <properties />
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAStringTwo.java</url>
-          <line>21</line>
+          <url>file://$PROJECT_DIR$/src/main/java/airbnb/IPToCIDR.java</url>
+          <line>16</line>
           <properties />
           <option name="timeStamp" value="101" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/airbnb/IPToCIDR.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/airbnb/IPToCIDR.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/airbnb/ConsecutiveNumbersSum.java</url>
+          <line>7</line>
+          <properties />
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/airbnb/ConsecutiveNumbersSum.java</url>
+          <line>9</line>
+          <properties />
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/airbnb/ConsecutiveNumbersSum.java</url>
+          <line>11</line>
+          <properties />
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/airbnb/ThreeSumTest.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/datastructure/LargestNumberTest.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/IntegerToEnglishWords.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/IntegerToEnglishWords.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/IntegerToEnglishWords.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/IntegerToEnglishWords.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/IntegerToEnglishWords.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/miscellaneous/IntegerToEnglishWords.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="102" />
     </breakpoint-manager>
-    <watches-manager />
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/MajorityElement.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/graph/CourseScheduleTwo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dp/ClimbingStairs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dp/MinCostClimbingStairs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dp/HouseRobber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tree/PathSum3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="35" column="25" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dp/MaximumSubarray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/PascalTriangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/PascalTriangleTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="30" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/FizzBuzz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="29" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16104">
-          <caret line="765" column="0" lean-forward="false" selection-start-line="765" selection-start-column="0" selection-end-line="765" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/design/CodecTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/design/Codec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/miscellaneous/PowerOfThree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="20" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/design/MinStack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/MissingRanges.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/RotateArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="26" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/design/ShuffleAnArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="35" column="25" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dp/UniquePaths.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dp/UniquePathTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dp/MinimumPathSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/linkedlist/RemoveLinkedListElements.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/linkedlist/OddEvenLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/LargestNumberAtLeastTwiceAsOhters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/FindPivotIndex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="26" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/ArrayPartition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/linkedlist/PartitionListTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="46" lean-forward="false" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/linkedlist/PartitionList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/MaxConsecutiveOnes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/dp/TestJumpGameTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dp/JumpGameTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-248">
-          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dp/JumpGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ValidPalindrome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/array/TestValidPalindromeTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="624">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/array/ValidPalindromeTwo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="600">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/RemoveElement.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/SearchInRotatedSortedArray.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/array/TwoSum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="240">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/MinimumSizeSubarraySum.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/binarysearch/SearchA2DMatrixTwo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        <state relative-caret-position="576">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tree/BinaryTreeInorderTraversal.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/binarysearch/SearchInRotatedArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="48">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tree/SumOfLeftLeaves.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/binarysearch/SearchInRotatedArrayTwo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
-          <caret line="55" column="45" lean-forward="false" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+        <state relative-caret-position="144">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/AddBinary.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/binarysearch/FindMinimumInRotatedSortedArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="48">
+          <caret line="2" column="44" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/binarysearch/FindMinimumInRotatedSortedArrayTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/slidingwindow/LongestSubstringWithoutRepeatingCharacters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/miscellaneous/IntegerToEnglishWords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/miscellaneous/IntegerToRoman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/miscellaneous/RomanToInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PalindromeLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ReverseLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ValidPalindrome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MoveZeroes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/twopointers.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/HammingDistance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bfs/SerializeAndDeserializeBinaryTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tree/ValidateBinarySearchTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/twopointers/SortColors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bst/TwoSumFour.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tree/KthSmallestElementInBST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/design/Codec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tree/BalancedBinaryTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.scripthost.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3768">
+          <caret line="170" column="24" selection-start-line="170" selection-start-column="24" selection-end-line="170" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tree/PathSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/miscellaneous/PalindromePairs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tree/PathSumTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tree/BinaryTreePreorderTraversal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tree/BinaryTreePostorderTraversal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45264">
+          <caret line="1957" column="18" selection-start-line="1957" selection-start-column="18" selection-end-line="1957" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tree/LowestCommonAncestorOfBinaryTree.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/tree/PathSumThree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tree/LowestCommonAncestorOfABinaryTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dfs/SubSets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dfs/SubsetsTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dfs/CombinationSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dfs/Permutations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dfs/PermutationsTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dfs/NQueens.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datastructures/TreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="216">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastructures/UndirectedGraphNode.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/graph/WordLadder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="228">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/graph/CloneGraph.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tree/BinaryTreeInorderTraversal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1452">
-          <caret line="73" column="73" lean-forward="false" selection-start-line="73" selection-start-column="73" selection-end-line="73" selection-end-column="73" />
-          <folding />
+        <state relative-caret-position="552">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/graph/CopyListWithRandomPointer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/design/BSTIterator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="102">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tree/AverageOfLevelsInBinaryTree.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dp/DecodeWays.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="-162">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tree/BinaryTreeLevelOrderTraversal.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dp/DeleteAndEarn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/array/TestReverseWordsInAStringThree.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dp/HouseRobber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="360">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAStringThree.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dp/HouseRobberTwo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="36" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="96">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/array/TestReverseWordsInAString.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/stack/BasicCalculatorTwo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="38" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/array/TestReverseWordsInAStringTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/ReverseWordsInAStringTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="35" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="264">
+          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Practices2018-2</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: com.google.code.findbugs:jsr305:1.3.9</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

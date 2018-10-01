@@ -7,8 +7,6 @@ import java.util.Stack;
 import datastructures.TreeNode;
 
 
-// TODO: Investigate Morris traversal
-
 public class BinaryTreeInorderTraversal {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> integerList = new ArrayList<>();
@@ -35,16 +33,16 @@ public class BinaryTreeInorderTraversal {
 
         while(cur!=null || !formerNodes.isEmpty()) {
 
-            if(cur!=null) {
+            while(cur!=null) {
                 formerNodes.push(cur);
                 cur = cur.left;
-            } else {
-                cur = formerNodes.pop();
-                integerList.add(cur.val);
-                cur = cur.right;
             }
-        }
 
+            cur = formerNodes.pop();
+            integerList.add(cur.val);
+            cur = cur.right;
+
+        }
 
         return integerList;
     }

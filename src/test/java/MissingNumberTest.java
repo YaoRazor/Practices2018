@@ -4,6 +4,8 @@
 
 import org.junit.Test;
 
+import java.util.List;
+
 import array.MissingNumber;
 
 /**
@@ -18,5 +20,12 @@ public class MissingNumberTest {
 
         missingNumber.missingNumber(new int[]{3, 0, 1});
 
+    }
+
+
+    @Test
+    public void randomTest() {
+
+        List<Character>[] bucket = new List[10];
     }
 }

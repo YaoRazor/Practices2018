@@ -12,8 +12,9 @@ public class TestCountAndSay {
 
         String s = CountAndSay.countAndSay(4);
 
-        int[] nums = null;
-        System.out.print(nums.length);
+
+
+        int tmp = '9';
 
         return;
     }

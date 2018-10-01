@@ -1,34 +1,70 @@
 package array;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
-/**
- * Created by yawang on 3/12/18.
- */
+
 public class MeetingRoomsTwo {
 
         public int minMeetingRooms(Interval[] intervals) {
-            if(intervals == null || intervals.length <= 1) {
-                return 1;
-            }
+
+            PriorityQueue<Integer> queue = new PriorityQueue<>();
 
             List<Interval> intervalList = Arrays.asList(intervals);
 
-            Collections.sort(intervalList, Comparator.comparingInt(o -> o.end));
+            Collections.sort(intervalList, Comparator.comparingInt(o -> o.start));
 
-            int cur = 1;
+            int ans = 0;
 
-            for(int i=1; i<intervals.length; i++) {
-                cur--;
-                if(intervals[i].start < intervals[i-1].end) {
-                    cur++;
-                }
+            for(Interval interval: intervalList) {
+
+                    while (!queue.isEmpty()) {
+
+                        if(queue.peek()<interval.start) {
+                            queue.poll();
+                        } else {
+                            break;
+                        }
+                    }
+
+                    queue.add(interval.end);
+
+                    ans = Math.max(ans, queue.size());
             }
 
-            return cur+1;
+            return ans;
+            }
+
+    public int minMeetingRoomsTwo(Interval[] intervals) {
+
+        int[] start = new int[intervals.length];
+        int[] end = new int[intervals.length];
+
+        for (int i = 0; i < intervals.length; i++) {
+
+            start[i] = intervals[i].start;
+            end[i] = intervals[i].end;
         }
+
+        Arrays.sort(start);
+        Arrays.sort(end);
+
+
+        int ans = 0;
+        int endPointer = 0;
+
+        for(int i=0; i<intervals.length; i++) {
+
+            if(start[i]<end[endPointer]) {
+                ans++;
+            } else {
+                endPointer++;
+            }
+        }
+
+        return ans;
+
+
+    }
+
 
 }
