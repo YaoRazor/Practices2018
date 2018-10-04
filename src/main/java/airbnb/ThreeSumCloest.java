@@ -8,45 +8,47 @@ public class ThreeSumCloest {
     public int threeSumClosest(int[] nums, int target) {
 
 
-        Arrays.sort(nums);
         int difference = Integer.MAX_VALUE;
-        int ans = 0;
+        int sum = 0;
 
-        for(int i=0; i< nums.length-2; i++) {
+        Arrays.sort(nums);
 
-            int tmp = nums[i];
-            int l = i+1;
-            int r = nums.length-1;
+        for(int i=0; i<nums.length-2; i++) {
 
+            int start = i+1;
+            int end = nums.length-1;
 
-            while(l<r) {
+            while(start<end) {
 
-                int cur = nums[l]+nums[r]+tmp;
+                int tmp = nums[start] + nums[end]+nums[i];
 
-                if(Math.abs(cur-target) < difference) {
-
-                    ans = cur;
-                    difference = Math.abs(cur-target);
-
-                    System.out.printf(i+","+l+","+r+"\n");
-
+                if(Math.abs(tmp-target)<difference) {
+                    difference = Math.abs(tmp-target);
+                    sum = tmp;
                 }
 
-                if(cur > target) {
-                    r--;
+                // This is an optimization
+                if(tmp==target) {
+                    return sum;
+                }
+
+                if(tmp>target) {
+                    end--;
                 } else {
-                    l++;
+                    start++;
                 }
 
             }
 
+            // This is an optimization, this is not required for this problem
             while(i<nums.length-1 && nums[i+1]==nums[i]) {
                 i++;
             }
 
+
         }
 
-        return ans;
+        return sum;
 
     }
 }
