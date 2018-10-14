@@ -20,11 +20,4 @@ public class TestJumpGameTwo {
 
     }
 
-
-    @Test
-    public void testJumpGameGreedy() {
-        JumpGameTwo jumpGameTwo = new JumpGameTwo();
-        int result = jumpGameTwo.jumpGreedy(new int[]{3,2,1,1,0,0,4});
-        assertEquals(Integer.MAX_VALUE, result);
-    }
 }

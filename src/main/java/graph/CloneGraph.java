@@ -1,6 +1,8 @@
 package graph;
 
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -9,8 +11,6 @@ import java.util.Queue;
 import datastructures.UndirectedGraphNode;
 
 public class CloneGraph {
-
-
 
     private UndirectedGraphNode clone(UndirectedGraphNode src, HashMap<UndirectedGraphNode, UndirectedGraphNode> map) {
 
@@ -39,48 +39,40 @@ public class CloneGraph {
         return clone(node, new HashMap<>());
     }
 
-    private UndirectedGraphNode cloneBFS(UndirectedGraphNode src){
-        if (src == null){
-            return null;
+    private UndirectedGraphNode cloneBFS(UndirectedGraphNode node){
+        if(node==null) {
+            return node;
         }
 
-        Map<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<>();
+        Deque<UndirectedGraphNode> deque = new ArrayDeque<>();
 
-        Queue<UndirectedGraphNode> queue = new LinkedList<>();
+        HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<>();
+        UndirectedGraphNode copyOfNode = new UndirectedGraphNode(node.label);
+        map.put(node, copyOfNode);
 
-        queue.add(src);
+        deque.addLast(node);
 
-        while (!queue.isEmpty()) {
+        while(!deque.isEmpty()) {
 
-            UndirectedGraphNode cur = queue.poll();
-            UndirectedGraphNode copy;
-
-            if(map.containsKey(cur)) {
-                copy = map.get(cur);
-            } else {
-                copy = new UndirectedGraphNode(cur.label);
-                map.put(cur, copy);
-            }
+            // Before you put it into the queue, you already created its copy
+            UndirectedGraphNode cur = deque.pollFirst();
+            UndirectedGraphNode copy = map.get(cur);
 
             for(UndirectedGraphNode child: cur.neighbors) {
 
-                if(map.containsKey(child)) {
-                    copy.neighbors.add(map.get(child));
-                } else {
-                    UndirectedGraphNode childCopy = new UndirectedGraphNode(child.label);
-                    copy.neighbors.add(childCopy);
-                    map.put(child, childCopy);
-
-                    // Only add unvisited node in the queue to avoid loop
-                    queue.add(child);
+                if(!map.containsKey(child)) {
+                    UndirectedGraphNode copyOfChild = new UndirectedGraphNode(child.label);
+                    map.put(child, copyOfChild);
+                    deque.addLast(child);
                 }
 
+                copy.neighbors.add(map.get(child));
 
             }
 
         }
 
-        return map.get(src);
+        return map.get(node);
 
 
     }

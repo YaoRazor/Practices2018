@@ -22,6 +22,8 @@ public class JumpGame {
                 for(int j=1; j<=nums[i] && i+j<=nums.length-1; j++) {
                     canJump[i+j] = true;
                 }
+            } else {
+                return false;
             }
 
         }
@@ -32,21 +34,28 @@ public class JumpGame {
     }
 
 
-    //Greedy
+    //For this problem, I think Greedy is actually not as important as dp
     public boolean canJumpTwo(int[] nums) {
 
+        if(nums==null || nums.length == 0) {
+            return false;
+        }
+
         int lastSeen = 0;
+        int start = 0;
 
-        int start=0;
+        while(start<=lastSeen && start<nums.length) {
 
-        while ( start <nums.length && start<=lastSeen) {
-            lastSeen = Math.max(nums[start]+start, lastSeen);
+            for(int i=start; i<=lastSeen; i++) {
+                lastSeen = Math.max(lastSeen, nums[i]+i);
 
-            if(lastSeen>=nums.length-1) {
-                return true;
+                if(lastSeen>=nums.length-1) {
+                    return true;
+                }
             }
 
-            start++;
+            start = start+1;
+
         }
 
         return false;

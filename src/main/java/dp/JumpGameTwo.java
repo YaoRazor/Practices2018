@@ -2,6 +2,8 @@ package dp;
 
 
 public class JumpGameTwo {
+
+    // This is using DP
     public int jump(int[] nums) {
 
         int[] dp = new int[nums.length];
@@ -25,25 +27,31 @@ public class JumpGameTwo {
     }
 
 
-    public int jumpGreedy(int[] nums) {
-        int ret = 0;
-        int lastFurthest = 0;
-        int furthest = 0;
-
-        for(int i=0; i<nums.length; i++) {
-
-            if(i>furthest) {
-                return Integer.MAX_VALUE;
-            }
-
-            if(i>lastFurthest) {
-                ret++;
-                lastFurthest = furthest;
-            }
-
-            furthest = Math.max(furthest, nums[i]+i);
+    // Greedy is not very straightforward, using BFS makes it much clear
+    public int jumpBFS(int[] nums) {
+        if(nums.length<2) {
+            return 0;
         }
 
-        return ret;
+        int i = 0;
+        int curMax =0;
+        int level = 0;
+
+        while(i<=curMax) {
+            int nextMax = 0;
+            level++;
+            for(; i<=curMax; i++) {
+                nextMax = Math.max(nextMax, nums[i]+i);
+
+                if(nextMax>=nums.length-1) {
+                    return level;
+                }
+            }
+
+            curMax = nextMax;
+
+        }
+
+        return -1;
     }
 }

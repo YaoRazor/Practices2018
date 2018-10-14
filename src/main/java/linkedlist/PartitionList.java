@@ -6,40 +6,29 @@ import datastructures.ListNode;
 public class PartitionList {
     public ListNode partition(ListNode head, int x) {
 
-        ListNode dummyNode = new ListNode(x-1);
-        dummyNode.next = head;
+        //创建两个List是这里的关键思想
+        ListNode dummyNode1 = new ListNode(-1);
+        ListNode dummyNode2 = new ListNode(-1);
+        ListNode head1 = dummyNode1;
+        ListNode head2 = dummyNode2;
 
-        ListNode cur = dummyNode;
-        ListNode pre = dummyNode; // keep the nodes that are smaller than x;
-        ListNode big;
+        while(head!=null) {
 
-        while (cur.next!=null && cur.next.val<x) {
-            pre.next = cur.next;
-            cur = cur.next;
-            pre = pre.next;
-        }
-
-        if(cur.next==null) {
-            return dummyNode.next;
-        } else {
-            big = cur.next;
-        }
-
-
-        while (cur.next != null) {
-            if(cur.next.val<x) {
-                pre.next = cur.next;
-                cur.next = cur.next.next;
-                pre = pre.next;
+            if(head.val<x) {
+                head1.next = head;
+                head1 = head1.next;
             } else {
-                cur = cur.next;
+                head2.next = head;
+                head2 = head2.next;
             }
+
+            head = head.next;
         }
 
-
-        pre.next = big;
-
-        return dummyNode.next;
+        head1.next = dummyNode2.next;
+        //注意不要忘记把这里设置成null
+        head2.next = null;
+        return dummyNode1.next;
 
     }
 }
