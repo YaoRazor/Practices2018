@@ -2,6 +2,7 @@ package array;
 
 public class ContainerWithMostWater {
 
+    // 两根指针，移动木桶的短板
     public int maxArea(int[] height) {
 
         if(height==null || height.length < 2) {

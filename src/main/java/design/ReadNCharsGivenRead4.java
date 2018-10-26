@@ -8,22 +8,25 @@ public class ReadNCharsGivenRead4 extends Reader4{
      */
     public int read(char[] buf, int n) {
 
-        char[] tmp = new char[4];
-        int i = 0;
-        int len = 0;
+        char[] tmp =  new char[4];
+        int start = 0;
 
-        while(i<n && (len=read4(tmp))>0) {
+        while(start<n) {
 
+            int cur = read4(tmp);
+            cur = Math.min(n-start, cur);
 
-            len = Math.min(len, n-i);
-            System.arraycopy(tmp /* src */, 0 /* srcPos */,
-                    buf /* dest */, i /* destPos */, len /* length */);
+            for(int i=0; i<cur; i++) {
+                buf[start++] = tmp[i];
+            }
 
-            i+=len;
+            if(cur<4) {
+                break;
+            }
 
         }
 
-        return i;
+        return start;
 
     }
 

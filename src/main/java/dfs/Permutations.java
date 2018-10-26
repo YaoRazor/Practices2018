@@ -7,6 +7,8 @@ import java.util.List;
 public class Permutations {
     List<List<Integer>> ans = new ArrayList<>();
 
+    // Time complexity: O(n!), need to ask whether there are duplicates, you
+    // can use program from Permutations two directly
     public List<List<Integer>> permute(int[] nums) {
 
         if (nums == null || nums.length == 0) {
@@ -19,7 +21,6 @@ public class Permutations {
         return ans;
 
     }
-
 
 
     private void dfs(int[] nums, boolean[] isUsed, LinkedList<Integer> cur) {

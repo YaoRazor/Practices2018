@@ -1,63 +1,75 @@
 package tree;
 
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Deque;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
 import datastructures.TreeNode;
 
+// Level order traversal is used to solve this problem, we also need to store the
+// col for each node in order to add it to the right list, the index doex not have
+// to start from 0, it can start from negative numbers
 public class BinaryTreeVerticalOrderTraversal {
     public List<List<Integer>> verticalOrder(TreeNode root) {
 
         List<List<Integer>> ans = new ArrayList<>();
-
-        if (root == null) {
+        if(root==null) {
             return ans;
         }
 
-        LinkedList<Map.Entry<TreeNode, Integer>> queue = new LinkedList<>();
-        HashMap<Integer, ArrayList<Integer>> map = new HashMap<>();
-        queue.add(new java.util.AbstractMap.SimpleEntry<>(root, 0));
-
+        Deque<Pair> deque = new ArrayDeque<>();
+        Map<Integer, List<Integer>> map = new HashMap<>();
+        deque.addLast(new Pair(root, 0));
         int min = 0;
-        int max = 0;
-        while (queue.size() > 0) {
 
-            Map.Entry<TreeNode, Integer> cur = queue.poll();
+        while(!deque.isEmpty()) {
 
-            TreeNode curNode = cur.getKey();
-            Integer position = cur.getValue();
+            Pair cur = deque.pollFirst();
+            TreeNode node = cur.node;
+            int col = cur.col;
 
-            if (map.containsKey(position)) {
-                map.get(position).add(curNode.val);
-            }
-            else {
-                map.put(position, new ArrayList<>());
-                map.get(position).add(curNode.val);
-
+            if(!map.containsKey(col)) {
+                map.put(col, new ArrayList<>());
             }
 
-            if (curNode.left != null) {
-                queue.add(new java.util.AbstractMap.SimpleEntry<>(curNode.left, position - 1));
+            map.get(col).add(node.val);
 
-                min = Math.min(min, position - 1);
+            if(node.left!=null) {
+
+                deque.addLast(new Pair(node.left, col-1));
+                min = Math.min(min, col-1);
+            }
+
+            if(node.right!=null) {
+
+                deque.addLast(new Pair(node.right, col+1));
             }
 
 
-            if (curNode.right != null) {
-                queue.add(new java.util.AbstractMap.SimpleEntry<>(curNode.right, position + 1));
-                max = Math.max(max, position + 1);
-            }
         }
 
-        for (int i = min; i <= max; i++) {
-            ans.add(map.get(i));
+
+        while(map.containsKey(min)) {
+            ans.add(map.get(min++));
         }
 
         return ans;
+
+    }
+
+
+    class Pair {
+
+        public TreeNode node;
+        public int col;
+
+        public Pair(TreeNode node, int col) {
+            this.node = node;
+            this.col = col;
+        }
     }
 }

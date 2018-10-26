@@ -12,39 +12,52 @@ public class BasicCalculatorTwo {
         }
 
         Stack<Integer> stack = new Stack<>();
-        int num  = 0;
+        // sign is used to store the previous operator, for initialization, we can assume
+        // There is a '+' before the expression
         char sign = '+';
+        int i =0;
 
-        for(int i=0; i<s.length(); i++) {
-            char cur = s.charAt(i);
+        while(i<s.length()) {
 
-            if(Character.isDigit(cur)) {
-                num = num*10+cur-'0';
+            if(s.charAt(i)==' ') {
+                i++;
+                continue;
             }
 
-            if((!Character.isDigit(cur)) && cur !=' ' || i==s.length()-1) {
+            // store current number
+            int number = 0;
 
-                if(sign=='+') {
-                    stack.push(num);
-                } else if(sign=='-') {
-                    stack.push(-num);
-                } else if(sign=='*') {
-                    stack.push(stack.pop()*num);
-                } else if(sign=='/'){
-                    stack.push(stack.pop()/num);
-                }
-
-                num = 0;
-                sign = cur;
-                System.out.println(sign+"\n");
-
+            while(i<s.length() && Character.isDigit(s.charAt(i))) {
+                number = number*10+ (int)(s.charAt(i)-'0');
+                i++;
             }
 
+            // This sign is previous sign
+            if(sign=='+') {
+                stack.push(number);
+
+            } else if(sign=='-') {
+                stack.push(-number);
+
+            } else if(sign=='*') {
+                stack.push(stack.pop()*number);
+
+            } else if(sign=='/'){
+                stack.push(stack.pop()/number);
+            }
+
+            if(i==s.length()) {
+                break;
+            } else {
+                sign = s.charAt(i);
+            }
+
+            i++;
 
         }
 
-        for(Integer i: stack) {
-            ans+=i;
+        for(Integer cur: stack) {
+            ans+=cur;
         }
 
         return ans;

@@ -4,6 +4,7 @@ package stack;
 
 public class TrappingRainWater {
 
+    // 这题的关键是以每一个木桶为单元来计算
     public int trap(int[] height) {
 
         if(height==null || height.length<3) {

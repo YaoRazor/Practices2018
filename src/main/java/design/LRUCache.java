@@ -49,11 +49,7 @@ class LRUCache {
             }
         }
 
-
-
     }
-
-
 
     private void deleteNode(Node node) {
         Node pre = node.pre;

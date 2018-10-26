@@ -8,39 +8,35 @@ import java.util.List;
 public class SubsetsTwo {
 
 
+    // Time complexity: O(2^n)
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
 
-        if(nums==null) {
+        if(nums==null || nums.length==0) {
             return ans;
         }
 
-        LinkedList<Integer> cur = new LinkedList<>();
-
+        // key point
         Arrays.sort(nums);
-        dfs(ans, cur, 0, nums);
 
+        LinkedList<Integer> cur = new LinkedList<>();
+        dfs(nums, 0, cur, ans);
         return ans;
-
     }
 
+    private void dfs(int[] nums, int start, LinkedList<Integer> cur, List<List<Integer>> ans) {
 
+        ans.add(new LinkedList<>(cur));
+        // System.out.println(cur+"\n");
 
-    private void dfs(List<List<Integer>> ans, LinkedList<Integer> cur, int pos, int[] nums) {
-
-        if(pos==nums.length) {
-            ans.add(new LinkedList<>(cur));
-            return;
-        }
-
-
-        cur.add(nums[pos]);
-        dfs(ans, cur, pos+1, nums);
-        cur.removeLast();
-        dfs(ans, cur, pos+1, nums);
-
-        while (pos+1<nums.length && nums[pos+1] == nums[pos]) {
-            pos++;
+        for(int i=start; i<nums.length; i++) {
+            cur.add(nums[i]);
+            dfs(nums, i+1, cur, ans);
+            cur.removeLast();
+            // key point
+            while (i+1<nums.length && nums[i+1] == nums[i]) {
+                i++;
+            }
         }
 
     }

@@ -16,6 +16,7 @@ public class PermutationsTwo {
 
         LinkedList<Integer> cur = new LinkedList<>();
         boolean[] isUsed = new boolean[nums.length];
+        // Sorting is important
         Arrays.sort(nums);
         dfs(nums, isUsed, cur);
         return ans;
@@ -39,6 +40,7 @@ public class PermutationsTwo {
                 dfs(nums, isUsed, cur);
                 cur.removeLast();
                 isUsed[i] = false;
+                // Key point
                 while (i+1<nums.length && nums[i+1]==nums[i]) {
                     i++;
                 }

@@ -12,6 +12,11 @@ import datastructures.UndirectedGraphNode;
 
 public class CloneGraph {
 
+
+    // DFS解法，DFS当然会有重复子问题，对于重复子问题，进行记忆就可以了
+    public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
+        return clone(node, new HashMap<>());
+    }
     private UndirectedGraphNode clone(UndirectedGraphNode src, HashMap<UndirectedGraphNode, UndirectedGraphNode> map) {
 
         if(src == null) {
@@ -35,9 +40,6 @@ public class CloneGraph {
     }
 
 
-    public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
-        return clone(node, new HashMap<>());
-    }
 
     private UndirectedGraphNode cloneBFS(UndirectedGraphNode node){
         if(node==null) {

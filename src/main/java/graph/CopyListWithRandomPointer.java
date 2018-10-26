@@ -6,6 +6,68 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class CopyListWithRandomPointer {
+
+    // This is O(1) space, you have to do it in three passes, you can't do it in two passes
+    // Reason is here: https://leetcode.com/problems/copy-list-with-random-pointer/discuss/164674/Why-is-two-pass-with-O(1)-space-not-possible
+    // Basically some random pointer can point to the nodes before current node, if you decouple at the same time, that
+    // relationship is already lost
+    public RandomListNode copyRandomListWithConstantSpace(RandomListNode head) {
+
+        if(head==null) {
+            return null;
+        }
+
+        RandomListNode cur = head;
+
+        // Clone the list and put the copy to the next pointer of each original pointer
+        while(cur!=null) {
+
+            RandomListNode next = cur.next;
+            RandomListNode copy = new RandomListNode(cur.label);
+
+            cur.next = copy;
+            copy.next = next;
+            cur = next;
+        }
+
+        cur = head;
+
+        // Allocate the random pointer
+        while(cur!=null) {
+
+            if(cur.random!=null) {
+                cur.next.random = cur.random.next;
+            }
+
+            cur = cur.next.next;
+
+        }
+
+        cur = head;
+        RandomListNode ans = cur.next;
+        RandomListNode newHead = cur.next;
+
+
+        // Decouple two list
+        while(cur!=null) {
+
+            RandomListNode copy = cur.next;
+            cur.next = copy.next;
+            cur = cur.next;
+            if(cur!=null) {
+                copy.next = cur.next;
+            } else {
+                copy.next = null;
+            }
+
+        }
+
+        return ans;
+    }
+
+
+
+
     public RandomListNode copyRandomList(RandomListNode head) {
         if(head==null) {
             return head;
