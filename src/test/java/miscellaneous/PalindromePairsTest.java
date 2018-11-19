@@ -15,6 +15,8 @@ public class PalindromePairsTest {
 
         Map<String, Integer> map = new HashMap<>();
 
+        System.out.println("abcd".substring(0, 0));
+
 
         for(int i=0; i<test.length; i++) {
             map.put(new StringBuilder(test[i]).reverse().toString(), i);

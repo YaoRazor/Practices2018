@@ -9,7 +9,11 @@ public class TestLongestSubstringWithAtMostTwoDistinctCharacters {
     public void test() {
 
         LongestSubstringWithAtMostTwoDistinctCharacters tmp = new LongestSubstringWithAtMostTwoDistinctCharacters();
-        tmp.lengthOfLongestSubstringTwoDistinct("abcabcabc");
+
+        tmp.lengthOfLongestSubstringTwoDistinctTwo("ababcbcbaaabbdef");
+
+
+//        tmp.lengthOfLongestSubstringTwoDistinct("abcabcabc");
 
         return;
 

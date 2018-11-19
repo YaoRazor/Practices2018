@@ -1,51 +1,46 @@
 package slidingwindow;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class LongestSubstringWithAtMostTwoDistinctCharacters {
 
-    public int lengthOfLongestSubstringTwoDistinct(String s) {
 
-        if(s == null || s.length() == 0) {
-            return 0;
-        }
-
-        int index = 0;
+    // 采用了九章算法强化班的同向双指针模板，可以扩展到K个的情况
+    public int lengthOfLongestSubstringTwoDistinctTwo(String s) {
+        int j = 0;
+        Map<Character, Integer> map = new HashMap<>();
         int ans = 0;
+        for(int i=0; i<s.length(); i++) {
 
-        HashMap<Character, Integer> map = new HashMap<>();
+            while(j<s.length() && map.size()<=2) {
+                char c = s.charAt(j);
 
-        for(int i=0; i< s.length(); i++) {
-
-            Character cur = s.charAt(i);
-
-            if(map.containsKey(cur) || map.size()<2) {
-                map.put(cur, i);
-            } else {
-                int smaller = s.length();
-                Character old = null;
-                for(Character key :map.keySet()) {
-                    if(map.get(key)<smaller) {
-                        old = key;
-                        smaller = map.get(key);
-                    }
-
+                if(!map.containsKey(c) && map.size()==2) {
+                    map.put(c, 1);
+                    j++;
+                    break;
                 }
 
-                map.remove(old);
+                map.put(c, map.getOrDefault(c, 0)+1);
 
-                index = smaller+1;
-                map.put(cur,1);
+                ans = Math.max(ans, j-i+1);
+                j++;
 
             }
 
-            ans = Math.max(i-index+1, ans);
+            char cur = s.charAt(i);
+
+            map.put(cur, map.get(cur)-1);
+            if(map.get(cur) == 0) {
+                map.remove(cur);
+            }
 
 
         }
 
         return ans;
 
-
     }
+
 }

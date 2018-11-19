@@ -5,58 +5,61 @@ import java.util.Map;
 
 public class MinimumWindowSubstring {
 
+    // 使用九章算法同向双指针模板
     public String minWindow(String s, String t) {
 
         Map<Character, Integer> map = new HashMap<>();
+        String ans = "";
 
         for(char c: t.toCharArray()) {
-            map.put(c, map.getOrDefault(c, 0)+1);
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }
 
+        int start = 0;
+        int end = 0;
+        // 用这个cnt来代表是不是满足了条件，是一个常见思路，可以参考FindAllAnagramsinSingleString
+        int cnt = map.size();
+        int minimumWindowLength = Integer.MAX_VALUE;
 
-        int slow = 0, fast = 0, ans = Integer.MAX_VALUE, max_count = 0; int index = 0;
+        while(end< s.length()) {
 
-        for(;fast < s.length(); fast++) {
+            Character cur = s.charAt(end);
+            if(map.containsKey(cur)) {
 
-            Character cur = s.charAt(fast);
-
-            if(!map.containsKey(cur)) {
-                continue;
-            } else {
                 map.put(cur, map.get(cur)-1);
 
                 if(map.get(cur)==0) {
-
-                    max_count++;
-
-                    // max_count==map.size(), this is the key point of this item
-                    while (slow<=fast && max_count==map.size()) {
-
-                        if(fast-slow+1<ans) {
-                            ans = fast-slow+1;
-                            index = slow;
-                        }
-
-
-                        if(map.containsKey(s.charAt(slow))) {
-                            map.put(s.charAt(slow), map.get(s.charAt(slow))+1);
-                            if(map.get(s.charAt(slow))==1) {
-                                max_count--;
-                            }
-                        }
-
-                        slow++;
-
-                    }
-
+                    cnt--;
                 }
 
             }
 
+
+            // cnt等于0表示满足了条件
+            while(cnt==0) {
+                if(end-start+1<minimumWindowLength) {
+                    ans = s.substring(start, end+1);
+                    minimumWindowLength = end-start+1;
+                }
+
+                cur = s.charAt(start);
+                if(map.containsKey(cur)) {
+                    map.put(cur, map.get(cur)+1);
+                    if(map.get(cur)>0) {
+                        cnt++;
+                    }
+
+                }
+
+                start++;
+
+            }
+
+            end++;
+
         }
 
-
-        return ans==Integer.MAX_VALUE? "": s.substring(index, index+ans);
+        return minimumWindowLength==Integer.MAX_VALUE? "" : ans;
 
 
     }
