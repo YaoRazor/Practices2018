@@ -2,42 +2,43 @@ package design;
 
 import datastructures.TreeNode;
 
-import java.util.ArrayDeque;
 
+import java.util.Stack;
+
+
+// Because every node will be visited twice, therefore next() and hasNext() should run in average O(1) time
+// The space complexity is O(h), h is the height of the tree
 public class BSTIterator {
 
-    ArrayDeque<TreeNode> deque = new ArrayDeque<>();
+    Stack<TreeNode> stack = new Stack<>();
 
     public BSTIterator(TreeNode root) {
 
-        while (root!=null) {
-            deque.addFirst(root);
+        while(root!=null) {
+            stack.push(root);
             root = root.left;
         }
-
     }
 
     /** @return whether we have a next smallest number */
     public boolean hasNext() {
-        return !deque.isEmpty();
+        return !stack.isEmpty();
     }
 
-    // The tree will be iterated twice in the whole process, that is why this next is average O(1)
+    /** @return the next smallest number */
     public int next() {
 
-        TreeNode cur = deque.removeFirst();
+        TreeNode cur = stack.pop();
         int ans = cur.val;
 
-        if(cur.right!=null) {
-            cur = cur.right;
+        cur = cur.right;
 
-            while (cur!=null) {
-                deque.addFirst(cur);
-                cur = cur.left;
-            }
-
+        while(cur!=null) {
+            stack.push(cur);
+            cur = cur.left;
         }
 
         return ans;
+
     }
 }

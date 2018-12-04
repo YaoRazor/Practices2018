@@ -2,52 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac705035-c858-4b3d-a5ec-1197d6462ea1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/airbnb/CSVParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airbnb/DisplayPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airbnb/Flatten2DVectorWithRemove.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airbnb/PyramidTransitionMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airbnb/RoundPrices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airbnb/WizardShortestDistance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/array/OneEditDistance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/binarysearch/FindKClosestElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/datastructures/NestedInteger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/design/LoggerRateLimiter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/design/MaxStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dp/BurstBalloons.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dp/EditDistance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dp/LongestIncreasingPathInAMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dp/MaximalSquare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dp/PaintHouse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dp/PaintHouseTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dp/StoneGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dp/StoneGameLintCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/heap/TopKFrequentWords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/linkedin/CanPlaceFlowers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/linkedin/FindLeavesOfBinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/linkedin/NestedListWeightSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/linkedin/NestedListWeightSumTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/linkedin/RepeatedDNASequences.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/linkedin/ShortestWordDistanceTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/miscellaneous/FractionToRecurringDecimal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/slidingwindow/FindAllAnagramsinaString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/slidingwindow/MinimumSizeSubarraySum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/slidingwindow/SubstringWithConcatenationOfAllWords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stack/ExclusiveTimeOfFunctions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stack/SolveTheEquation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tree/ConvertBinarySearchTreetoSortedDoublyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/airbnb/CSVParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/airbnb/RoundPricesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/binarysearch/FindKClosestElementsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airbnb/StreamIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/amazon/BSTDistance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/amazon/KClosestPoints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/amazon/MaximumMinimumPath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/amazon/MazeMinSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/amazon/MostCommonWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/amazon/NodeDistanceTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/amazon/PartitionLabels.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/amazon/SubstringKDistinctCharacters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/amazon/TwoSumClosest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/binarysearch/FindFirstAndLastPositionOfElementInSortedArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/binarysearch/RandomPickWithWeight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bst/InsertIntoBinarySearchTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tree/InvertBinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/unionfind/NumberOfIslandsTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/amazon/BSTDistanceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/amazon/MaximumMinimumPathTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/amazon/MazeMinStepsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/amazon/SubstringKDistinctCharactersTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/amazon/TwoSumClosestTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/array/FindAllAnagramsinaString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MergeInterval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MergeInterval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/array/MeetingRoomsTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/array/MeetingRoomsTwo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bfs/FindCheapestPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bfs/FindCheapestPrice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/design/Vector2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/design/Vector2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/miscellaneous/PalindromePairs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/miscellaneous/PalindromePairs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/quicksort/KthLargestElementInAnArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/quicksort/KthLargestElementInAnArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/slidingwindow/LongestSubstringWithAtMostTwoDistinctCharacters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slidingwindow/LongestSubstringWithAtMostTwoDistinctCharacters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/slidingwindow/MinimumWindowSubstring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slidingwindow/MinimumWindowSubstring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/miscellaneous/PalindromePairsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/miscellaneous/PalindromePairsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/slidingwindow/TestLongestSubstringWithAtMostTwoDistinctCharacters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/slidingwindow/TestLongestSubstringWithAtMostTwoDistinctCharacters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bfs/NumberOfIslands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bfs/NumberOfIslands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/design/BSTIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/design/BSTIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tree/BalancedBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tree/BalancedBinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Interval.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Interval.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MergeInterval.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MergeInterval.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/array/MeetingRoomsTwo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/array/MeetingRoomsTwo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tree/BalancedBinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tree/BalancedBinaryTree.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,35 +87,36 @@
     <session id="-439287541">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="83" />
+          <entry key="java" value="140" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="83" />
+          <entry key="JAVA" value="140" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="6889" />
+          <entry key="java" value="10549" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6889" />
+          <entry key="JAVA" value="10549" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.6" value="4" />
+          <entry key="project.open.time.6" value="5" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -140,19 +126,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tree/ConvertBinarySearchTreetoSortedDoublyLinkedList.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/amazon/TwoSumClosest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/miscellaneous/FractionToRecurringDecimal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+            <state relative-caret-position="306">
+              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,10 +138,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/stack/ExclusiveTimeOfFunctions.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bfs/NumberOfIslands.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+            <state relative-caret-position="306">
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -173,10 +150,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/design/LoggerRateLimiter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/unionfind/NumberOfIslandsTwo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="272">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -185,65 +162,64 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/binarysearch/FindKClosestElements.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MergeInterval.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="374">
+              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/twodimensionarray/ValidSudoku.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/array/MeetingRoomsTwo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bfs/FindCheapestPrice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/airbnb/StreamIterator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1955">
+              <caret line="115" column="45" selection-start-line="115" selection-start-column="45" selection-end-line="115" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dp/WordBreakTwo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/stack/SolveTheEquation.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dp/WorldBreak.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/binarysearch/FindKClosestElementsTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="64" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Collections.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="210" column="8" selection-start-line="210" selection-start-column="8" selection-end-line="210" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Arrays.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="3798" column="30" selection-start-line="3798" selection-start-column="30" selection-end-line="3798" selection-end-column="30" />
-              <folding>
-                <element signature="e#177013#177014#0" expanded="true" />
-                <element signature="e#177054#177055#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/graph/CourseScheduleTwo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+            <state relative-caret-position="289">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -273,6 +249,8 @@
       <find>getList</find>
       <find>helper</find>
       <find>visited</find>
+      <find>left</find>
+      <find>PriorityQue</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -281,32 +259,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/heap/SmallestRange.java" />
-        <option value="$PROJECT_DIR$/src/main/java/heap/FindMedianFromDataStream.java" />
-        <option value="$PROJECT_DIR$/src/main/java/heap/EmployeeFreeTime.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datastructures/NestedInteger.java" />
-        <option value="$PROJECT_DIR$/src/main/java/linkedin/NestedListWeightSum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/linkedin/NestedListWeightSumTwo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/linkedin/ShortestWordDistanceTwo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/design/MaxStack.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dp/PaintHouse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dp/PaintHouseTwo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/greedy/CanPlaceFlowers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/linkedin/FindLeavesOfBinaryTree.java" />
-        <option value="$PROJECT_DIR$/src/main/java/linkedin/RepeatedDNASequences.java" />
-        <option value="$PROJECT_DIR$/src/main/java/miscellaneous/TopKFrequentElements.java" />
-        <option value="$PROJECT_DIR$/src/main/java/heap/TopKFrequentWords.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tree/BinaryTreePostorderTraversal.java" />
-        <option value="$PROJECT_DIR$/src/main/java/array/FindAllAnagramsinaString.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dp/LongestIncreasingPathInAMatrix.java" />
-        <option value="$PROJECT_DIR$/src/main/java/slidingwindow/MinimumSizeSubarraySum.java" />
-        <option value="$PROJECT_DIR$/src/test/java/slidingwindow/TestLongestSubstringWithAtMostTwoDistinctCharacters.java" />
-        <option value="$PROJECT_DIR$/src/main/java/slidingwindow/LongestSubstringWithAtMostTwoDistinctCharacters.java" />
-        <option value="$PROJECT_DIR$/src/main/java/slidingwindow/FindAllAnagramsinaString.java" />
-        <option value="$PROJECT_DIR$/src/main/java/slidingwindow/MinimumWindowSubstring.java" />
-        <option value="$PROJECT_DIR$/src/main/java/slidingwindow/SubstringWithConcatenationOfAllWords.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dp/MaximalSquare.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dp/EditDistance.java" />
         <option value="$PROJECT_DIR$/src/main/java/array/OneEditDistance.java" />
         <option value="$PROJECT_DIR$/src/main/java/quicksort/KthLargestElementInAnArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/dp/StoneGame.java" />
@@ -319,7 +271,6 @@
         <option value="$PROJECT_DIR$/src/main/java/design/Vector2D.java" />
         <option value="$PROJECT_DIR$/src/test/java/miscellaneous/PalindromePairsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/miscellaneous/PalindromePairs.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bfs/FindCheapestPrice.java" />
         <option value="$PROJECT_DIR$/src/test/java/airbnb/Wizard.java" />
         <option value="$PROJECT_DIR$/src/main/java/airbnb/PyramidTransitionMatrix.java" />
         <option value="$PROJECT_DIR$/src/main/java/airbnb/DisplayPage.java" />
@@ -332,6 +283,33 @@
         <option value="$PROJECT_DIR$/src/test/java/binarysearch/FindKClosestElementsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/binarysearch/FindKClosestElements.java" />
         <option value="$PROJECT_DIR$/src/main/java/stack/SolveTheEquation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tree/InvertBinaryTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/binarysearch/RandomPickWithWeight.java" />
+        <option value="$PROJECT_DIR$/src/main/java/binarysearch/FindFirstAndLastPositionOfElementInSortedArray.java" />
+        <option value="$PROJECT_DIR$/src/main/java/amazon/MostCommonWord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/design/BSTIterator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bst/InsertIntoBinarySearchTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tree/BalancedBinaryTree.java" />
+        <option value="$PROJECT_DIR$/src/test/java/amazon/MazeMinStepsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/amazon/MazeMinSteps.java" />
+        <option value="$PROJECT_DIR$/src/main/java/amazon/SubstringKDistinctCharacters.java" />
+        <option value="$PROJECT_DIR$/src/main/java/amazon/PartitionLabels.java" />
+        <option value="$PROJECT_DIR$/src/main/java/amazon/MaximumMinimumPath.java" />
+        <option value="$PROJECT_DIR$/src/main/java/amazon/MaximumMinimumPathTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/amazon/SubstringKDistinctCharactersTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/amazon/MaximumMinimumPathTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/amazon/KClosestPoints.java" />
+        <option value="$PROJECT_DIR$/src/main/java/amazon/NodeDistanceTwo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/amazon/BSTDistanceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/amazon/BSTDistance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/amazon/TwoSumClosest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/amazon/TwoSumClosestTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bfs/NumberOfIslands.java" />
+        <option value="$PROJECT_DIR$/src/main/java/unionfind/NumberOfIslandsTwo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MergeInterval.java" />
+        <option value="$PROJECT_DIR$/src/main/java/array/MeetingRoomsTwo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bfs/FindCheapestPrice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/airbnb/StreamIterator.java" />
       </list>
     </option>
   </component>
@@ -348,10 +326,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1680" />
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
-    <option name="width" value="1920" />
+    <option name="width" value="1680" />
     <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -362,7 +339,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -395,7 +371,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="stack" type="462c0819:PsiDirectoryNode" />
+              <item name="airbnb" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Practices2018" type="b2602c69:ProjectViewProjectNode" />
@@ -409,6 +385,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Practices2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practices2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="amazon" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Practices2018" type="b2602c69:ProjectViewProjectNode" />
@@ -422,13 +406,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="Inord&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/tree/BinaryTreeInorderTraversal.java&#10;tiny&#9;PSI&#9;JAVA://design.EncodeAndDecodeTinyURL&#10;Course&#9;PSI&#9;JAVA://graph.CourseScheduleTwo&#10;Mer&#9;PSI&#9;JAVA://linkedlist.MergeKSortedLists&#10;Perm&#9;PSI&#9;JAVA://dfs.Permutations&#10;Chea&#9;PSI&#9;JAVA://bfs.FindCheapestPrice&#10;Palindrome&#9;PSI&#9;JAVA://miscellaneous.PalindromePairs#palindromePairs&#10;Vec&#9;PSI&#9;JAVA://design.Vector2D&#10;CS&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/test/java/airbnb/CSVParserTest.java&#10;Edit&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/dp/EditDistance.java&#10;median of&#9;PSI&#9;JAVA://binarysearch.MedianOfTwoSortedArray&#10;Qui&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/quicksort/QuickSort.java&#10;Kth&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/quicksort/KthLargestElementInAnArray.java&#10;House&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/dp/HouseRobberTwo.java&#10;Trie&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/trie/Trie.java&#10;Find All Anagrams in a String&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/array/FindAllAnagramsinaString.java&#10;Mini&#9;PSI&#9;JAVA://slidingwindow.MinimumWindowSubstring&#10;LengthOf&#9;PSI&#9;JAVA://slidingwindow.LongestSubstringWithAtMostTwoDistinctCharacters#lengthOfLongestSubstringTwoDistinct&#10;FindAll&#9;PSI&#9;JAVA://array.FindAllAnagramsinaString&#10;pos&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/tree/BinaryTreePostorderTraversal.java&#10;BS&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/dfs/SubsetsTwo.java&#10;pre&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/tree/BinaryTreePreorderTraversal.java&#10;Inor&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/tree/BinaryTreeInorderTraversal.java&#10;Longest&#9;PSI&#9;JAVA://dp.LongestIncreasingSubsequences&#10;Lru&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/design/LRUCache.java&#10;Del&#9;PSI&#9;JAVA://dp.DeleteAndEarn&#10;Top&#9;PSI&#9;JAVA://miscellaneous.TopKFrequentElements&#10;Lin&#9;PSI&#9;JAVA://linkedlist.LinkedListCycleTwo&#10;Minst&#9;PSI&#9;JAVA://design.MinStack&#10;Em&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/heap/EmployeeFreeTime.java&#10;doma&#9;PSI&#9;JAVA://array.SubdomainVisitCount&#10;post&#9;PSI&#9;JAVA://tree.BinaryTreePostorderTraversal&#10;preor&#9;PSI&#9;JAVA://tree.BinaryTreePreorderTraversal&#10;inord&#9;PSI&#9;JAVA://tree.BinaryTreeInorderTraversal&#10;Coin&#9;PSI&#9;JAVA://dp.CoinChange&#10;Tra&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/stack/TrappingRainWater.java&#10;Contain&#9;PSI&#9;JAVA://array.ContainerWithMostWater&#10;Bas&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/stack/BasicCalculatorTwo.java&#10;Trappin&#9;PSI&#9;JAVA://stack.TrappingRainWater&#10;Basic&#9;PSI&#9;JAVA://stack.BasicCalculatorTwo&#10;LRU&#9;PSI&#9;JAVA://design.LRUCache&#10;BinaryTreeUp&#9;PSI&#9;JAVA://tree.BinaryTreeUpsideDown&#10;BinaryTreeV&#9;PSI&#9;JAVA://tree.BinaryTreeVerticalOrderTraversal&#10;Per&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/dfs/PermutationsTwo.java&#10;Sub&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/dfs/SubsetsTwo.java&#10;Pe&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/dfs/PermutationsTwo.java&#10;perm&#9;PSI&#9;JAVA://dfs.PermutationsTwo&#10;Permut&#9;PSI&#9;JAVA://dfs.Permutations&#10;Copy&#9;PSI&#9;JAVA://graph.CopyListWithRandomPointer&#10;Grap&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/graph/GraphValidTree.java" />
+    <property name="SearchEverywhereHistoryKey" value="WordBrea&#9;PSI&#9;JAVA://dp.WorldBreak#wordBreak&#10;WordBreak&#9;PSI&#9;JAVA://dp.WordBreakTwo&#10;Meeting&#9;PSI&#9;JAVA://array.MeetingRoomsTwo&#10;ValidS&#9;PSI&#9;JAVA://twodimensionarray.ValidSudoku&#10;Merge&#9;PSI&#9;JAVA://MergeInterval&#10;Number of&#9;PSI&#9;JAVA://bfs.NumberOfIslands&#10;Lowes&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/tree/LowestCommonAncestorOfABinaryTree.java&#10;Wiza&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/airbnb/WizardShortestDistance.java&#10;Cheapes&#9;PSI&#9;JAVA://bfs.FindCheapestPrice#findCheapestPrice&#10;Bala&#9;PSI&#9;JAVA://tree.BalancedBinaryTree&#10;Iter&#9;PSI&#9;JAVA://design.BSTIterator&#10;Inord&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/tree/BinaryTreeInorderTraversal.java&#10;tiny&#9;PSI&#9;JAVA://design.EncodeAndDecodeTinyURL&#10;Course&#9;PSI&#9;JAVA://graph.CourseScheduleTwo&#10;Mer&#9;PSI&#9;JAVA://linkedlist.MergeKSortedLists&#10;Perm&#9;PSI&#9;JAVA://dfs.Permutations&#10;Chea&#9;PSI&#9;JAVA://bfs.FindCheapestPrice&#10;Palindrome&#9;PSI&#9;JAVA://miscellaneous.PalindromePairs#palindromePairs&#10;Vec&#9;PSI&#9;JAVA://design.Vector2D&#10;CS&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/test/java/airbnb/CSVParserTest.java&#10;Edit&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/dp/EditDistance.java&#10;median of&#9;PSI&#9;JAVA://binarysearch.MedianOfTwoSortedArray&#10;Qui&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/quicksort/QuickSort.java&#10;Kth&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/quicksort/KthLargestElementInAnArray.java&#10;House&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/dp/HouseRobberTwo.java&#10;Trie&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/trie/Trie.java&#10;Find All Anagrams in a String&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/array/FindAllAnagramsinaString.java&#10;Mini&#9;PSI&#9;JAVA://slidingwindow.MinimumWindowSubstring&#10;LengthOf&#9;PSI&#9;JAVA://slidingwindow.LongestSubstringWithAtMostTwoDistinctCharacters#lengthOfLongestSubstringTwoDistinct&#10;FindAll&#9;PSI&#9;JAVA://array.FindAllAnagramsinaString&#10;pos&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/tree/BinaryTreePostorderTraversal.java&#10;BS&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/dfs/SubsetsTwo.java&#10;pre&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/tree/BinaryTreePreorderTraversal.java&#10;Inor&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/tree/BinaryTreeInorderTraversal.java&#10;Longest&#9;PSI&#9;JAVA://dp.LongestIncreasingSubsequences&#10;Lru&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/design/LRUCache.java&#10;Del&#9;PSI&#9;JAVA://dp.DeleteAndEarn&#10;Top&#9;PSI&#9;JAVA://miscellaneous.TopKFrequentElements&#10;Lin&#9;PSI&#9;JAVA://linkedlist.LinkedListCycleTwo&#10;Minst&#9;PSI&#9;JAVA://design.MinStack&#10;Em&#9;FILE&#9;file:///Users/yaowang/Repo/Practices2018/src/main/java/heap/EmployeeFreeTime.java&#10;doma&#9;PSI&#9;JAVA://array.SubdomainVisitCount&#10;post&#9;PSI&#9;JAVA://tree.BinaryTreePostorderTraversal&#10;preor&#9;PSI&#9;JAVA://tree.BinaryTreePreorderTraversal&#10;inord&#9;PSI&#9;JAVA://tree.BinaryTreeInorderTraversal&#10;Coin&#9;PSI&#9;JAVA://dp.CoinChange&#10;Tra&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/stack/TrappingRainWater.java&#10;Contain&#9;PSI&#9;JAVA://array.ContainerWithMostWater&#10;Bas&#9;FILE&#9;file:///Users/yawang/Personal/Practices2018/src/main/java/stack/BasicCalculatorTwo.java&#10;Trappin&#9;PSI&#9;JAVA://stack.TrappingRainWater" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542607083844" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543359093772" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -454,37 +439,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FindKClosestElementsTest.test">
-    <configuration name="DisplayPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="airbnb.DisplayPage" />
-      <module name="Practices2018" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="airbnb.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Wizard" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="airbnb.Wizard" />
-      <module name="Practices2018" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="airbnb.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WizardShortestDistance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="airbnb.WizardShortestDistance" />
+  <component name="RunManager" selected="Application.Solution">
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="airbnb.Solution" />
       <module name="Practices2018" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -503,33 +460,67 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CSVParserTest.printBackslash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BSTDistanceTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Practices2018" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="airbnb.*" />
+          <option name="PATTERN" value="amazon.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="airbnb" />
-      <option name="MAIN_CLASS_NAME" value="airbnb.CSVParserTest" />
-      <option name="METHOD_NAME" value="printBackslash" />
+      <option name="PACKAGE_NAME" value="amazon" />
+      <option name="MAIN_CLASS_NAME" value="amazon.BSTDistanceTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindKClosestElementsTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BSTDistanceTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Practices2018" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="binarysearch.*" />
+          <option name="PATTERN" value="amazon.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="binarysearch" />
-      <option name="MAIN_CLASS_NAME" value="binarysearch.FindKClosestElementsTest" />
+      <option name="PACKAGE_NAME" value="amazon" />
+      <option name="MAIN_CLASS_NAME" value="amazon.BSTDistanceTest" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaximumMinimumPathTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Practices2018" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="amazon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="amazon" />
+      <option name="MAIN_CLASS_NAME" value="amazon.MaximumMinimumPathTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TwoSumClosestTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Practices2018" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="amazon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="amazon" />
+      <option name="MAIN_CLASS_NAME" value="amazon.TwoSumClosestTest" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -552,19 +543,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Wizard" />
-      <item itemvalue="Application.WizardShortestDistance" />
-      <item itemvalue="Application.DisplayPage" />
-      <item itemvalue="JUnit.CSVParserTest.printBackslash" />
-      <item itemvalue="JUnit.FindKClosestElementsTest.test" />
+      <item itemvalue="JUnit.MaximumMinimumPathTest.test" />
+      <item itemvalue="JUnit.BSTDistanceTest.test" />
+      <item itemvalue="JUnit.BSTDistanceTest.test2" />
+      <item itemvalue="JUnit.TwoSumClosestTest.test" />
+      <item itemvalue="Application.Solution" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FindKClosestElementsTest.test" />
-        <item itemvalue="JUnit.CSVParserTest.printBackslash" />
-        <item itemvalue="Application.DisplayPage" />
-        <item itemvalue="Application.WizardShortestDistance" />
-        <item itemvalue="Application.Wizard" />
+        <item itemvalue="Application.Solution" />
+        <item itemvalue="JUnit.TwoSumClosestTest.test" />
+        <item itemvalue="JUnit.BSTDistanceTest.test" />
+        <item itemvalue="JUnit.BSTDistanceTest.test2" />
+        <item itemvalue="JUnit.MaximumMinimumPathTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -669,50 +660,52 @@
       <workItem from="1541983811538" duration="3362000" />
       <workItem from="1542091192056" duration="3808000" />
       <workItem from="1542339497578" duration="1407000" />
-      <workItem from="1542583928533" duration="3912000" />
+      <workItem from="1542583928533" duration="5430000" />
+      <workItem from="1543017540337" duration="24324000" />
+      <workItem from="1543362648232" duration="385000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PalindromePairsTest_test - 2018.11.10 at 23h 56m 50s.xml">
-      <configuration name="PalindromePairsTest.test" configurationId="JUnit" />
+    <history-entry file="BSTDistanceTest_test - 2018.11.24 at 23h 39m 46s.xml">
+      <configuration name="BSTDistanceTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PalindromePairsTest_test - 2018.11.10 at 23h 57m 11s.xml">
-      <configuration name="PalindromePairsTest.test" configurationId="JUnit" />
+    <history-entry file="BSTDistanceTest_test - 2018.11.24 at 23h 40m 34s.xml">
+      <configuration name="BSTDistanceTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PalindromePairsTest_test - 2018.11.10 at 23h 57m 21s.xml">
-      <configuration name="PalindromePairsTest.test" configurationId="JUnit" />
+    <history-entry file="BSTDistanceTest_test - 2018.11.24 at 23h 49m 30s.xml">
+      <configuration name="BSTDistanceTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PalindromePairsTest_test - 2018.11.10 at 23h 57m 26s.xml">
-      <configuration name="PalindromePairsTest.test" configurationId="JUnit" />
+    <history-entry file="BSTDistanceTest_test - 2018.11.24 at 23h 50m 52s.xml">
+      <configuration name="BSTDistanceTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RoundPricesTest_test - 2018.11.11 at 16h 49m 49s.xml">
-      <configuration name="RoundPricesTest.test" configurationId="JUnit" />
+    <history-entry file="BSTDistanceTest_test2 - 2018.11.24 at 23h 53m 05s.xml">
+      <configuration name="BSTDistanceTest.test2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CSVParserTest_printBackslash - 2018.11.15 at 10h 28m 21s.xml">
-      <configuration name="CSVParserTest.printBackslash" configurationId="JUnit" />
+    <history-entry file="BSTDistanceTest_test - 2018.11.24 at 23h 53m 15s.xml">
+      <configuration name="BSTDistanceTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CSVParserTest_printBackslash - 2018.11.15 at 10h 28m 31s.xml">
-      <configuration name="CSVParserTest.printBackslash" configurationId="JUnit" />
+    <history-entry file="BSTDistanceTest_test2 - 2018.11.24 at 23h 53m 27s.xml">
+      <configuration name="BSTDistanceTest.test2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CSVParserTest_printBackslash - 2018.11.15 at 10h 28m 49s.xml">
-      <configuration name="CSVParserTest.printBackslash" configurationId="JUnit" />
+    <history-entry file="BSTDistanceTest_test2 - 2018.11.24 at 23h 55m 58s.xml">
+      <configuration name="BSTDistanceTest.test2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FindKClosestElementsTest_test - 2018.11.18 at 19h 17m 30s.xml">
-      <configuration name="FindKClosestElementsTest.test" configurationId="JUnit" />
+    <history-entry file="BSTDistanceTest_test - 2018.11.24 at 23h 56m 13s.xml">
+      <configuration name="BSTDistanceTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FindKClosestElementsTest_test - 2018.11.18 at 19h 18m 41s.xml">
-      <configuration name="FindKClosestElementsTest.test" configurationId="JUnit" />
+    <history-entry file="TwoSumClosestTest_test - 2018.11.25 at 00h 32m 33s.xml">
+      <configuration name="TwoSumClosestTest.test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268093000" />
+    <option name="totallyTimeSpent" value="294320000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1680" y="23" width="1920" height="1027" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19648562" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16605617" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -721,8 +714,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.14438502" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.37823835" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.10695187" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.12192513" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1194,6 +1187,24 @@
           <properties />
           <option name="timeStamp" value="150" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/amazon/BSTDistanceTest.java</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/airbnb/StreamIterator.java</url>
+          <line>119</line>
+          <properties />
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/airbnb/StreamIterator.java</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="153" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -1201,387 +1212,354 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/slidingwindow/MinimumWindowSubstring.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tree/InvertBinaryTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/slidingwindow/FindAllAnagramsinaString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/slidingwindow/SubstringWithConcatenationOfAllWords.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dp/MaximalSquare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dp/HouseRobberTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/OneEditDistance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/trie/Trie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/airbnb/Coding + CrossFunctional/Coding/BankSystem.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/quicksort/QuickSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/quicksort/KthLargestElementInAnArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/binarysearch/MedianOfTwoSortedArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dp/StoneGame.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/binarysearch/RandomPickWithWeight.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dp/StoneGameLintCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" column="61" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dp/BurstBalloons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dp/EditDistance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/airbnb/ConsecutiveNumbersSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/airbnb/IPToCIDR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/slidingwindow/TestLongestSubstringWithAtMostTwoDistinctCharacters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="421" column="25" selection-start-line="421" selection-start-column="25" selection-end-line="421" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/airbnb/Coding + CrossFunctional/Coding/Vector2DIterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-111">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/design/Vector2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/miscellaneous/PalindromePairs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="95" selection-start-line="42" selection-start-column="95" selection-end-line="42" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/Airbnb/Coding/WizardShortestDistance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2193">
-          <caret line="129" selection-start-line="129" selection-end-line="158" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bfs/FindCheapestPrice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/airbnb/ThreeSumTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/miscellaneous/PalindromePairsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/airbnb/RoundPrices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="77" selection-start-line="42" selection-start-column="77" selection-end-line="42" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/airbnb/RoundPricesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/airbnb/Flatten2DVectorWithRemove.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/airbnb/WizardShortestDistance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" column="25" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dfs/Permutations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/Airbnb/Coding/PyramidTransition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/airbnb/Coding + CrossFunctional/Coding/PyramidTransition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="16" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/airbnb/PyramidTransitionMatrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/airbnb/CSVParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/design/EncodeAndDecodeTinyURL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tree/BinaryTreeInorderTraversal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/airbnb/CSVParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/linkedlist/MergeKSortedLists.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/airbnb/DisplayPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/graph/CourseScheduleTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/miscellaneous/Implementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tree/ConvertBinarySearchTreetoSortedDoublyLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/miscellaneous/FractionToRecurringDecimal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/stack/ExclusiveTimeOfFunctions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/design/LoggerRateLimiter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="3798" column="30" selection-start-line="3798" selection-start-column="30" selection-end-line="3798" selection-end-column="30" />
-          <folding>
-            <element signature="e#177013#177014#0" expanded="true" />
-            <element signature="e#177054#177055#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="210" column="8" selection-start-line="210" selection-start-column="8" selection-end-line="210" selection-end-column="8" />
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/binarysearch/FindKClosestElementsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="170">
           <caret line="14" column="64" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2907">
+          <caret line="210" column="8" selection-start-line="210" selection-start-column="8" selection-end-line="210" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63359">
+          <caret line="3798" column="30" selection-start-line="3798" selection-start-column="30" selection-end-line="3798" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/binarysearch/FindFirstAndLastPositionOfElementInSortedArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/amazon/MostCommonWord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/binarysearch/FindKClosestElements.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/design/BSTIterator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        <state relative-caret-position="153">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bst/InsertIntoBinarySearchTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tree/BalancedBinaryTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/amazon-oa/BinaryTreeLCA.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/amazon-oa/MostFrequentWords.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/airbnb/WizardShortestDistance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/amazon-oa/ValidParentheses.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/amazon-oa/AnagramsInString.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/amazon-oa/RotateImage.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/amazon-oa/MazeMinSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" selection-start-line="10" selection-end-line="54" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/amazon-oa/ReorderLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/amazon-oa/MaxAverageOfTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/amazon-oa/SubstringKDistinctCharacters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="61" column="3" selection-start-line="61" selection-start-column="3" selection-end-line="69" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/amazon/MazeMinStepsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/amazon/SubstringKDistinctCharacters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/stack/SolveTheEquation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/amazon/PartitionLabels.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+        <state relative-caret-position="187">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/amazon/MaximumMinimumPathTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/amazon/MaximumMinimumPath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/amazon/SubstringKDistinctCharactersTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/amazon/MaximumMinimumPathTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/amazon-oa/UniquePathsII.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/amazon/BSTDistanceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/amazon-oa/NodeDistance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" selection-start-line="25" selection-end-line="120" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/amazon-oa/MinimumPathSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/amazon/TwoSumClosestTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/amazon-oa/BaseBallScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="86" column="27" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/amazon-oa/RevserseSecondHalfList.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/amazon-oa/MovieNetwork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-47" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tree/LowestCommonAncestorOfABinaryTree.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/amazon/MazeMinSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="110" column="47" selection-start-line="110" selection-start-column="47" selection-end-line="110" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/amazon/NodeDistanceTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/amazon/BSTDistance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/amazon-oa/LowestCommonSupervisor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="123" selection-start-line="108" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/amazon/KClosestPoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/amazon/TwoSumClosest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bfs/NumberOfIslands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/unionfind/NumberOfIslandsTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MergeInterval.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/twodimensionarray/ValidSudoku.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/array/MeetingRoomsTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bfs/FindCheapestPrice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/airbnb/StreamIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1955">
+          <caret line="115" column="45" selection-start-line="115" selection-start-column="45" selection-end-line="115" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dp/WordBreakTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dp/WorldBreak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>

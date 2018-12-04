@@ -3,6 +3,10 @@ package tree;
 import datastructures.TreeNode;
 
 public class BalancedBinaryTree {
+
+    // 还可以采用ResultType, 同时返回isBalanced和TreeDepth, 这种方法更正统一点
+    // 本题的方法其实有一些hacky,相当于return value同时用于表示tree depth和是否balanced
+
     public boolean isBalanced(TreeNode root) {
        return treeDepth(root) != -1;
     }

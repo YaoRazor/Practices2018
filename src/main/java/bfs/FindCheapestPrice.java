@@ -19,7 +19,7 @@ public class FindCheapestPrice {
 
         }
 
-        PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> {return o1[0]-o2[0];});
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(o -> o[0]));
 
         // 用Visited来防止pop出已经记录过的节点
         Set<Integer> visited = new HashSet<>();

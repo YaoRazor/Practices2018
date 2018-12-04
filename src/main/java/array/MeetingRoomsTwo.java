@@ -5,6 +5,61 @@ import java.util.*;
 
 public class MeetingRoomsTwo {
 
+
+    class MeetingEvent {
+
+        int time;
+        int eventType;  // 0 means end, 1 means start
+
+        public MeetingEvent(int time, int eventType) {
+            this.time = time;
+            this.eventType = eventType;
+        }
+
+    }
+
+
+    // 这是扫描线算法的解
+    public int minMeetingRoomsSweepingLine(Interval[] intervals) {
+
+        if(intervals==null || intervals.length==0) {
+            return 0;
+        }
+
+
+        PriorityQueue<MeetingEvent> pq = new PriorityQueue<>(
+                (a, b) -> {
+                    if(a.time==b.time) {
+                        return a.eventType-b.eventType;
+                    } else {
+                        return a.time-b.time;
+                    }
+                }
+        );
+
+        for(Interval interval: intervals) {
+            pq.add(new MeetingEvent(interval.start, 1));
+            pq.add(new MeetingEvent(interval.end, 0));
+        }
+
+        int cnt = 0;
+        int ans = 0;
+
+        while(!pq.isEmpty()) {
+            MeetingEvent event = pq.poll();
+
+            if(event.eventType==1) {
+                cnt++;
+                ans = Math.max(ans, cnt);
+            } else {
+                cnt--;
+            }
+
+        }
+
+        return ans;
+    }
+
         public int minMeetingRooms(Interval[] intervals) {
 
             PriorityQueue<Integer> queue = new PriorityQueue<>();
