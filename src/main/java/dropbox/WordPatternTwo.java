@@ -1,81 +1,66 @@
 package dropbox;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class WordPatternTwo {
     public boolean wordPatternMatch(String pattern, String str) {
 
-        if(pattern==null || str==null) {
-            return false;
-        }
+        Map<Character, String> map = new HashMap<>();
+        //只要有一个set就可以了
+        Set<String> set = new HashSet<>();
 
-        Map<Character, String> map1 = new HashMap<>();
-        Map<String, Character> map2 = new HashMap<>();
-
-        return wordPatternMatch(pattern, str, 0, 0, map1, map2);
-
-
+        return dfs(pattern, str, 0, map, set);
     }
 
 
-    // i is the startPoint in the pattern and j is the startPoint in the string to match
-    private boolean wordPatternMatch(String pattern, String str, int i, int j, Map<Character, String> map1, Map<String, Character> map2) {
+    private boolean dfs(String pattern, String str, int start, Map<Character, String> map, Set<String> set) {
 
-        if(i==pattern.length() && j==str.length()) {
-            return true;
-        } else if(i==pattern.length() || j==str.length()) {
-            return false;
-        }
+        if(start==pattern.length()) {
 
-        Character cur = pattern.charAt(i);
-
-        if(map1.containsKey(cur)) {
-
-            String mappedString = map1.get(cur);
-
-            if(j+mappedString.length()>str.length()) {
+            if(str.equals("")) {
+                return true;
+            } else {
                 return false;
             }
 
+        }
 
-            if(!str.substring(j, j+mappedString.length()).equals(mappedString)) {
+        char cur = pattern.charAt(start);
+
+        if(map.containsKey(cur)) {
+
+            String match = map.get(cur);
+            if(!str.startsWith(match)) {
                 return false;
             } else {
-                return wordPatternMatch(pattern, str, i+1, j+mappedString.length(), map1, map2);
+                return dfs(pattern, str.substring(match.length()), start+1, map, set);
             }
-
-
-        } else {
-
-            // Try to create a new mapping
-            for(int k = j+1; k<=str.length(); k++) {
-
-                String subString = str.substring(j, k);
-
-                if(map2.containsKey(subString)) {
-                    continue;
-                } else {
-
-
-                    map1.put(cur, subString);
-                    map2.put(subString, cur);
-
-                    if(wordPatternMatch(pattern, str, i+1, k, map1, map2)) {
-                        return true;
-                    }
-
-                    map1.remove(cur);
-                    map2.remove(subString);
-
-                }
-
-
-            }
-
-            return false;
 
         }
+
+        for(int i=1; i<=str.length(); i++) {
+            String subString = str.substring(0, i);
+
+            if(set.contains(subString)) {
+                continue;
+            }
+
+            map.put(cur, subString);
+            set.add(subString);
+
+            if(dfs(pattern, str.substring(i), start+1, map, set)) {
+                return true;
+            } else {
+                //注意这里有一个backtracking
+                map.remove(cur);
+                set.remove(subString);
+            }
+        }
+
+        return false;
 
     }
 }
