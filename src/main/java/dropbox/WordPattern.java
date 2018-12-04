@@ -1,42 +1,47 @@
 package dropbox;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class WordPattern {
     public boolean wordPattern(String pattern, String str) {
 
-        Map<Character, String> map1 = new HashMap<>();
-        Map<String, Character> map2 = new HashMap<>();
-
-        String[] token = str.split("\\s+");
-
-        if(token.length!=pattern.length()) {
+        if(pattern==null || pattern.length()==0) {
             return false;
         }
 
+        String[] array = str.split("\\s+");
 
-        for(int i=0; i<token.length; i++) {
+        if(pattern.length()!=array.length) {
+            return false;
+        }
 
-            Character cur = pattern.charAt(i);
+        Map<Character, String> map = new HashMap<>();
+        Set<String> set = new HashSet<>();
 
-            if(map1.containsKey(cur)) {
+        for(int i=0; i<pattern.length(); i++) {
 
-                if(!token[i].equals(map1.get(cur))) {
+            char cur = pattern.charAt(i);
+
+            if(!map.containsKey(cur)) {
+                if(set.contains(array[i])) {
                     return false;
                 }
+
+                map.put(cur, array[i]);
+                set.add(array[i]);
+
             } else {
-
-                if(map2.containsKey(token[i])) {
+                if(!array[i].equals(map.get(cur))) {
                     return false;
                 }
-
-                map1.put(cur, token[i]);
-                map2.put(token[i], cur);
-
             }
 
+
         }
+
 
         return true;
 
