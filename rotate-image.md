@@ -33,6 +33,7 @@ Just Remember this method, no need to think too much on this:
             int start = 0;
             int end = m-1;
 
+            // Think of it as a reverse makes it much simpler
             while(start<end) {
                 swap(matrix, start, i, end, i);
                 start++;
