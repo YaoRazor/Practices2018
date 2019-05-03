@@ -9,3 +9,7 @@
 
 * [Untitled](array/untitled.md)
 
+## BinarySearch
+
+* [First bad version](binarysearch/first-bad-version.md)
+
