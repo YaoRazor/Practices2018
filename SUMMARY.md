@@ -13,3 +13,7 @@
 
 * [First bad version](binarysearch/first-bad-version.md)
 
+## Dynamic Programming
+
+* [House Robber](dynamic-programming/house-robber.md)
+
