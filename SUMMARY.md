@@ -21,3 +21,7 @@
 
 * [Palindrome Linked Listitled](linkedlist/palindrome-linked-listitled.md)
 
+## BitManipulation
+
+* [Reverse Bits](bitmanipulation/reverse-bits.md)
+
