@@ -1,5 +1,6 @@
 package airbnb;
 
+import array.ConsecutiveNumbersSum;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;

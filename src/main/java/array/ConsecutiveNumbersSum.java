@@ -1,4 +1,4 @@
-package airbnb;
+package array;
 
 public class ConsecutiveNumbersSum {
 

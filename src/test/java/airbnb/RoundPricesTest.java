@@ -16,6 +16,8 @@ public class RoundPricesTest {
 
         List<Integer> ans = roundPrices.getNearlyArrayWithSameSum(test, 10);
 
+        System.out.println(ans);
+
         return;
 
 

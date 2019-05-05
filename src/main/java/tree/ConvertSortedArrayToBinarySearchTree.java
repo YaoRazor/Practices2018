@@ -11,6 +11,7 @@ public class ConvertSortedArrayToBinarySearchTree {
         return sortedArrayToBST(nums, 0, nums.length-1);
     }
 
+    // Whether you need a helper function or not depends on whether original problem ans sub-problem share the same interface
     private TreeNode sortedArrayToBST(int[] nums, int start, int end) {
         if(start>end) {
             return null;

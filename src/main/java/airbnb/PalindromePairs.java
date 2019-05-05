@@ -1,4 +1,4 @@
-package miscellaneous;
+package airbnb;
 
 import java.util.*;
 
@@ -10,7 +10,6 @@ public class PalindromePairs {
     public List<List<Integer>> palindromePairs(String[] words) {
 
         List<List<Integer>> ans = new ArrayList<>();
-
         if(words==null || words.length==0) {
             return ans;
         }
@@ -20,7 +19,6 @@ public class PalindromePairs {
         for(int i=0; i<words.length; i++) {
             map.put(new StringBuilder(words[i]).reverse().toString(), i);
         }
-
 
         for(int i=0; i< words.length; i++) {
 
@@ -32,30 +30,22 @@ public class PalindromePairs {
                 String left = cur.substring(0, j);
                 String right = cur.substring(j);
 
-
+                // map.get(right)!=i, 确保不是自己和自己形成Palindrome
                 if(isPalindrome(left) && map.containsKey(right) && map.get(right)!=i) {
-
                     ans.add(Arrays.asList(map.get(right), i));
-
                 }
-
 
                 // right.length()!=0是用来防止互为reverse这种情况，比如对于abcd和dcba, 不会把abcddcba和dcbaabcd各计算两次
                 if(isPalindrome(right) && map.containsKey(left) &&map.get(left)!=i && right.length()!=0) {
                     ans.add(Arrays.asList(i, map.get(left)));
                 }
 
-
             }
-
-
 
         }
 
         return ans;
     }
-
-
 
     private boolean isPalindrome(final String s) {
 

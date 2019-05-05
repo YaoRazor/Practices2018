@@ -11,34 +11,40 @@ public class IPToCIDR {
         List<String> ans = new ArrayList<>();
 
         while (n>0) {
-            System.out.println(start);
-            System.out.println(n);
-            long currentLength = Math.min(Long.lowestOneBit(start),Long.highestOneBit(n));
-            int mask = 32- Long.numberOfTrailingZeros(currentLength); // 33 is a keypoint here
-            ans.add(LongToIp(start)+"/"+mask);
-            start+= 1<< (32-mask);
-            n-= 1<<(32-mask);
 
+            long step = start & -start;
+            while (step> n) {
+                step/=2;
+            }
+
+            ans.add(LongToIp(start, step));
+
+            start+=step;
+            n-=step;
         }
 
         return ans;
 
     }
 
+    protected String LongToIp(long start, long step) {
 
-    protected String LongToIp(long start) {
-        return String.format("%s.%s.%s.%s", (start>>24)%256, (start>>16)%256, (start>>8)%256, start %256);
+        int key = 33;
+
+        while(step>0) {
+            key--;
+            step/=2;
+        }
+
+        return String.format("%s.%s.%s.%s", (start>>24)&255, (start>>16)&255, (start>>8)&255, start&255) + "/" + key;
     }
 
     protected long ipToLong(final String ip) {
 
         long ans = 0;
         for(String s : ip.split("\\.")) {
-
             ans= ans*256+Integer.parseInt(s);
-
         }
         return ans;
     }
-
 }

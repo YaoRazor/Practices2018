@@ -1,5 +1,6 @@
 package airbnb;
 
+import array.ThreeSum;
 import org.junit.Test;
 
 public class ThreeSumTest {

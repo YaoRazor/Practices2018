@@ -1,30 +1,30 @@
 package bst;
 
-/**
- * Created by yawang on 3/11/18.
- */
-class VersionControl {
+
+public class FirstBadVersion {
+    public int firstBadVersion(int n) {
+        int start = 1;
+        int end = n;
+
+        while(start<end) {
+            // using "(end-start)/2 + start" instead of "(start+end)/2" to
+            // prevent stackoverflow
+            int mid = (end-start)/2 + start;
+
+            if(isBadVersion(mid)) {
+                //Because we want to find the first bad version, that's why it
+                // is "end=mid" instead of "end = mid-1"
+                end = mid;
+            } else {
+                start = mid+1;
+            }
+
+        }
+        // Eventually start and end will meet, therefore either start or end will do
+        return end;
+    }
+
     boolean isBadVersion(int version) {
         return false;
-    }
-}
-
-
-public class FirstBadVersion extends VersionControl{
-    public int firstBadVersion(int n) {
-
-        int left = 1;
-        int right = n;
-        while (left < right) {
-            //不要用加，而是用left + (right - left) / 2，可以去除overflow的问题
-            int mid = left + (right - left) / 2;
-            if (isBadVersion(mid)) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left; // right也可以，eventually left and right will meet
-
     }
 }

@@ -1,3 +1,5 @@
+package linkedlist;
+
 import datastructures.ListNode;
 
 public class PalindromeLinkedList {
@@ -16,6 +18,7 @@ public class PalindromeLinkedList {
             fast = fast.next.next;
         }
 
+        // Always reverse slow.next
         ListNode reversedSecondHalf = reverseList(slow.next);
 
         while (reversedSecondHalf !=null) {

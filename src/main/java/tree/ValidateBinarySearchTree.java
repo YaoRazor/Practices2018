@@ -1,33 +1,33 @@
 package tree;
 
 
-import java.util.Stack;
-
 import datastructures.TreeNode;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 
 public class ValidateBinarySearchTree {
     public boolean isValidBST(TreeNode root) {
-        Stack<TreeNode> formerNodes = new Stack<>();
+        Integer pre = null;
+        Deque<TreeNode> deque = new ArrayDeque<>();
 
-        TreeNode pre = null;
+        TreeNode cur = root;
 
-        while(root!=null || !formerNodes.isEmpty()) {
-
-            while(root!=null) {
-                formerNodes.push(root);
-                root = root.left;
+        while(cur!=null || !deque.isEmpty()) {
+            while(cur!=null) {
+                deque.addFirst(cur);
+                cur= cur.left;
             }
 
-            root = formerNodes.pop();
+            cur = deque.pollFirst();
 
-            if(pre!=null && pre.val>=root.val) {
+            if(pre!=null && pre>=cur.val) {
                 return false;
             }
 
-            pre = root;
-            root = root.right;
-
+            pre = cur.val;
+            cur = cur.right;
         }
 
         return true;

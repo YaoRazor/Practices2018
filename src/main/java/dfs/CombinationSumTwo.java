@@ -7,41 +7,32 @@ import java.util.List;
 
 public class CombinationSumTwo {
 
-    List<List<Integer>> ans = new ArrayList<>();
-
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
-
-        LinkedList<Integer> cur = new LinkedList<>();
         Arrays.sort(candidates);
-        dfs(candidates, 0, target, cur);
-
+        List<List<Integer>> ans = new ArrayList<>();
+        LinkedList<Integer> cur = new LinkedList<>();
+        dfs(candidates, 0, cur, ans, target);
         return ans;
     }
 
-
-
-    private void dfs(int[] candidates, int start, int target, LinkedList<Integer> cur) {
-
+    private void dfs(int[] candidates, int start, LinkedList<Integer> cur, List<List<Integer>> ans, int target) {
         if(target==0) {
             ans.add(new LinkedList<>(cur));
             return;
         }
 
         for(int i=start; i<candidates.length; i++) {
-
             if(candidates[i]>target) {
                 return;
             }
 
             cur.add(candidates[i]);
-            dfs(candidates, i+1, target-candidates[i], cur);
+            dfs(candidates, i+1, cur, ans, target-candidates[i]);
             cur.removeLast();
 
-            // Key point to remove duplicates
-            while (i+1<candidates.length && candidates[i+1]==candidates[i]) {
+            while(i+1<candidates.length && candidates[i+1]==candidates[i]) {
                 i++;
             }
         }
-
     }
 }

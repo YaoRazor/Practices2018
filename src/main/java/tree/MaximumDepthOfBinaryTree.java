@@ -15,7 +15,6 @@ public class MaximumDepthOfBinaryTree {
         return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
     }
 
-
     public int maxDepthBFS(TreeNode root) {
         if(root == null) {
             return 0;

@@ -1,8 +1,6 @@
 package bitmanupulation;
 
-/**
- * Created by yawang on 4/28/18.
- */
+
 public class ReverseBits {
     // you need treat n as an unsigned value
     public int reverseBits(int n) {
@@ -17,7 +15,7 @@ public class ReverseBits {
     }
 
 
-    //这里是按照四位一组，如果想要再优化，可以按照八位一组
+    //这里是按照四位一组，如果想要再优化速度，可以八位一组，那样的话需要的表就会大一些
     public int tableLookUp(int n) {
         int[] tb = {0,8,4,12,2,10,6,14,1,9,5,13,3,11,7,15};
         int ret = 0;

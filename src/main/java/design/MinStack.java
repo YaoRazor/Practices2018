@@ -1,42 +1,41 @@
 package design;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
-//我们这个方法使用了两个stack, 其实还可以通过amend数据结构来实现
-//但是思想是一样的，都是需要额外的内存
+// 有使用一个stack实现的版本，但是和两个stack的本质是一样的
 public class MinStack {
+    Deque<Integer> stack;
+    Deque<Integer> minStack;
+
     /** initialize your data structure here. */
-
-    Stack<Integer> internalStack;
-    Stack<Integer> min;
-
     public MinStack() {
-        internalStack = new Stack<>();
-        min = new Stack<>();
+        stack = new ArrayDeque<>();
+        minStack = new ArrayDeque<>();
     }
 
     public void push(int x) {
-        internalStack.push(x);
 
-        if(min.isEmpty()|| x<=min.peek()) { //这里又两个要点：一个是check empty，还有一个是<=
-            min.push(x);
+        stack.push(x);
+
+        if(minStack.isEmpty() || x<=getMin()) {
+            minStack.push(x);
         }
-
     }
 
     public void pop() {
-        if(internalStack.peek()==getMin()) {
-            min.pop();
-        }
 
-        internalStack.pop();
+        Integer cur = stack.pop();
+        if(cur==getMin()) {
+            minStack.pop();
+        }
     }
 
     public int top() {
-        return internalStack.peek();
+        return stack.peek();
     }
 
     public int getMin() {
-        return min.peek();
+        return minStack.peek();
     }
 }

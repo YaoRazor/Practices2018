@@ -1,5 +1,6 @@
 package miscellaneous;
 
+import airbnb.PalindromePairs;
 import org.junit.Test;
 
 import java.util.HashMap;

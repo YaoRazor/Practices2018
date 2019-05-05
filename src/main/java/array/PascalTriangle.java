@@ -2,7 +2,6 @@ package array;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class PascalTriangle {
@@ -10,26 +9,19 @@ public class PascalTriangle {
 
         List<List<Integer>> ans = new ArrayList<>();
 
-        if(numRows==0) {
-            return ans;
-        }
+        for(int i=0; i<numRows; i++) {
 
-        List<Integer> init = Arrays.asList(1);
-        ans.add(init);
+            List<Integer> tmp = new ArrayList<>();
 
-        for(int i=1; i<numRows; i++) {
-
-            List<Integer> cur = new ArrayList<>();
-            for(int j=0; j<i+1;j++) {
+            for(int j=0; j<=i; j++) {
                 if(j==0 || j==i) {
-                    cur.add(1);
+                    tmp.add(1);
                 } else {
-                    cur.add(ans.get(i-1).get(j-1)+ans.get(i-1).get(j));
+                    tmp.add(ans.get(i-1).get(j-1) + ans.get(i-1).get(j));
                 }
-
             }
 
-            ans.add(cur);
+            ans.add(tmp);
 
         }
 

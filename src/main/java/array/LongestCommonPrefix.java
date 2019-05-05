@@ -3,32 +3,26 @@ package array;
 
 public class LongestCommonPrefix {
     public String longestCommonPrefix(String[] strs) {
-        StringBuilder sb = new StringBuilder();
-
-        if(strs==null || strs.length == 0) {
-            return sb.toString();
+        if(strs==null || strs.length==0) {
+            return "";
         }
 
-        int length = strs[0].length();
-        boolean isCommon = true;
+        StringBuilder sb = new StringBuilder();
 
-        for(int i=0; i<length; i++) {
+        for(int i=0; i<strs[0].length(); i++) {
 
-            char tmp = strs[0].charAt(i);
+            char cur = strs[0].charAt(i);
 
-            for(int j=1; j<strs.length; j++) {
-                if(i>=strs[j].length() || tmp!=strs[j].charAt(i)) {
-                    isCommon = false;
-                    break;
+            for(int j = 1; j<strs.length; j++) {
+
+                // i>=strs[j].length() is the key here, don't forget to add it
+                if(i>=strs[j].length() || cur!=strs[j].charAt(i)) {
+                    return sb.toString();
                 }
 
             }
 
-            if(isCommon) {
-                sb.append(tmp);
-            } else {
-                break;
-            }
+            sb.append(cur);
         }
 
         return sb.toString();

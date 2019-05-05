@@ -6,6 +6,9 @@ import java.util.List;
 
 public class NQueens {
 
+
+
+    // NQuuens本质上其实是一个一维DFS，只不过在buildString和isValid上稍微需要实现一下
     public List<List<String>> solveNQueens(int n) {
 
         List<List<String>> ans = new ArrayList<>();

@@ -1,31 +1,30 @@
 package array;
 
-
-import java.util.Arrays;
+import java.util.LinkedList;
 
 public class PlusOne {
     public int[] plusOne(int[] digits) {
-        if(digits == null || digits.length == 0) {
-            return digits;
-        }
-
-        int carry = 0;
-        int tmp = 0;
-
-        int[] result = new int[digits.length+1];
+        LinkedList<Integer> ans = new LinkedList<>();
+        boolean isCarry = true;
 
         for(int i=digits.length-1; i>=0; i--) {
-            tmp = digits[i]+ carry;
-            result[i+1] = tmp%10;
-            carry = tmp/10;
+            int cur = digits[i] + (isCarry? 1:0);
+            isCarry = cur>=10;
+            cur%=10;
+            ans.addFirst(cur);
         }
 
-        if(carry>0) {
-            result[0] = 1;
-            return result;
-        } else {
-            return Arrays.copyOfRange(result, 1, digits.length+1);
+        if(isCarry) {
+            ans.addFirst(1);
         }
 
+        int[] ret = new int[ans.size()];
+        int i = 0;
+
+        for(int num: ans) {
+            ret[i++] = num;
+        }
+
+        return ret;
     }
 }

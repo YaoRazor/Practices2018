@@ -1,64 +1,64 @@
 package array;
 
-public class StringToInteger {
+
+
+class Solution {
     public int myAtoi(String str) {
-
-        if(str==null) {
+        if(str==null || str.length()==0) {
             return 0;
         }
 
-        str = str.trim();
-        if(str.length()==0) {
-            return 0;
-        }
+        int i=0;
 
-        int start = 0;
-
-        boolean isPostive = true;
-
-        if(str.charAt(0)=='+') {
-            start = 1;
-        } else if(str.charAt(0)=='-'){
-            start = 1;
-            isPostive = false;
-        }
-
-
-        if(isSpecialCase(str, start)) {
-            return 0;
-        }
-
-        long ans =0;
-
-        while(start< str.length() && Character.isDigit(str.charAt(start))) {
-            ans = ans*10 + (long)(str.charAt(start)-'0');
-            start++;
-            if(ans>(0l-(long)Integer.MIN_VALUE)) {
+        // Remove leading zeroes
+        while(i<str.length()) {
+            if(str.charAt(i)==' ') {
+                i++;
+            } else {
                 break;
             }
         }
 
-        if(!isPostive) {
-            ans = 0-ans;
+        // Check whether it has reached the end
+        if(i>=str.length()) {
+            return 0;
         }
 
-        if(ans > Integer.MAX_VALUE) {
-            return Integer.MAX_VALUE;
-        } else if(ans< Integer.MIN_VALUE) {
+        return parseInt(str, i);
+    }
+
+    private int parseInt(String s, int i) {
+        boolean isNegative = false;
+        long ans = 0;
+
+        // Check sign
+        if(s.charAt(i)=='-' || s.charAt(i)=='+') {
+            isNegative = s.charAt(i)=='-'? true: false;
+            i++;
+        }
+
+        // Check number
+        for(; i<s.length(); i++) {
+            if(Character.isDigit(s.charAt(i))) {
+                ans = ans*10 + (s.charAt(i)-'0');
+                // Handle overflow
+                if(ans> (long)Integer.MAX_VALUE) {
+                    break;
+                }
+            } else {
+                break;
+            }
+
+        }
+
+        ans = isNegative? -ans: ans;
+
+        if(ans<Integer.MIN_VALUE) {
             return Integer.MIN_VALUE;
+        } else if(ans>Integer.MAX_VALUE) {
+            return Integer.MAX_VALUE;
         } else {
             return (int)ans;
         }
-
-    }
-
-
-    private boolean isSpecialCase(String str, int start) {
-
-        if(start>=str.length() || !Character.isDigit(str.charAt(start))) {
-            return true;
-        }
-        return false;
-
     }
 }

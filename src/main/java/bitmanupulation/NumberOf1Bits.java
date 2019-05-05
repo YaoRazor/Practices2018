@@ -1,8 +1,6 @@
 package bitmanupulation;
 
-/**
- * Created by yawang on 5/30/18.
- */
+
 public class NumberOf1Bits {
     public int hammingWeight(int n) {
 

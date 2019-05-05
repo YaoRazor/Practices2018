@@ -7,29 +7,25 @@ public class RoundPrices {
     public List<Integer> getNearlyArrayWithSameSum(double[] arr, int target) {
 
         List<Integer> ans = new ArrayList<>();
-
         if(arr==null || arr.length==0) {
 
             return ans;
 
         }
 
-
         int bottemLine = 0;
-
         for(double tmp: arr) {
             bottemLine+=Math.floor(tmp);
         }
-
         int nunberOfIntegersToRoundUp = target-bottemLine;
 
         // Max heap
         PriorityQueue<Pair> pq = new PriorityQueue<>(
                 (o1, o2) -> {
 
-                    if(Math.ceil(o1.price)-o1.price > Math.ceil(o2.price)-o2.price) {
+                    if(o1.price-Math.floor(o1.price) < o2.price-Math.floor(o2.price)) {
                         return -1;
-                    } else if(Math.ceil(o1.price)-o1.price < Math.ceil(o2.price)-o2.price) {
+                    } else if(o1.price-Math.floor(o1.price) > o2.price-Math.floor(o2.price)) {
                         return 1;
                     } else {
                         return 0;
@@ -37,10 +33,8 @@ public class RoundPrices {
                 }
         );
 
-
         for(int i=0; i<arr.length; i++) {
-
-            // if the double is integer itself, then we will ignore thi input
+            // if the double is integer itself, then we will ignore the input
             if(arr[i]%1==0) {
                 continue;
             }
@@ -58,7 +52,6 @@ public class RoundPrices {
             indices.add(pair.index);
         }
 
-
         for(int i=0; i<arr.length; i++) {
 
             if(indices.contains(i)) {
@@ -69,12 +62,8 @@ public class RoundPrices {
 
         }
 
-
         return ans;
-
-
     }
-
 
     class Pair {
 
@@ -87,7 +76,5 @@ public class RoundPrices {
         }
 
     }
-
-
 
 }

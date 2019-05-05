@@ -4,23 +4,21 @@ package dp;
 public class ClimbingStairs {
     public int climbStairs(int n) {
 
-        if(n<=0) {
-            return 0;
+        int[] pre = new int[2];
+        pre[0] = 1;
+        pre[1] = 1;
+
+        if(n==1) {
+            return 1;
         }
 
-        int[] dp = new int[n+1];
-
-        dp[0] = 1;
-        dp[1] = 1;
+        int ans = 0;
 
         for(int i=2; i<=n; i++) {
-
-            dp[i] = dp[i-1]+dp[i-2];
-
+            ans = pre[0] + pre[1];
+            pre[i%2] = ans;
         }
 
-
-        return dp[n];
-
+        return ans;
     }
 }

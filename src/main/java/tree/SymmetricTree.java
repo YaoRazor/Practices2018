@@ -4,9 +4,7 @@ import java.util.LinkedList;
 
 import datastructures.TreeNode;
 
-/**
- * Created by yawang on 5/20/18.
- */
+
 public class SymmetricTree {
     public boolean isSymmetric(TreeNode root) {
         if(root==null) {

@@ -7,41 +7,28 @@ import java.util.List;
 
 public class CombinationSum {
 
-    List<List<Integer>> ans = new ArrayList<>();
-
-
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-
-        LinkedList<Integer> cur = new LinkedList<>();
-
         Arrays.sort(candidates);
-
-        dfs(candidates, 0, target, cur);
-
-
+        List<List<Integer>> ans = new ArrayList<>();
+        LinkedList<Integer> cur = new LinkedList<>();
+        dfs(candidates, 0, cur, ans, target);
         return ans;
     }
 
-
-
-    private void dfs(int[] candidates, int start, int target, LinkedList<Integer> cur) {
+    private void dfs(int[] candidates, int start, LinkedList<Integer> cur, List<List<Integer>> ans, int target) {
+        if(target==0) {
+            ans.add(new LinkedList<>(cur));
+            return;
+        }
 
         for(int i=start; i<candidates.length; i++) {
-
             if(candidates[i]>target) {
                 return;
             }
+
             cur.add(candidates[i]);
-
-            if(target-candidates[i] == 0) {
-                ans.add(new ArrayList<>(cur));
-                cur.removeLast();
-                return;
-            }
-
-            dfs(candidates, start, target-candidates[i], cur);
+            dfs(candidates, i, cur, ans, target-candidates[i]);
             cur.removeLast();
         }
-
     }
 }
