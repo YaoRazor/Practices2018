@@ -10,39 +10,38 @@ public class SerializeAndDeserializeBinaryTree {
     public String serialize(TreeNode root) {
 
         StringBuilder sb = new StringBuilder();
-        sb.append("[");
-        if(root==null)  {
-            sb.append("]");
+        Deque<TreeNode> deque = new ArrayDeque<>();
+
+        if(root==null) {
             return sb.toString();
         }
+        TreeNode cur = root;
 
-        Deque<TreeNode> deque = new ArrayDeque<>();
-        deque.addLast(root);
-        sb.append(root.val+ ",");
+        deque.addLast(cur);
+        sb.append(cur.val + ",");
 
-        while (!deque.isEmpty()) {
+        while(!deque.isEmpty()) {
 
-            TreeNode cur = deque.pollFirst();
+            cur = deque.pollFirst();
 
             if(cur.left!=null) {
                 deque.addLast(cur.left);
-                sb.append(cur.left.val+ ",");
+                sb.append(cur.left.val + ",");
             } else {
-                sb.append("n" + ",");
+                sb.append("null,");
             }
 
             if(cur.right!=null) {
                 deque.addLast(cur.right);
-                sb.append(cur.right.val+ ",");
-            }else {
-                sb.append("n" + ",");
+                sb.append(cur.right.val + ",");
+            } else {
+                sb.append("null,");
             }
 
         }
 
-        sb.deleteCharAt(sb.length()-1);
-
-        sb.append("]");
+        int length = sb.length();
+        sb.deleteCharAt(length-1);
 
         return sb.toString();
 
@@ -51,33 +50,34 @@ public class SerializeAndDeserializeBinaryTree {
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
 
-        data = data.substring(1, data.length()-1);
-        if(data.equals("")) {
+        if(data==null || data.length()==0) {
             return null;
         }
 
-        String[] nodeArray = data.split(",");
+        String[] array = data.split(",");
 
+        TreeNode root = new TreeNode(Integer.parseInt(array[0]));
+
+        // BFS is used to help track the parent nodes
         Deque<TreeNode> deque = new ArrayDeque<>();
-        TreeNode root = new TreeNode(Integer.parseInt(nodeArray[0]));
         deque.addLast(root);
 
 
-        for(int i=1; i<nodeArray.length; i++) {
+        for(int i=1; i<array.length; i++) {
 
             TreeNode parent = deque.pollFirst();
 
-            if(!nodeArray[i].equals("n")) {
-                TreeNode left = new TreeNode(Integer.parseInt(nodeArray[i]));
-                parent.left = left;
-                deque.addLast(left);
+            // Every parent node will corresponds to two children nodes
+            if(!array[i].equals("null")) {
+
+                parent.left = new TreeNode(Integer.parseInt(array[i]));
+                deque.addLast(parent.left);
             }
 
+            if(!array[++i].equals("null")) {
 
-            if(!nodeArray[++i].equals("n")) {
-                TreeNode right = new TreeNode(Integer.parseInt(nodeArray[i]));
-                parent.right = right;
-                deque.addLast(right);
+                parent.right = new TreeNode(Integer.parseInt(array[i]));
+                deque.addLast(parent.right);
             }
 
         }
