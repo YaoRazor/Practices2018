@@ -1,44 +1,47 @@
 package miscellaneous;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.Map;
+import java.util.Arrays;
 
-/**
- * Created by yawang on 4/18/18.
- */
 public class GroupAnagrams {
+
     public List<List<String>> groupAnagrams(String[] strs) {
-
-        if(strs == null || strs.length == 0) {
-            return new ArrayList<>();
+        List<List<String>> ans = new ArrayList<>();
+        if(strs==null || strs.length==0) {
+            return ans;
         }
 
-        HashMap<String, List<String>> map = new HashMap<>();
+        Map<String, List<String>> map = new HashMap<>();
 
-        for(int i=0; i<strs.length; i++) {
+        for(String str: strs) {
 
-            String sorted = sortString(strs[i]);
+            String sortedString = getSortedString(str);
+            if(map.containsKey(sortedString)) {
+                map.get(sortedString).add(str);
 
-            if(!map.containsKey(sorted)) {
-               map.put(sorted, new ArrayList<>());
+            } else {
+                List<String> tmp = new ArrayList<>();
+                tmp.add(str);
+                map.put(sortedString, tmp);
             }
-
-            map.get(sorted).add(strs[i]);
-
         }
 
-        return new ArrayList<>(map.values());
+        for(String key: map.keySet()) {
+            ans.add(map.get(key));
+        }
+
+        return ans;
 
     }
 
-
-    protected String sortString(String input) {
-        return Stream.of(input.split(""))
-                      .sorted()
-                      .collect(Collectors.joining());
+    private String getSortedString(final String input) {
+        char[] sortedCharArray = input.toCharArray();
+        Arrays.sort(sortedCharArray);
+        return String.valueOf(sortedCharArray);
     }
 
 

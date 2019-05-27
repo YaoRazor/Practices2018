@@ -1,8 +1,6 @@
 package tree;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 import datastructures.TreeNode;
 
@@ -24,26 +22,21 @@ public class BinaryTreeInorderTraversal {
         }
     }
 
-
     public List<Integer> inorderTraversalInterative(TreeNode root) {
-        List<Integer> integerList = new ArrayList<>();
-
+        List<Integer> ans = new ArrayList<>();
+        Deque<TreeNode> stack = new ArrayDeque<>();
         TreeNode cur = root;
-        Stack<TreeNode> formerNodes = new Stack<>();
 
-        while(cur!=null || !formerNodes.isEmpty()) {
-
+        while(cur!=null || !stack.isEmpty()) {
             while(cur!=null) {
-                formerNodes.push(cur);
+                stack.push(cur);
                 cur = cur.left;
             }
-
-            cur = formerNodes.pop();
-            integerList.add(cur.val);
+            cur = stack.pop();
+            ans.add(cur.val);
             cur = cur.right;
-
         }
 
-        return integerList;
+        return ans;
     }
 }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
@@ -6,43 +7,49 @@ import java.util.stream.Collectors;
 
 
 public class MergeInterval {
-    public List<Interval> merge(List<Interval> intervals) {
 
-        List<Interval> ans = new ArrayList<>();
+    public int[][] merge(int[][] intervals) {
 
-        if(intervals==null || intervals.size()==0) {
-            return ans;
+        if(intervals==null || intervals.length==0) {
+            return intervals;
         }
 
-        intervals.sort(Comparator.comparingInt(a -> a.start));
+        Arrays.sort(intervals, Comparator.comparingInt(o -> o[0]));
 
-        Interval pre = intervals.get(0);
+        List<int[]> ans = new ArrayList<>();
 
-        for(int i=1; i<intervals.size(); i++) {
-            Interval cur = intervals.get(i);
+        int curStart = intervals[0][0];
+        int curEnd = intervals[0][1];
 
-            if(pre.end<cur.start) {
-                ans.add(pre);
-                pre = cur;
+        for(int i=1; i<intervals.length; i++) {
+
+            int[] cur = intervals[i];
+
+            if(cur[0]<=curEnd) {
+                curEnd = Math.max(curEnd, cur[1]);
             } else {
-                pre.end = Math.max(pre.end, cur.end);
+                ans.add(new int[]{curStart, curEnd});
+                curStart = cur[0];
+                curEnd = cur[1];
             }
 
         }
 
-        ans.add(pre);
-        return ans;
+        ans.add(new int[]{curStart, curEnd});
+
+        int[][] arr = new int[ans.size()][2];
+
+        // ArrayList to Array Conversion
+        for (int i =0; i < ans.size(); i++)  {
+            arr[i] = ans.get(i);
+        }
+
+        return arr;
     }
 
 
 }
 
-class Interval {
-     int start;
-     int end;
-     Interval() { start = 0; end = 0; }
-     Interval(int s, int e) { start = s; end = e; }
-}
 
 
 

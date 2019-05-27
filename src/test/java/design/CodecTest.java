@@ -27,4 +27,11 @@ public class CodecTest {
         System.out.println(ans);
 
     }
+
+    @Test
+    public void test2() {
+        String[] arrayTwo = "1,2,".split(",");
+        System.out.println(arrayTwo);
+
+    }
 }

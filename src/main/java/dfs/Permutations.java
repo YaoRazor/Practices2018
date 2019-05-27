@@ -17,13 +17,13 @@ public class Permutations {
 
         LinkedList<Integer> cur = new LinkedList<>();
         boolean[] isUsed = new boolean[nums.length];
-        dfs(nums, isUsed, cur);
+        backtrack(nums, isUsed, cur);
         return ans;
 
     }
 
 
-    private void dfs(int[] nums, boolean[] isUsed, LinkedList<Integer> cur) {
+    private void backtrack(int[] nums, boolean[] isUsed, LinkedList<Integer> cur) {
 
         if(cur.size()==nums.length) {
             ans.add(new LinkedList<>(cur));
@@ -35,7 +35,7 @@ public class Permutations {
             if(isUsed[i]==false) {
                 cur.add(nums[i]);
                 isUsed[i] = true;
-                dfs(nums, isUsed, cur);
+                backtrack(nums, isUsed, cur);
                 cur.removeLast();
                 isUsed[i] = false;
             }

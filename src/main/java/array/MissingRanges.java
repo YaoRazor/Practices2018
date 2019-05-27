@@ -7,28 +7,37 @@ import java.util.List;
 // Three edge cases that need to be handled
 public class MissingRanges {
     public List<String> findMissingRanges(int[] nums, int lower, int upper) {
-        List<String> ret = new ArrayList<>();
-        // long is used to handle overflow
-        long pre = (long)lower -1;
-        long cur ;
+        List<String> ans = new ArrayList<>();
 
-        for(int i=0; i<=nums.length; i++) {
-            // upper needs to add extra one
-            cur = i == nums.length ? (long)upper + 1: (long)nums[i];
+        // long is used to handle the overflow usecase, most of the time, this is a overkill
+        long lastSeen = (long)lower-1;
+        long expected = (long)lower;
 
-            // cur!=pre handles the equal case
-            if(cur!=(pre+1) && cur!=pre) {
-                if(cur == (pre+2)) {
-                    ret.add(String.valueOf(pre+1));
-                } else {
-                    String tmp = String.valueOf(pre+1)+"->"+String.valueOf(cur-1);
-                    ret.add(tmp);
-                }
+        for(int tmp: nums) {
+            long num = (long) tmp;
+
+            // expected<=num is used to handle the equal case in the array
+            if(num!=expected && expected<=num) {
+                ans.add(getString(lastSeen+1, num-1));
             }
 
-            pre = cur;
+            lastSeen = num;
+            expected = num+1;
         }
 
-        return ret;
+        // Need to handle the last element
+        if(lastSeen!=upper) {
+            ans.add(getString(lastSeen+1, upper));
+        }
+
+        return ans;
+    }
+
+    private String getString(long start, long end) {
+        if(start==end) {
+            return String.valueOf(start);
+        } else {
+            return start + "->" + end;
+        }
     }
 }

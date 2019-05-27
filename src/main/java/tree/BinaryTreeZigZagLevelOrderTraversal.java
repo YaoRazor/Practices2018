@@ -1,57 +1,47 @@
 package tree;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 import datastructures.TreeNode;
 
-/**
- * Created by yawang on 5/20/18.
- */
+
 public class BinaryTreeZigZagLevelOrderTraversal {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-
         List<List<Integer>> ans = new ArrayList<>();
-
         if(root==null) {
             return ans;
         }
 
-        LinkedList<TreeNode> queue = new LinkedList<>();
+        Deque<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
+        int level = 1;
 
-        queue.add(root);
-        int level = 0;
-        int currentLevelSize = 1;
+        while(!queue.isEmpty()) {
 
-        while (!queue.isEmpty()) {
-            int n = currentLevelSize;
-            currentLevelSize = 0;
-            LinkedList<Integer> curList = new LinkedList<>();
+            int size = queue.size();
+            LinkedList<Integer> tmp = new LinkedList<>();
 
-            for(int i=0; i<n; i++) {
+            for(int i=0; i<size; i++) {
+
                 TreeNode cur = queue.poll();
-                if(level%2==0) {
-                    curList.add(cur.val);
+                if(level%2==1) {
+                    tmp.addLast(cur.val);
                 } else {
-                    curList.addFirst(cur.val);
+                    tmp.addFirst(cur.val);
                 }
 
                 if(cur.left!=null) {
-                    queue.add(cur.left);
-                    currentLevelSize++;
+                    queue.offer(cur.left);
                 }
-
 
                 if(cur.right!=null) {
-                    queue.add(cur.right);
-                    currentLevelSize++;
+                    queue.offer(cur.right);
                 }
+
             }
 
-            ans.add(curList);
             level++;
-
+            ans.add(tmp);
         }
 
         return ans;

@@ -2,23 +2,34 @@ package graph;
 
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
 import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Queue;
+import java.util.Set;
 
 import datastructures.UndirectedGraphNode;
 
 public class CloneGraph {
+    class Node {
+        public int val;
+        public List<Node> neighbors;
 
+        public Node() {}
+
+        public Node(int _val,List<Node> _neighbors) {
+            val = _val;
+            neighbors = _neighbors;
+        }
+    };
 
     // DFS解法，DFS当然会有重复子问题，对于重复子问题，进行记忆就可以了
     public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
         return clone(node, new HashMap<>());
     }
     private UndirectedGraphNode clone(UndirectedGraphNode src, HashMap<UndirectedGraphNode, UndirectedGraphNode> map) {
-
         if(src == null) {
             return null;
         }
@@ -39,43 +50,38 @@ public class CloneGraph {
         return cur;
     }
 
-
-
-    private UndirectedGraphNode cloneBFS(UndirectedGraphNode node){
+    private Node cloneBFS(Node node){
         if(node==null) {
-            return node;
+            return null;
         }
 
-        Deque<UndirectedGraphNode> deque = new ArrayDeque<>();
+        Map<Node, Node> map = new HashMap<>();
+        map.put(node, new Node(node.val, new ArrayList<>()));
 
-        HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<>();
-        UndirectedGraphNode copyOfNode = new UndirectedGraphNode(node.label);
-        map.put(node, copyOfNode);
+        Set<Node> visited = new HashSet<>();
+        Deque<Node> queue = new ArrayDeque<>();
 
-        deque.addLast(node);
+        queue.offer(node);
+        visited.add(node);
 
-        while(!deque.isEmpty()) {
+        while(!queue.isEmpty()) {
+            Node cur = queue.poll();
+            for(Node neighbor: cur.neighbors) {
 
-            // Before you put it into the queue, you already created its copy
-            UndirectedGraphNode cur = deque.pollFirst();
-            UndirectedGraphNode copy = map.get(cur);
-
-            for(UndirectedGraphNode child: cur.neighbors) {
-
-                if(!map.containsKey(child)) {
-                    UndirectedGraphNode copyOfChild = new UndirectedGraphNode(child.label);
-                    map.put(child, copyOfChild);
-                    deque.addLast(child);
+                Node copy = map.getOrDefault(neighbor, new Node(neighbor.val, new ArrayList<>()));
+                if(!map.containsKey(neighbor)) {
+                    map.put(neighbor, copy);
                 }
 
-                copy.neighbors.add(map.get(child));
+                map.get(cur).neighbors.add(copy);
 
+                if(!visited.contains(neighbor)) {
+                    queue.offer(neighbor);
+                    visited.add(neighbor);
+                }
             }
-
         }
 
         return map.get(node);
-
-
     }
 }

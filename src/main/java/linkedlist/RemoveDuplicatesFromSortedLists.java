@@ -5,22 +5,19 @@ import datastructures.ListNode;
 
 public class RemoveDuplicatesFromSortedLists {
     public ListNode deleteDuplicates(ListNode head) {
-        if(head == null) {
-            return head;
-        }
-
+        ListNode pre = null;
         ListNode cur = head;
 
-        while (cur.next !=null) {
+        while(cur!=null) {
 
-            if(cur.val != cur.next.val) {
-                cur = cur.next;
+            if(pre!=null && pre.val==cur.val) {
+                pre.next = cur.next;
             } else {
-                cur.next = cur.next.next;
+                pre = cur;
             }
+            cur = cur.next;
         }
 
         return head;
-
     }
 }

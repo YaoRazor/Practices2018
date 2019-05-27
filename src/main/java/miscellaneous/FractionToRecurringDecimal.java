@@ -8,70 +8,49 @@ public class FractionToRecurringDecimal {
     // 这是一道纯实现题，一般来说，对于数值处理类问题，要注意两点
     // 一是正负号，二是overflow
     public String fractionToDecimal(int numerator, int denominator) {
+        StringBuilder sb = new StringBuilder();
 
-        // Edge case handling
-        if(numerator==0) {
-            return "0";
-        }
-
-        if(denominator==0) {
-            throw new RuntimeException();
-        }
-
-        // Handle overflow
         long numeratorL = (long)numerator;
         long denominatorL = (long)denominator;
-        String symbol = "";
 
-        // Positive or negative
         if(numeratorL*denominatorL<0) {
-            symbol = "-";
+            sb.append("-");
         }
 
         numeratorL = Math.abs(numeratorL);
         denominatorL = Math.abs(denominatorL);
 
-        StringBuilder sb = new StringBuilder();
-        sb.append(symbol);
+        sb.append(numeratorL/denominatorL);
+        numeratorL=numeratorL%denominatorL;
 
-        // Handle the digits before zero
-        long numberBeforeZero = numeratorL/denominatorL;
-        sb.append(numberBeforeZero);
-
-        numeratorL = numeratorL%denominatorL;
-
-        if(numeratorL==0) {
+        // The calculation before dot and calculation after dot is not the same
+        if(numeratorL!=0) {
+            sb.append(".");
+        } else {
             return sb.toString();
         }
 
-        Map<Long, Integer> map = new HashMap<>();
-
-        sb.append(".");
+        Map<Long, Integer> position = new HashMap<>();
 
         // handle the digits after zero
         while (numeratorL>0) {
-
-            // 记录第一次出现该余数的时候，因为有可能出现5.(123)这种情况，所以
-            // 不能只是简单的把上一位的结果加正负号，需要一个map来记录第一次出现
-            // 这个余数的情况
-            if(map.containsKey(numeratorL)) {
-                sb.insert((int)map.get(numeratorL), '(');
+            // 记录第一次出现该余数的时候，因为有可能出现5.(113)这种情况，所以并不是对于
+            // 余数来记录位置，而是对于被除数来记录上一次出现的位置，如果被除数出现以前出现过的
+            // 结果，那么说明有环
+            if(position.containsKey(numeratorL)) {
+                sb.insert((int)position.get(numeratorL), '(');
                 sb.append(')');
                 break;
             }
 
-            map.put(numeratorL, sb.length());
+            position.put(numeratorL, sb.length());
 
             numeratorL*=10;
-            long newDigit = numeratorL/denominatorL;
-
-            sb.append(newDigit);
-
+            long cur = numeratorL/denominatorL;
+            sb.append(cur);
             numeratorL%=denominatorL;
-
         }
 
         return sb.toString();
-
     }
 }

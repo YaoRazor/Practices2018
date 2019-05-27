@@ -5,12 +5,8 @@ public class AddBinary {
     public String addBinary(String a, String b) {
 
         // Trick one
-        if(a==null || a.length() == 0) {
-            return b;
-        }
-
-        if(b==null || b.length() == 0) {
-            return a;
+        if(a==null || b==null) {
+            return a==null?b:a;
         }
 
         int i = a.length()-1; int j = b.length() -1;

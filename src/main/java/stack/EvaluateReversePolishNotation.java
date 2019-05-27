@@ -1,11 +1,11 @@
 package stack;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class EvaluateReversePolishNotation {
     public int evalRPN(String[] tokens) {
-
-        Stack<Integer> stack = new Stack<>();
+        Deque<Integer> stack = new ArrayDeque<>();
 
         for(int i=0; i<tokens.length; i++) {
 
@@ -31,18 +31,10 @@ public class EvaluateReversePolishNotation {
         }
 
         return stack.pop();
-
-
     }
 
 
     private boolean isOperator(String string) {
-
-        if("*".equals(string) || "+".equals(string) || "-".equals(string) || "/".equals(string)) {
-            return true;
-        } else {
-            return false;
-        }
-
+        return ("*".equals(string) || "+".equals(string) || "-".equals(string) || "/".equals(string));
     }
 }

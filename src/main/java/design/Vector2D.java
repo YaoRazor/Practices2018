@@ -1,35 +1,46 @@
 package design;
 
-import java.util.Iterator;
-import java.util.List;
 
-// 这一题是airbnb那一道题的子集
-public class Vector2D implements Iterator<Integer> {
+class Vector2D {
 
-    private Iterator<List<Integer>> i;
-    private Iterator<Integer> j;
+    private int i=0;
+    private int j=0;
+    private int[][] v;
 
-    public Vector2D(List<List<Integer>> vec2d) {
-        this.i = vec2d.iterator();
-        this.j = null;
+    public Vector2D(int[][] v) {
+        i = 0;
+        j = 0;
+        this.v = v;
     }
 
-    @Override
+    public int next() {
+        if(hasNext()) {
+            return v[i][j++];
+        }
+
+        throw new RuntimeException();
+    }
+
     public boolean hasNext() {
-
-        while((j==null || !j.hasNext()) && i.hasNext()) {
-            j = i.next().iterator();
+        if(v==null || v.length==0) {
+            return false;
         }
 
+        if(j<v[i].length) {
+            return true;
+        } else {
 
-        return j!=null && j.hasNext();
-    }
+            while(i<v.length-1) {
+                i++;
+                if(v[i]==null || v[i].length==0) {
+                    continue;
+                } else {
+                    j = 0;
+                    return true;
+                }
+            }
 
-    @Override
-    public Integer next() {
-        if(!j.hasNext()) {
-            throw new java.util.NoSuchElementException();
+            return false;
         }
-        return j.next();
     }
 }

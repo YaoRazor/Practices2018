@@ -9,9 +9,7 @@ public class MajorityElement {
             return 0;
         }
 
-
         Arrays.sort(nums);
-
         return nums[nums.length/2];
     }
 }

@@ -1,9 +1,12 @@
 package miscellaneous;
 
+import java.util.HashSet;
+import java.util.Set;
+
 //要点是其实最终是有环的
 public class HappyNumber {
 
-    public boolean isHappy(int n) {
+    public boolean isHappySpaceEfficient(int n) {
         if(n<=0) {
             return false;
         }
@@ -21,6 +24,24 @@ public class HappyNumber {
         } else {
             return false;
         }
+    }
+
+    public boolean isHappyTimeEfficient(int n) {
+
+        Set<Integer> seen = new HashSet<>();
+        int cur = n;
+
+        do {
+            seen.add(cur);
+            cur = getSquareSum(cur);
+        } while(!seen.contains(cur));
+
+        if(cur == 1) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
 
 

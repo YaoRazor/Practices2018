@@ -16,17 +16,18 @@ class Subsets {
         }
 
         LinkedList<Integer> cur = new LinkedList<>();
-        dfs(nums, 0, cur, ans);
+        backtrack(nums, 0, cur, ans);
         return ans;
     }
 
-    private void dfs(int[] nums, int start, LinkedList<Integer> cur, List<List<Integer>> ans) {
+    private void backtrack(int[] nums, int start, LinkedList<Integer> cur, List<List<Integer>> ans) {
 
         ans.add(new LinkedList<>(cur));
 
         for(int i=start; i<nums.length; i++) {
             cur.add(nums[i]);
-            dfs(nums, i+1, cur, ans);
+            // it is (i+1) here, not start+1
+            backtrack(nums, i+1, cur, ans);
             cur.removeLast();
         }
 

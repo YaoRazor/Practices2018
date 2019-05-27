@@ -4,7 +4,6 @@ import java.util.*;
 
 public class AllienDictionary {
 
-    //本题就是一道典型的拓扑排序
     public String alienOrder(String[] words) {
         Map<Character, Set<Character>> map = new HashMap<>();
         Map<Character, Integer> indegree = new HashMap<>();

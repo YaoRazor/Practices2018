@@ -1,35 +1,34 @@
 package design;
 
-
-import java.util.Arrays;
-import java.util.LinkedList;
-
 import datastructures.TreeNode;
 
 public class Codec {
+
+    // Preorder traversal is very intuitive
     public String serialize(TreeNode root) {
-
         StringBuilder sb = new StringBuilder();
-        dfs(root, sb);
-        if(sb.length()>1) {
-            sb.deleteCharAt(sb.length()-1);
+        if(root==null) {
+            return sb.toString();
         }
+        buildTree(root, sb);
+        // sb.deleteCharAt(sb.length()-1);
+        System.out.println(sb.toString());
         return sb.toString();
-
     }
 
-
-    private void dfs(TreeNode root, StringBuilder sb) {
+    private void buildTree(TreeNode root, StringBuilder sb) {
         if(root==null) {
             sb.append("null,");
             return;
         }
 
         sb.append(root.val+",");
-
-        dfs(root.left, sb);
-        dfs(root.right, sb);
+        buildTree(root.left, sb);
+        buildTree(root.right, sb);
     }
+
+    // We can also use deque to deque here
+    int i=0;
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
@@ -37,29 +36,22 @@ public class Codec {
         if(data==null || data.length()==0) {
             return null;
         }
-
-        LinkedList<String> listOfData = new LinkedList<>(Arrays.asList(data.split(",")));
-
-        return dfsDeserialize(listOfData);
+        i = 0;
+        String[] array = data.split(",");
+        return buildTree(array);
 
     }
 
-    private TreeNode dfsDeserialize(LinkedList<String> data) {
-
-        if(data.isEmpty()) {
+    private TreeNode buildTree(String[] array) {
+        if(array[i].equals("null")) {
+            i++;
             return null;
         }
 
-        String cur = data.poll();
-
-        if(cur.equals("null")) {
-            return null;
-        }
-
-        TreeNode root = new TreeNode(Integer.valueOf(cur));
-
-        root.left = dfsDeserialize(data);
-        root.right = dfsDeserialize(data);
+        TreeNode root = new TreeNode(Integer.parseInt(array[i]));
+        i++;
+        root.left = buildTree(array);
+        root.right = buildTree(array);
         return root;
     }
 }

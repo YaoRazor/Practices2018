@@ -64,6 +64,5 @@ public class CourseScheduleTwo {
         } else {
             return visited.stream().mapToInt(i->i).toArray();
         }
-
     }
 }

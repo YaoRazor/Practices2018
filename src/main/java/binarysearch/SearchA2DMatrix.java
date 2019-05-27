@@ -28,11 +28,9 @@ public class SearchA2DMatrix {
                 start = mid+1;
             }
 
-
         }
 
         return false;
-
     }
 
 }

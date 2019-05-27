@@ -17,6 +17,7 @@ public class SmallestRange {
 
         }
 
+
         int left = pq.peek().val;
         int max = right;
 
@@ -40,7 +41,6 @@ public class SmallestRange {
         }
 
         return new int[]{left, right};
-
     }
 
     class Element {

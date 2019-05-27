@@ -12,20 +12,20 @@ public class LetterCombinationsOfPhoneNumber {
 
     public List<String> letterCombinations(String digits) {
 
-        if(digits == null || digits.length() == 0) {
+        if (digits == null || digits.length() == 0) {
             return ret;
         }
 
         StringBuilder sb = new StringBuilder();
-                               MAP.put('3', "def");
-                               MAP.put('2', "abc");
-                               MAP.put('4', "ghi");
-                               MAP.put('5', "jkl");
-                               MAP.put('6', "mno");
-                               MAP.put('7', "pqrs");
-                               MAP.put('8', "tuv");
-                               MAP.put('9', "wxyz");
+        MAP.put('2', "abc");
+        MAP.put('3', "def");
 
+        MAP.put('4', "ghi");
+        MAP.put('5', "jkl");
+        MAP.put('6', "mno");
+        MAP.put('7', "pqrs");
+        MAP.put('8', "tuv");
+        MAP.put('9', "wxyz");
 
 
         dfs(digits, 0, sb);
