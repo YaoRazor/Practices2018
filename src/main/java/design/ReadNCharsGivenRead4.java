@@ -7,34 +7,26 @@ public class ReadNCharsGivenRead4 extends Reader4{
      * @return    The number of characters read
      */
     public int read(char[] buf, int n) {
+        boolean isEnd = false;
+        char[] tmp = new char[4];
+        int i = 0;
 
-        char[] tmp =  new char[4];
-        int start = 0;
-
-        while(start<n) {
-
+        while(!isEnd && i<n) {
             int cur = read4(tmp);
-            cur = Math.min(n-start, cur);
-
-            for(int i=0; i<cur; i++) {
-                buf[start++] = tmp[i];
-            }
-
             if(cur<4) {
-                break;
+                isEnd = true;
             }
 
+            for(int j=0; j<cur && i<n; ) {
+                buf[i++] = tmp[j++];
+            }
         }
 
-        return start;
-
+        return i;
     }
-
-
 }
 
 abstract class Reader4{
-
     int read4(char[] buf){
         return 0;
     }

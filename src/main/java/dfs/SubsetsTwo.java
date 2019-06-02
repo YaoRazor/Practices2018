@@ -27,7 +27,6 @@ public class SubsetsTwo {
     private void dfs(int[] nums, int start, LinkedList<Integer> cur, List<List<Integer>> ans) {
 
         ans.add(new LinkedList<>(cur));
-        // System.out.println(cur+"\n");
 
         for(int i=start; i<nums.length; i++) {
             cur.add(nums[i]);

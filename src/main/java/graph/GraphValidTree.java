@@ -11,7 +11,6 @@ import java.util.Set;
 public class GraphValidTree {
     // BFS解法
     public boolean validTree(int n, int[][] edges) {
-
         if((n-1)!=edges.length) {
             return false;
         }
@@ -35,17 +34,13 @@ public class GraphValidTree {
                 deque.addLast(i);
                 visited.add(i);
             }
-
-
         }
 
         return visited.size()==n;
-
     }
 
 
     private Map<Integer, Set<Integer>> getAllNodes(int n, int[][] edges) {
-
         Map<Integer, Set<Integer>> map = new HashMap<>();
         for(int i=0; i<n; i++) {
 
@@ -63,7 +58,6 @@ public class GraphValidTree {
         }
 
         return map;
-
     }
 
 
@@ -138,11 +132,5 @@ public class GraphValidTree {
         if (nums[i] == -1) return i;
         return find(nums, nums[i]);
     }
-
-
-
-
-
-
 
 }

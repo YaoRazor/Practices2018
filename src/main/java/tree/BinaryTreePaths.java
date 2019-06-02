@@ -5,11 +5,9 @@ import java.util.List;
 
 import datastructures.TreeNode;
 
-/**
- * Created by yawang on 3/11/18.
- */
+
 public class BinaryTreePaths {
-    public List<String> binaryTreePaths(TreeNode root) {
+    public List<String> binaryTreePathsRecursion(TreeNode root) {
 
         List<String> ret = new ArrayList<>();
         StringBuilder sb = new StringBuilder();
@@ -39,5 +37,32 @@ public class BinaryTreePaths {
         if(cur.right != null) {
             dfs(cur.right, new StringBuilder(sb), ret);
         }
+    }
+
+
+    public List<String> binaryTreePathsDivideAndConquer(TreeNode root) {
+
+        List<String> ans = new ArrayList<>();
+        if(root==null) {
+            return ans;
+        }
+
+        if(root.left==null && root.right==null) {
+            ans.add(String.valueOf(root.val));
+            return ans;
+        }
+
+        List<String> left = binaryTreePathsDivideAndConquer(root.left);
+        List<String> right = binaryTreePathsDivideAndConquer(root.right);
+
+        for(String str: left) {
+            ans.add(String.valueOf(root.val)+"->"+str);
+        }
+
+        for(String str: right) {
+            ans.add(String.valueOf(root.val)+"->"+str);
+        }
+
+        return ans;
     }
 }

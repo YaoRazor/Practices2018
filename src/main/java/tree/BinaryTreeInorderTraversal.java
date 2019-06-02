@@ -5,7 +5,7 @@ import java.util.*;
 import datastructures.TreeNode;
 
 
-public class BinaryTreeInorderTraversal {
+public class  BinaryTreeInorderTraversal {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> integerList = new ArrayList<>();
         inorderTraversal(root, integerList);

@@ -21,6 +21,7 @@ public class CombinationSum {
             return;
         }
 
+        // This for loop can be viewed as traversal of N-ary tree
         for(int i=start; i<candidates.length; i++) {
             if(candidates[i]>target) {
                 return;

@@ -1,8 +1,5 @@
 package miscellaneous;
 
-/**
- * Created by yawang on 4/12/18.
- */
 public class ExcelSheetColumnNumber {
     public int titleToNumber(String s) {
         if(s==null || s.length()==0) {

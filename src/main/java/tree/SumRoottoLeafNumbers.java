@@ -34,4 +34,20 @@ public class SumRoottoLeafNumbers {
             dfs(root.right, cur);
         }
     }
+
+    public int sumNumbersDAC(TreeNode root) {
+        return sumNumbers(root, 0);
+    }
+
+    private int sumNumbers(TreeNode root, int cur) {
+        if(root==null) {
+            return 0;
+        }
+
+        if(root.left==null && root.right==null) {
+            return cur*10+root.val;
+        }
+
+        return sumNumbers(root.left, cur*10+root.val)+sumNumbers(root.right, cur*10+root.val);
+    }
 }

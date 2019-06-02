@@ -1,6 +1,8 @@
 package binarysearch;
 
 public class FindMinimumInRotatedSortedArray {
+
+    // Nine chapter ooxx approach, the goal is to find the first element that is smaller than the rightmost element
     public int findMin(int[] nums) {
 
         int start = 0;
@@ -10,12 +12,10 @@ public class FindMinimumInRotatedSortedArray {
 
             int mid = (start+end)/2;
 
-            if(nums[mid]>=nums[start] && nums[mid]>=nums[end]) {
-                start = mid+1;
-            } else if(nums[mid]>=nums[start] && nums[mid]<=nums[end]) {
-                end = mid-1;
-            } else {
+            if(nums[mid]<nums[end]) {
                 end = mid;
+            } else {
+                start = mid+1;
             }
         }
 

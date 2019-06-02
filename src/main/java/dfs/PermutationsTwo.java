@@ -6,48 +6,38 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class PermutationsTwo {
-    List<List<Integer>> ans = new ArrayList<>();
-
     public List<List<Integer>> permuteUnique(int[] nums) {
-
-        if (nums == null ) {
+        List<List<Integer>> ans = new ArrayList<>();
+        if(nums==null || nums.length==0) {
             return ans;
         }
 
-        LinkedList<Integer> cur = new LinkedList<>();
-        boolean[] isUsed = new boolean[nums.length];
-        // Sorting is important
         Arrays.sort(nums);
-        dfs(nums, isUsed, cur);
+        LinkedList<Integer> tmp = new LinkedList<>();
+        boolean[] isVisited = new boolean[nums.length];
+        backtrack(ans, tmp, isVisited, nums);
         return ans;
-
     }
 
+    private void backtrack(List<List<Integer>> ans, LinkedList<Integer> tmp, boolean[] isVisited, int[] nums) {
 
-
-    private void dfs(int[] nums, boolean[] isUsed, LinkedList<Integer> cur) {
-
-        if(cur.size()==nums.length) {
-            ans.add(new LinkedList<>(cur));
+        if(tmp.size()==nums.length) {
+            ans.add(new LinkedList<>(tmp));
             return;
         }
 
         for(int i=0; i<nums.length; i++) {
+            if(!isVisited[i]) {
+                isVisited[i]=true;
+                tmp.add(nums[i]);
+                backtrack(ans, tmp, isVisited, nums);
+                tmp.removeLast();
+                isVisited[i]=false;
 
-            if(isUsed[i]==false) {
-                cur.add(nums[i]);
-                isUsed[i] = true;
-                dfs(nums, isUsed, cur);
-                cur.removeLast();
-                isUsed[i] = false;
-                // Key point
-                while (i+1<nums.length && nums[i+1]==nums[i]) {
+                while(i+1<nums.length && nums[i+1]==nums[i]) {
                     i++;
                 }
             }
-
-
         }
-
     }
 }

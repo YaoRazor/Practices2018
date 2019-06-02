@@ -25,7 +25,6 @@ public class CodecTest {
         TreeNode test = codec.deserialize(ans);
 
         System.out.println(ans);
-
     }
 
     @Test

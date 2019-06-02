@@ -5,36 +5,28 @@ import datastructures.ListNode;
 
 public class RemoveDuplicatesFromSortedListsTwo {
     public ListNode deleteDuplicates(ListNode head) {
-
-        ListNode dummyHead = new ListNode(-1);
-
+        ListNode dummy = new ListNode(-1);
+        ListNode pre = dummy;
         ListNode cur = head;
-        dummyHead.next =head;
-        ListNode pre = dummyHead;
 
-
-        while(cur!=null && cur.next !=null) {
+        while(cur!=null && cur.next!=null) {
 
             if(cur.val!=cur.next.val) {
                 pre.next = cur;
-                pre = cur;
+                pre = pre.next;
                 cur = cur.next;
-            } else {
+                continue;
+            }
 
-                do {
-                    cur = cur.next;
-                } while (cur.next!=null && cur.val == cur.next.val);
+            int val = cur.val;
 
+            while(cur!=null && cur.val==val) {
                 cur = cur.next;
-
             }
 
         }
 
-        //这一句很重要
         pre.next = cur;
-
-        return dummyHead.next;
-
+        return dummy.next;
     }
 }

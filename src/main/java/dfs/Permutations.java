@@ -22,7 +22,6 @@ public class Permutations {
 
     }
 
-
     private void backtrack(int[] nums, boolean[] isUsed, LinkedList<Integer> cur) {
 
         if(cur.size()==nums.length) {
