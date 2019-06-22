@@ -10,27 +10,25 @@ import java.util.Set;
 public class WorldBreak {
 
     public boolean wordBreak(String s, List<String> wordDict) {
+        if(s==null || s.length()==0) {
+            return true;
+        }
 
+        int n = s.length();
+        Set<String> set = new HashSet<>(wordDict);
+        boolean[] dp = new boolean[n+1];
+        dp[n] = true;
 
-        Set<String> set = new HashSet<>();
-        set.addAll(wordDict);
-
-        boolean[] dp = new boolean[s.length()+1];
-        dp[0] = true;
-
-        for(int i=1; i<=s.length(); i++) {
-
-            for(int j=0; j<i; j++) {
-
-                if(dp[j] && set.contains(s.substring(j, i))) {
+        for(int i=n-1; i>=0; i--) {
+            for(int j=i+1; j<=n; j++) {
+                if(set.contains(s.substring(i, j)) && dp[j]) {
                     dp[i] = true;
                     break;
                 }
             }
-
         }
 
-        return dp[s.length()];
+        return dp[0];
     }
 
 }

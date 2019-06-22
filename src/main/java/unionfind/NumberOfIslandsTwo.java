@@ -5,66 +5,82 @@ import java.util.Arrays;
 import java.util.List;
 
 public class NumberOfIslandsTwo {
-
+    int sum = 0;
     public List<Integer> numIslands2(int m, int n, int[][] positions) {
-
         List<Integer> ans = new ArrayList<>();
+        int[] grid = new int[m*n];
+        Arrays.fill(grid, 0);
+        int[] parent = new int[m*n];
 
-        if(positions==null || positions.length==0) {
-            return ans;
+        for(int i=0; i<m; i++) {
+            for(int j=0; j<n; j++) {
+                parent[i*n+j] = i*n+j;
+            }
         }
 
-        int count = 0;
-        int[] roots = new int[m*n];
-
-        // 这一题上来先把root设成-1, 是因为后面只想计算本身值是1的值，对于本身值就不是1的位置，就没有必要采用union find算法了
-        Arrays.fill(roots, -1);
-
-        int[][] dirs = new int[][]{{-1, 0}, {1, 0}, {0, 1}, {0, -1}};
-
-
         for(int[] position: positions) {
+            int index = position[0]*n +position[1];
 
-            int root = n*position[0] + position[1];
-            roots[root] = root;
-            count++;
-
-            for(int[] dir: dirs) {
-
-                int dx = position[0]+dir[0];
-                int dy = position[1]+dir[1];
-
-                int neighbour = n*dx + dy;
-
-                if(dx<0 || dx>=m || dy<0 || dy>=n || roots[neighbour]==-1) {
-                    continue;
-                }
-
-                int rootOfNeighbour = find(roots, neighbour);
-
-                if(rootOfNeighbour!=root) {
-                    roots[root] = rootOfNeighbour;
-                    root = rootOfNeighbour; //这一步很关键，就是保证后面都采用同一个root
-                    count--;
-
-                }
-
+            if(grid[index]==1) {
+                ans.add(sum);
+                continue;
             }
 
-            ans.add(count);
-
+            sum++;
+            grid[index] = 1;
+            search(grid, parent, position[0], position[1], m, n);
+            ans.add(sum);
         }
 
         return ans;
     }
 
+    private void search(int[] grid, int[] parent, int row, int col, int m, int n) {
+        int[][] dirs = new int[][]{{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
-    private int find(int[] roots, int id) {
-        while(id!=roots[id]) {
-            roots[id] = roots[roots[id]]; //这里加一行相当于path compression，没有这一行也不影响逻辑
-            id = roots[id];
+        for(int[] dir: dirs) {
+            int newRow = row+dir[0];
+            int newCol = col+dir[1];
+            int index = newRow*n+newCol;
+
+            if(isValid(newRow, newCol, m, n) && grid[index]==1) {
+                union(row*n+col, index, parent);
+            }
+        }
+    }
+
+    private boolean isValid(int row, int col, int m, int n) {
+        if(row<0 || row>=m || col<0 || col>=n) {
+            return false;
+        }
+        return true;
+    }
+
+    private int find(int value, int[] parent) {
+        int root = value;
+
+        while(parent[root]!=root) {
+            root = parent[root];
         }
 
-        return id;
+        while(parent[value]!=root) {
+            int tmp = parent[value];
+            parent[value] = root;
+            value = tmp;
+        }
+
+        return root;
+    }
+
+    private void union(int x, int y, int[] parent) {
+        int fx = find(x, parent);
+        int fy = find(y, parent);
+
+        if(fx!=fy) {
+            sum--;
+            parent[fx] = fy;
+        }
+
+        return;
     }
 }

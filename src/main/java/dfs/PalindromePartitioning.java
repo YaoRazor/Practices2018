@@ -4,60 +4,41 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+// DFS+DP
 public class PalindromePartitioning {
 
-
     public List<List<String>> partition(String s) {
+        int n = s.length();
+        boolean[][] dp = new boolean[n][n];
 
-        List<List<String>> ans = new ArrayList<>();
-
-        if(s==null || s.length()==0) {
-            return ans;
+        for(int i=n-1; i>=0; i--) {
+            for(int j=i; j<n; j++) {
+                if(s.charAt(i)==s.charAt(j) && (j-i<2 || dp[i+1][j-1])) {
+                    dp[i][j] = true;
+                }
+            }
         }
 
+        List<List<String>> ans = new ArrayList<>();
+        LinkedList<String> tmp = new LinkedList<>();
 
-        LinkedList<String> cur = new LinkedList<>();
-
-        dfs(ans, cur, 0, s);
-
+        dfs(ans, tmp, 0, dp, s);
         return ans;
-
     }
 
-
-    private void dfs(List<List<String>> ans, LinkedList<String> cur, int pos, String s) {
-
-        if(pos==s.length()) {
-            ans.add(new LinkedList<>(cur));
+    private void dfs( List<List<String>> ans, LinkedList<String> tmp, int start, boolean[][] dp, String s) {
+        if(start==dp.length) {
+            ans.add(new LinkedList<>(tmp));
             return;
         }
 
-
-        for(int i=pos; i< s.length(); i++) {
-
-            if(isPalindrome(s, pos, i)) {
-               cur.add(s.substring(pos, i+1));
-               dfs(ans, cur, i+1, s);
-               cur.removeLast();
+        for(int i=start; i<dp.length; i++) {
+            if(dp[start][i]) {
+                tmp.add(s.substring(start, i+1));
+                dfs(ans, tmp, i+1, dp, s);
+                tmp.removeLast();
             }
         }
-
-    }
-
-
-
-    private boolean isPalindrome(String s, int start, int end) {
-
-        while (start<end) {
-            if(s.charAt(start)!=s.charAt(end)) {
-                return false;
-            }
-
-            start++;
-            end--;
-        }
-
-        return true;
     }
 
 }

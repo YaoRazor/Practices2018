@@ -4,9 +4,7 @@ import datastructures.ListNode;
 
 public class SortList {
 
-
     public ListNode sortList(ListNode head) {
-
         if(head==null || head.next==null) {
             return head;
         }
@@ -18,8 +16,6 @@ public class SortList {
         // 使用pre的原因是如果LinkedList只有2个Node的话，会分割成2个Node和0个Node, 然后无限循环
         // 所以要么加上pre, 要么用fast.next!=null && fast.next.next!=null
         while(fast!=null && fast.next!=null) { // alternative: while(fast.next!=null && fast.next.next!=null)
-
-
             pre = slow;
             slow = slow.next;
             fast = fast.next.next;
@@ -34,14 +30,11 @@ public class SortList {
         ListNode sortedl2 = sortList(l2);
 
         return mergeTwoLists(sortedl1, sortedl2);
-
     }
 
     private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-
         ListNode dummyHead = new ListNode(-1);
         ListNode head = dummyHead;
-
 
         while(l1!=null && l2!=null) {
 
@@ -56,7 +49,6 @@ public class SortList {
             head = head.next;
         }
 
-
         if(l1!=null) {
             head.next = l1;
         } else {
@@ -64,6 +56,5 @@ public class SortList {
         }
 
         return dummyHead.next;
-
     }
 }

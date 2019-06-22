@@ -2,9 +2,6 @@ package linkedlist;
 
 import datastructures.ListNode;
 
-/**
- * Created by yawang on 4/15/18.
- */
 public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 

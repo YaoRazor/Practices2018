@@ -16,40 +16,43 @@ public class ReorderList {
             fast = fast.next.next;
         }
 
-        ListNode head1 = head;
-        ListNode head2 = slow.next;
+        ListNode second = slow.next;
         slow.next = null;
-        head2 = reverseList(head2);
+        second = reverse(second);
 
+        ListNode first = head;
 
-        merge(head1, head2);
+        ListNode dummyHead = new ListNode(-1);
+        ListNode cur = dummyHead;
+        int i = 0;
 
-    }
+        while(first!=null && second!=null) {
 
-    private void merge(ListNode left, ListNode right) {
-        while(left!=null && right!=null) {
-            ListNode tmp = right.next;
-            right.next = left.next;
-            left.next = right;
-            left = right.next;
-            right = tmp;
+            if(i%2==0) {
+                cur.next = first;
+                first = first.next;
+            } else {
+                cur.next = second;
+                second = second.next;
+            }
+
+            i++;
+            cur = cur.next;
         }
 
+        cur.next = first!=null? first:second;
+        return;
     }
 
-
-    public ListNode reverseList(ListNode head) {
-
+    private ListNode reverse(ListNode head) {
         ListNode pre = null;
         ListNode cur = head;
 
         while(cur!=null) {
-
-            ListNode tmp = cur.next;
+            ListNode next = cur.next;
             cur.next = pre;
             pre = cur;
-            cur = tmp;
-
+            cur = next;
         }
 
         return pre;

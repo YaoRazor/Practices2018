@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-class Subsets {
+public class SubSets {
 
     // Consider this as a binary tree, every node denotes whether to choose current number or not
     public List<List<Integer>> subsets(int[] nums) {

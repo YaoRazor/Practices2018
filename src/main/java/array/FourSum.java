@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
+// There is a KSum solution which is very interesting
 public class FourSum {
     public List<List<Integer>> fourSum(int[] nums, int target) {
 

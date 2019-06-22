@@ -2,6 +2,8 @@ package linkedlist;
 
 import datastructures.ListNode;
 
+import java.util.PriorityQueue;
+
 public class MergeKSortedLists {
     public ListNode mergeKLists(ListNode[] lists) {
 
@@ -52,6 +54,41 @@ public class MergeKSortedLists {
 
 
         return dummyHead.next;
+    }
+
+
+
+    public ListNode mergeKListsUsingPriorityQueue(ListNode[] lists) {
+        if(lists==null || lists.length==0) {
+            return null;
+        }
+
+        PriorityQueue<ListNode> pq = new PriorityQueue<>((a, b)-> {
+            return (a.val - b.val);
+        });
+        ListNode dummyNode = new ListNode(-1);
+        ListNode head = dummyNode;
+
+        for(ListNode list: lists) {
+            if(list!=null) {
+                pq.offer(list);
+            }
+        }
+
+        while(pq.size()>0) {
+            ListNode cur = pq.poll();
+
+            head.next = cur;
+            head = head.next;
+            cur = cur.next;
+
+            if(cur!=null) {
+                pq.offer(cur);
+            }
+
+        }
+
+        return dummyNode.next;
     }
 
 

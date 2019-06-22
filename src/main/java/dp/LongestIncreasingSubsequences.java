@@ -3,20 +3,18 @@ package dp;
 import java.util.Arrays;
 
 public class LongestIncreasingSubsequences {
-    public int lengthOfLISDP(int[] nums) {
 
+    public int lengthOfLISDP(int[] nums) {
         if(nums==null || nums.length==0) {
             return 0;
         }
 
         int n = nums.length;
-
         int[] dp = new int[n];
         Arrays.fill(dp, 1);
         int ans = 1;
 
         for(int i=1; i<n; i++) {
-
             for(int j=0; j<i; j++) {
 
                 if(nums[j]<nums[i]) {
@@ -26,11 +24,9 @@ public class LongestIncreasingSubsequences {
 
             }
             ans = Math.max(dp[i], ans);
-
         }
 
         return ans;
-
     }
 
     // This function is nlog(n), this is really tricky

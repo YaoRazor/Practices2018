@@ -9,32 +9,23 @@ public class ValidPalindromeTwo {
 
         int start = 0;
         int end = s.length()-1;
-
-        while (start<end) {
-
-            if(s.charAt(start)!=s.charAt(end)) {
-
-                return isPalindrome(s, start+1, end) ||
-                        isPalindrome(s, start, end-1);
-            }
-
-            start++;
-            end--;
-        }
-
-        return true;
+        return validPalindrome(s, start, end, false);
     }
 
-
-    private boolean isPalindrome(String s, int start, int end) {
-
-        while (start<end) {
+    private boolean validPalindrome(String s, int start, int end, boolean isDelete) {
+        while(start<end) {
             if(s.charAt(start)!=s.charAt(end)) {
-                return false;
-            }
 
-            start++;
-            end--;
+                if(isDelete) {
+                    return false;
+                } else {
+                    return validPalindrome(s, start+1, end, true) || validPalindrome(s, start, end-1, true);
+                }
+
+            } else {
+                end--;
+                start++;
+            }
         }
 
         return true;

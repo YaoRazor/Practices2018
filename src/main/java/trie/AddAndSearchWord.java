@@ -2,120 +2,72 @@ package trie;
 
 public class AddAndSearchWord {
 
-    private TrieNode root;
+    /** Returns if the word is in the trie. */
+    public boolean search(String word) {
+        return search(word, root);
+    }
+    TrieNode root;
 
     /** Initialize your data structure here. */
     public AddAndSearchWord() {
-        root = new TrieNode();
+        root = new TrieNode(' ');
     }
 
-    /** Inserts a word into the trie. */
+    /** Adds a word into the data structure. */
     public void addWord(String word) {
+        TrieNode cur = root;
 
-        if(word==null || word.length()==0) {
-            return;
+        for(int i=0; i<word.length(); i++) {
+            char c = word.charAt(i);
+            if(cur.children[c-'a']==null) {
+                cur.children[c-'a'] = new TrieNode(c);
+            }
+            cur = cur.children[c-'a'];
+        }
+
+        cur.isWord = true;
+    }
+
+    public boolean search(String word, TrieNode root) {
+        if(word.length()==0) {
+            return root!=null && root.isWord;
+        }
+
+        if(root==null) {
+            return false;
         }
 
         TrieNode cur = root;
 
         for(int i=0; i<word.length(); i++) {
+            char c = word.charAt(i);
 
-            if(!cur.containsKey(word.charAt(i))) {
-                cur.putNode(word.charAt(i));
-            }
-
-            cur = cur.getNode(word.charAt(i));
-
-        }
-
-        cur.setEnd();
-
-    }
-
-    public boolean search(String word) {
-        return search(word, root);
-    }
-
-
-    private boolean search(String word, TrieNode cur) {
-
-        if(cur==null) {
-            return false;
-        }
-
-        if(word==null || word.length()==0) {
-            return cur.isEnd;
-        }
-
-        for(int i=0; i<word.length(); i++) {
-
-            char key = word.charAt(i);
-
-            if(key=='.') {
-                for(TrieNode trieNode: cur.children) {
-                    if(search(word.substring(i+1), trieNode)) {
+            if('.'==c) {
+                for(int j=0; j<26; j++) {
+                    if(search(word.substring(i+1), cur.children[j])) {
                         return true;
                     }
                 }
-
                 return false;
             } else {
-                if(cur.containsKey(key)) {
-                    cur = cur.getNode(key);
-                } else {
+                if(cur.children[c-'a']==null) {
                     return false;
                 }
+                cur = cur.children[c-'a'];
             }
-
         }
-
-        return cur.isEnd;
+        return cur.isWord;
 
     }
 
     class TrieNode {
+        public char c;
+        public TrieNode[] children = new TrieNode[26];
+        public boolean isWord = false;
 
-        private TrieNode[] children;
-
-        private static final int R = 26;
-
-        private boolean isEnd;
-
-        public TrieNode() {
-            children = new TrieNode[R];
+        public TrieNode(char c) {
+            this.c = c;
         }
-
-
-        public boolean containsKey(char key) {
-            return children[key-'a']!=null;
-        }
-
-        public void putNode(char key) {
-
-            if(!containsKey(key)) {
-                children[key-'a'] = new TrieNode();
-            }
-
-        }
-
-
-        public TrieNode getNode(char key) {
-
-            if(containsKey(key)) {
-                return children[key-'a'];
-            } else {
-                return null;
-            }
-        }
-
-        public void setEnd() {
-            isEnd = true;
-        }
-
-        public boolean getEnd() {
-            return isEnd;
-        }
-
     }
 }
 

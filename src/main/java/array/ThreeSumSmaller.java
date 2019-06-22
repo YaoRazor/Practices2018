@@ -5,32 +5,25 @@ import java.util.Arrays;
 public class ThreeSumSmaller {
 
     public int threeSumSmaller(int[] nums, int target) {
+        int sum = 0;
         Arrays.sort(nums);
-        int ans = 0;
 
-        for (int i = 0; i < nums.length - 2; i++) {
+        for(int i=0; i<nums.length-2; i++) {
+            int start = i+1;
+            int end = nums.length-1;
 
-            int tmp = nums[i];
-            int l = i + 1;
-            int r = nums.length - 1;
+            while(start<end) {
+                int tmp = nums[start] + nums[end]+nums[i];
 
-
-            while (l < r) {
-
-                int cur = nums[l] + nums[r] + tmp;
-
-                if (cur < target) {
-                    ans+= r-l;
-                    l++;
-
-                } if (cur >= target) {
-                    r--;
+                if(tmp< target) {
+                    sum+=(end-start);
+                    start++;
+                } else {
+                    end--;
                 }
-
             }
-
         }
 
-        return ans;
+        return sum;
     }
 }
