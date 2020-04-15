@@ -2,8 +2,7 @@ package graph;
 
 
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.Map;
 
 public class CopyListWithRandomPointer {
 
@@ -11,20 +10,17 @@ public class CopyListWithRandomPointer {
     // Reason is here: https://leetcode.com/problems/copy-list-with-random-pointer/discuss/164674/Why-is-two-pass-with-O(1)-space-not-possible
     // Basically some random pointer can point to the nodes before current node, if you decouple at the same time, that
     // relationship is already lost
-    public RandomListNode copyRandomListWithConstantSpace(RandomListNode head) {
+    public Node copyRandomList(Node head) {
 
-        if(head==null) {
+        if (head == null) {
             return null;
         }
 
-        RandomListNode cur = head;
+        Node cur = head;
 
-        // Clone the list and put the copy to the next pointer of each original pointer
-        while(cur!=null) {
-
-            RandomListNode next = cur.next;
-            RandomListNode copy = new RandomListNode(cur.label);
-
+        while (cur != null) {
+            Node copy = new Node(cur.val, null, null);
+            Node next = cur.next;
             cur.next = copy;
             copy.next = next;
             cur = next;
@@ -32,89 +28,79 @@ public class CopyListWithRandomPointer {
 
         cur = head;
 
-        // Allocate the random pointer
-        while(cur!=null) {
-
-            if(cur.random!=null) {
+        while (cur != null) {
+            Node next = cur.next.next;
+            if (cur.random != null) {
                 cur.next.random = cur.random.next;
             }
-
-            cur = cur.next.next;
-
+            cur = next;
         }
 
+//        printList(head);
         cur = head;
-        RandomListNode ans = cur.next;
-        RandomListNode newHead = cur.next;
+        Node ans = cur.next;
 
-
-        // Decouple two list
-        while(cur!=null) {
-
-            RandomListNode copy = cur.next;
-            cur.next = copy.next;
-            cur = cur.next;
-            if(cur!=null) {
-                copy.next = cur.next;
-            } else {
-                copy.next = null;
+        while (cur != null) {
+            Node next = cur.next.next;
+            Node newNode = cur.next;
+            cur.next = next;
+            if (next == null) {
+                break;
             }
-
+            newNode.next = next.next;
+            cur = next;
         }
 
         return ans;
     }
 
+    private void printList(Node node) {
+        String ans = "";
 
-
-
-    public RandomListNode copyRandomList(RandomListNode head) {
-        if(head==null) {
-            return head;
+        while (node != null) {
+            ans += node.val;
+            node = node.next;
         }
 
-        HashMap<RandomListNode, RandomListNode> map = new HashMap<>();
-
-        Queue<RandomListNode> queue = new LinkedList<>();
-        queue.add(head);
-
-        RandomListNode copy = new RandomListNode(head.label);
-        map.put(head, copy);
-
-        while (!queue.isEmpty()) {
-
-            RandomListNode cur = queue.poll();
-
-            if(cur.next!=null) {
-                if(!map.containsKey(cur.next)) {
-                    RandomListNode currentCopy = new RandomListNode(cur.next.label);
-                    map.put(cur.next, currentCopy);
-                    queue.add(cur.next);
-                }
-
-                map.get(cur).next = map.get(cur.next);
-            }
+        System.out.println(ans);
+        return;
+    }
 
 
-            if(cur.random!=null) {
-                if(!map.containsKey(cur.random)) {
-                    RandomListNode currentCopy = new RandomListNode(cur.random.label);
-                    map.put(cur.random, currentCopy);
-                    queue.add(cur.random);
-                }
+    public Node copyRandomListWithHashMap(Node head) {
+        if (head == null) return null;
 
-                map.get(cur).random = map.get(cur.random);
-            }
+        Map<Node, Node> map = new HashMap<Node, Node>();
 
+        // loop 1. copy all the nodes
+        Node node = head;
+        while (node != null) {
+            map.put(node, new Node(node.val, null, null));
+            node = node.next;
+        }
+
+        // loop 2. assign next and random pointers
+        node = head;
+        while (node != null) {
+            map.get(node).next = map.get(node.next);
+            map.get(node).random = map.get(node.random);
+            node = node.next;
         }
 
         return map.get(head);
     }
 }
 
+class Node {
+    public int val;
+    public Node next;
+    public Node random;
 
-class RandomListNode {
-    int label;
-    RandomListNode next, random;
-    RandomListNode(int x) { this.label = x; }
+    public Node() {}
+
+    public Node(int _val,Node _next,Node _random) {
+        val = _val;
+        next = _next;
+        random = _random;
+    }
 }
