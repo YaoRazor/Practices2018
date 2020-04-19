@@ -1,32 +1,46 @@
-package dp;
+package ninechapter.warmup;
 
 public class LongestPalindromicSubstring {
 
     // Two dimensional DP would be more intuitive, but this method can save some space
     public String longestPalindromeUsingDP(String s) {
 
-        int n = s.length();
-        boolean[] dp = new boolean[n];
-        String ans = "";
-
-        for (int i = n - 1; i >= 0; i--) {
-
-            for (int j = n - 1; j >= i; j--) {
-
-                if (s.charAt(i) == s.charAt(j) && (j - i < 3 || dp[j - 1])) {
-
-                    dp[j] = true;
-
-                    if (j - i + 1 > ans.length()) {
-                        ans = s.substring(i, j + 1);
-                    }
-                } else {
-                    dp[j] = false;
-                }
-            }
+        if(s==null || s.length()==0) {
+            return "";
         }
 
-        return ans;
+        int n = s.length();
+
+        boolean[][] dp= new boolean[n][n];
+
+        String result = s.substring(0, 1);
+
+        for(int i=0; i<n; i++) {
+            dp[i][i] = true;
+        }
+
+        for(int i=2; i<=n; i++) {
+            for(int j=0; j+i<=n; j++) {
+
+                if(s.charAt(j)==s.charAt(j+i-1)) {
+
+                    if(i==2) {
+                        dp[j][j+i-1] = true;
+                    } else if(dp[j+1][j+i-2]) {
+                        dp[j][j+i-1] = true;
+                    }
+
+                    if(dp[j][j+i-1] && i>result.length()) {
+                        result = s.substring(j, j+i);
+                    }
+
+                }
+
+            }
+
+        }
+
+        return result;
     }
 
     private int lo, maxLen;

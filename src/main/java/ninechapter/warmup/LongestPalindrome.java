@@ -1,4 +1,4 @@
-package ninechapter.section_one;
+package ninechapter.warmup;
 
 import java.util.HashMap;
 import java.util.HashSet;

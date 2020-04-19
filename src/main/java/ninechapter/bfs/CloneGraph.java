@@ -1,13 +1,11 @@
-package graph;
+package ninechapter.bfs;
 
 
 import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
+import java.util.Queue;
 import java.util.Set;
 
 import datastructures.UndirectedGraphNode;
@@ -50,38 +48,50 @@ public class CloneGraph {
         return cur;
     }
 
-    private Node cloneBFS(Node node){
+    // For this problem, there can be a way of doing three steps at the same time, but
+    // it is not intuitive and error prune. So we break it into three sub steps there
+    public UndirectedGraphNode cloneGraphBFS(UndirectedGraphNode node) {
         if(node==null) {
             return null;
         }
 
-        Map<Node, Node> map = new HashMap<>();
-        map.put(node, new Node(node.val, new ArrayList<>()));
+        // get all nodes
+        Set<UndirectedGraphNode> set = getAllNodes(node);
+        HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<>();
 
-        Set<Node> visited = new HashSet<>();
-        Deque<Node> queue = new ArrayDeque<>();
+        // get mapping
+        for(UndirectedGraphNode cur: set) {
+            UndirectedGraphNode copyNode = new UndirectedGraphNode(cur.label);
+            map.put(cur, copyNode);
+        }
 
-        queue.offer(node);
-        visited.add(node);
-
-        while(!queue.isEmpty()) {
-            Node cur = queue.poll();
-            for(Node neighbor: cur.neighbors) {
-
-                Node copy = map.getOrDefault(neighbor, new Node(neighbor.val, new ArrayList<>()));
-                if(!map.containsKey(neighbor)) {
-                    map.put(neighbor, copy);
-                }
-
-                map.get(cur).neighbors.add(copy);
-
-                if(!visited.contains(neighbor)) {
-                    queue.offer(neighbor);
-                    visited.add(neighbor);
-                }
+        // Clone topology
+        for(UndirectedGraphNode cur: set) {
+            UndirectedGraphNode copyNode = map.get(cur);
+            for(UndirectedGraphNode neighbor: cur.neighbors) {
+                copyNode.neighbors.add(map.get(neighbor));
             }
         }
 
         return map.get(node);
+    }
+
+    private Set<UndirectedGraphNode> getAllNodes(UndirectedGraphNode node) {
+        Queue<UndirectedGraphNode> queue = new ArrayDeque<>();
+        Set<UndirectedGraphNode> set = new HashSet<>();
+        queue.offer(node);
+        set.add(node);
+
+        while(!queue.isEmpty()) {
+            UndirectedGraphNode cur = queue.poll();
+            for(UndirectedGraphNode neighbor: cur.neighbors) {
+                if(!set.contains(neighbor)) {
+                    queue.offer(neighbor);
+                    set.add(neighbor);
+                }
+            }
+        }
+
+        return set;
     }
 }

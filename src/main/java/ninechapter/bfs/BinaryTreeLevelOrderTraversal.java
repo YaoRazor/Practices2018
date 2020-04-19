@@ -1,4 +1,4 @@
-package tree;
+package ninechapter.bfs;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -9,6 +9,7 @@ import datastructures.TreeNode;
 
 
 public class BinaryTreeLevelOrderTraversal {
+
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> ret = new ArrayList<>();
 

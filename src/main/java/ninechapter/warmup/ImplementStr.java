@@ -1,4 +1,4 @@
-package ninechapter.section_one;
+package ninechapter.warmup;
 
 // Just O(n^2)，肯定不是KMP就是了
 public class ImplementStr {

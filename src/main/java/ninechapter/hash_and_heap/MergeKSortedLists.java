@@ -1,7 +1,9 @@
-package linkedlist;
+package ninechapter.hash_and_heap;
 
 import datastructures.ListNode;
 
+import java.util.Comparator;
+import java.util.List;
 import java.util.PriorityQueue;
 
 public class MergeKSortedLists {
@@ -58,37 +60,40 @@ public class MergeKSortedLists {
 
 
 
-    public ListNode mergeKListsUsingPriorityQueue(ListNode[] lists) {
-        if(lists==null || lists.length==0) {
-            return null;
-        }
-
-        PriorityQueue<ListNode> pq = new PriorityQueue<>((a, b)-> {
-            return (a.val - b.val);
-        });
+    // Prefer heap solution as it is simpler
+    public ListNode mergeKLists(List<ListNode> lists) {
         ListNode dummyNode = new ListNode(-1);
         ListNode head = dummyNode;
 
-        for(ListNode list: lists) {
-            if(list!=null) {
-                pq.offer(list);
-            }
+        PriorityQueue<ListNode> pq = new PriorityQueue<>(new NodeComparator());
+
+        for(ListNode node: lists) {
+            populatePriorityQueue(node, pq);
         }
 
-        while(pq.size()>0) {
-            ListNode cur = pq.poll();
-
-            head.next = cur;
+        while(!pq.isEmpty()) {
+            head.next = pq.poll();
             head = head.next;
-            cur = cur.next;
-
-            if(cur!=null) {
-                pq.offer(cur);
-            }
-
         }
 
         return dummyNode.next;
+    }
+
+
+    class NodeComparator implements Comparator<ListNode> {
+        @Override
+        public int compare(ListNode n1, ListNode n2) {
+            return n1.val - n2.val;
+        }
+    }
+
+
+    private void populatePriorityQueue(ListNode node, PriorityQueue<ListNode> pq) {
+        ListNode cur = node;
+        while(cur!=null) {
+            pq.offer(cur);
+            cur = cur.next;
+        }
     }
 
 
