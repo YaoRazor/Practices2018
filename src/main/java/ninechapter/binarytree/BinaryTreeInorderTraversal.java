@@ -1,4 +1,4 @@
-package tree;
+package ninechapter.binarytree;
 
 import java.util.*;
 
@@ -24,16 +24,23 @@ public class  BinaryTreeInorderTraversal {
 
     public List<Integer> inorderTraversalInterative(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
-        Deque<TreeNode> stack = new ArrayDeque<>();
+        Stack<TreeNode> stack = new Stack<>();
         TreeNode cur = root;
 
         while(cur!=null || !stack.isEmpty()) {
+            // When the node is not null, we need to find its
+            // leftmost TreeNode
             while(cur!=null) {
                 stack.push(cur);
                 cur = cur.left;
             }
+            // Everytime the TreeNode was poped from the stack,
+            // it means all nodes in the left subtree has been
+            // processed.
             cur = stack.pop();
+            // We process the middle node
             ans.add(cur.val);
+            // We start to process the right sub tree
             cur = cur.right;
         }
 

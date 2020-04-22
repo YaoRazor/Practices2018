@@ -1,4 +1,4 @@
-package tree;
+package ninechapter.binarytree;
 
 import java.util.LinkedList;
 import java.util.List;

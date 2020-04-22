@@ -12,7 +12,6 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
         }
 
         return buildTree(preorder, 0, preorder.length-1, inorder, 0, inorder.length-1);
-
     }
 
 
@@ -32,8 +31,6 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
         root.right =  buildTree(preorder, startp-starti+index+1, endp, inorder, index+1, endi);
 
         return root;
-
-
     }
 
 

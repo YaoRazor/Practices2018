@@ -1,6 +1,6 @@
 package tree;
 
-import bfs.SerializeAndDeserializeBinaryTree;
+import ninechapter.bfs.SerializeAndDeserializeBinaryTree;
 import datastructures.TreeNode;
 import org.junit.Test;
 

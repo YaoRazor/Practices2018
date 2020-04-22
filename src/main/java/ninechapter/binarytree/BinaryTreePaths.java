@@ -1,4 +1,4 @@
-package tree;
+package ninechapter.binarytree;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,36 +7,30 @@ import datastructures.TreeNode;
 
 
 public class BinaryTreePaths {
-    public List<String> binaryTreePathsRecursion(TreeNode root) {
-
-        List<String> ret = new ArrayList<>();
-        StringBuilder sb = new StringBuilder();
-
-        if(root != null) {
-            dfs(root, sb, ret);
-        }
-
-        return ret;
+    public List<String> binaryTreePaths(TreeNode root) {
+        List<String> ans = new ArrayList<>();
+        traverseTree(root, "", ans);
+        return ans;
     }
 
-
-    private void dfs(TreeNode cur, StringBuilder sb, List<String> ret) {
-
-        sb.append(cur.val);
-
-        if(cur.left==null && cur.right == null) {
-            ret.add(sb.toString());
+    private void traverseTree(TreeNode root, String cur, List<String> ans) {
+        if(root==null) {
             return;
         }
-        sb.append("->");
 
-        if(cur.left != null) {
-            dfs(cur.left, new StringBuilder(sb), ret);
+        if(cur.length()==0) {
+            cur = String.valueOf(root.val);
+        } else {
+            cur = cur+ "->"+ root.val;
         }
 
-        if(cur.right != null) {
-            dfs(cur.right, new StringBuilder(sb), ret);
+        if(root.left==null && root.right==null) {
+            ans.add(cur);
+            return;
         }
+
+        traverseTree(root.left, cur, ans);
+        traverseTree(root.right, cur, ans);
     }
 
 

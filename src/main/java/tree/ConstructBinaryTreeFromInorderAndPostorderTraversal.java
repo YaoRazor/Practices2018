@@ -14,12 +14,10 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
         }
 
         return buildTree(postorder, 0, postorder.length-1, inorder, 0, inorder.length-1);
-
     }
 
     public TreeNode buildTree(int[] postorder, int startp, int endp,
                               int[] inorder, int starti, int endi) {
-
         if(startp>endp) {
             return null;
         }
@@ -32,11 +30,7 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
         root.right =  buildTree(postorder, startp-starti+index+1, endp, inorder, index+1, endi);
 
         return root;
-
-
     }
-
-
 
 
     private int findIndex(int[] inorder, int start, int end, int value) {
