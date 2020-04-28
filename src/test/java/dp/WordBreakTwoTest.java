@@ -9,7 +9,7 @@ public class WordBreakTwoTest {
     @Test
     public void test() {
 //        String[] test = new String[] {"cat","cats","and","sand","dog"};
-//        WordBreakTwo wordBreakTwo = new WordBreakTwo();
+//        WordBreakThree wordBreakTwo = new WordBreakThree();
 //        wordBreakTwo.wordBreak("catsanddog", Arrays.asList(test));
 
 

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class TwoSumThree {
+public class TwoSumDataStructure {
 
     Map<Integer, Integer> map = new HashMap<>();
 

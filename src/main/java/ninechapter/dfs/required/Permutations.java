@@ -1,4 +1,4 @@
-package dfs;
+package ninechapter.dfs.required;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

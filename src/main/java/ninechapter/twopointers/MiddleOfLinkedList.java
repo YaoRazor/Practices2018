@@ -1,4 +1,4 @@
-package ninechapter;
+package ninechapter.twopointers;
 
 import datastructures.ListNode;
 

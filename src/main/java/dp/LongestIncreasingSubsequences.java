@@ -16,12 +16,10 @@ public class LongestIncreasingSubsequences {
 
         for(int i=1; i<n; i++) {
             for(int j=0; j<i; j++) {
-
                 if(nums[j]<nums[i]) {
                     dp[i] = Math.max(dp[i], dp[j]+1);
 
                 }
-
             }
             ans = Math.max(dp[i], ans);
         }
@@ -33,7 +31,6 @@ public class LongestIncreasingSubsequences {
     // you can refer: https://leetcode.com/problems/longest-increasing-subsequence/discuss/74824/JavaPython-Binary-search-O(nlogn)-time-with-explanation
     // and https://segmentfault.com/a/1190000003819886
     public int lengthOfLISBinary(int[] nums) {
-
         if(nums==null || nums.length==0) {
             return 0;
         }
@@ -60,9 +57,7 @@ public class LongestIncreasingSubsequences {
             if(i==size) {
                 size++;
             }
-
         }
-
 
         return size;
     }
