@@ -1,5 +1,6 @@
 package miscellaneous;
 
+import ninechapter.binarysearch.Power;
 import org.junit.Test;
 
 

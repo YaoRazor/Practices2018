@@ -1,4 +1,4 @@
-package dp;
+package ninechapter.dp_bottemup;
 
 import java.util.Arrays;
 
