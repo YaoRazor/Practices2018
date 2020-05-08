@@ -7,61 +7,48 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class MergeKSortedLists {
-    public ListNode mergeKLists(ListNode[] lists) {
-
-        if(lists==null || lists.length==0) {
+    public ListNode mergeKLists(List<ListNode> lists) {
+        if(lists==null || lists.size()==0) {
             return null;
         }
 
-        return mergeLists(lists, 0, lists.length-1);
+        return mergeKLists(lists, 0, lists.size()-1);
     }
 
-
-    private ListNode mergeLists(ListNode[] lists, int start, int end) {
-
-        if(start == end) {
-            return lists[start];
-        } else if(start>end) {
-            return null;
+    private ListNode mergeKLists(List<ListNode> lists, int start, int end) {
+        if(start==end) {
+            return lists.get(start);
         }
 
-        int mid = start+(end-start)/2;
+        int mid = (start+end)/2;
 
+        ListNode left = mergeKLists(lists, start, mid);
+        ListNode right = mergeKLists(lists, mid+1, end);
 
-        ListNode l1 = mergeLists(lists, start, mid);
-        ListNode l2 = mergeLists(lists, mid+1, end);
+        ListNode dummyNode = new ListNode(-1);
+        ListNode head = dummyNode;
 
+        while(left!=null && right!=null) {
 
-        ListNode dummyHead = new ListNode(-1);
-        ListNode head = dummyHead;
-
-
-        while (l1!=null && l2!=null) {
-
-            if(l1.val<l2.val) {
-                head.next = l1;
-                l1 = l1.next;
+            if(left.val<=right.val) {
+                head.next = left;
+                left = left.next;
             } else {
-                head.next = l2;
-                l2 = l2.next;
+                head.next = right;
+                right = right.next;
             }
 
             head = head.next;
         }
 
-        ListNode rest = l1!=null? l1:l2;
+        head.next = left!=null? left:right;
 
-        head.next = rest;
-
-
-
-        return dummyHead.next;
+        return dummyNode.next;
     }
 
 
-
     // Prefer heap solution as it is simpler
-    public ListNode mergeKLists(List<ListNode> lists) {
+    public ListNode mergeKListsUsingHeap(List<ListNode> lists) {
         ListNode dummyNode = new ListNode(-1);
         ListNode head = dummyNode;
 

@@ -1,8 +1,7 @@
-package tree;
+package ninechapter.binarytree.optional;
 
 import datastructures.TreeNode;
 
-import java.util.ArrayDeque;
 
 public class InorderSuccessorinBST {
 
@@ -20,22 +19,5 @@ public class InorderSuccessorinBST {
 
     }
 
-    public TreeNode inorderPredecessor(TreeNode root, TreeNode p) {
-        TreeNode res = null;
 
-        while (root!=null) {
-
-            if(root.val<p.val) {
-                res = root;
-                root = root.right;
-
-            } else {
-                root = root.left;
-            }
-
-        }
-
-        return res;
-
-    }
 }

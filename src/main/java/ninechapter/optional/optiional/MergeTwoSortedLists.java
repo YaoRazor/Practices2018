@@ -1,19 +1,13 @@
-package linkedlist;
+package ninechapter.optional.optiional;
 
 import datastructures.ListNode;
 
-/**
- * Created by yawang on 4/22/18.
- */
 public class MergeTwoSortedLists {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-
-        ListNode dummyHead = new ListNode(-1);
-        ListNode head = dummyHead;
-
+        ListNode dummyNode = new ListNode(-1);
+        ListNode head = dummyNode;
 
         while(l1!=null && l2!=null) {
-
             if(l1.val<=l2.val) {
                 head.next = l1;
                 l1 = l1.next;
@@ -25,14 +19,7 @@ public class MergeTwoSortedLists {
             head = head.next;
         }
 
-
-        if(l1!=null) {
-            head.next = l1;
-        } else {
-            head.next = l2;
-        }
-
-        return dummyHead.next;
-
+        head.next = l1!=null? l1:l2;
+        return dummyNode.next;
     }
 }

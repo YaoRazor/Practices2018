@@ -14,11 +14,9 @@ public class SortColors {
 
         while(i<k) {
             if(nums[i]==0) {
-                swap(nums, i, j+1);
-                j++; //i-j is always > 1, otherwise there could be index out boundery issue
+                swap(nums, i, ++j);//i-j is always > 1, otherwise there could be index out boundery issue
             } else if(nums[i]==2) {
-                swap(nums, i, k-1);
-                k--;
+                swap(nums, i, --k);
                 i--;
             }
             i++;

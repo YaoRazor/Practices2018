@@ -1,4 +1,4 @@
-package ninechapter.hash_and_heap;
+package ninechapter.hash_and_heap.optional;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

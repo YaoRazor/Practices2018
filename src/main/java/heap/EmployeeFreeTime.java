@@ -53,6 +53,7 @@ public class EmployeeFreeTime {
         mergedIntervals.add(mergedInterval);
         return mergedIntervals;
     }
+
     public class Interval {
       int start;
       int end;
