@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
+// Leader: FrogJump
+// inorder traversal
 public class GetRondom {
 
     private static Integer[] optional_problems= {
@@ -17,21 +19,45 @@ public class GetRondom {
             495, 128, 685, 613, 606, 601, 545, 526, 486, 130, 129, 124,
             476, 190, 198, 197, 52, 51, 634,
             272, 515, 151, 117, 116, 622,
+            931
 
     };
 
     private static Integer[] optional_solved_problems = {
-            515, 545, 495, 254, 448, 915, 618, 197, 198, 148
+            515, 545, 495, 254, 448, 915, 618, 197, 198, 148,
+            652, 609, 151, 52, 155, 613, 190, 474, 124, 117,
+            116, 598, 431, 128, 382, 622, 88, 16, 61, 59,
+            235, 427, 462, 68, 66, 67, 1311, 570, 376, 246,
+            587, 1375, 28, 38, 461, 242, 667, 476, 14, 624,
+            178, 272, 685, 526, 780, 601, 51, 426, 597, 97,
+            634, 459, 443, 604, 535, 56, 892, 71, 152, 414,
+            70, 531, 606, 486, 794, 802, 129,
     };
 
-
     public static void main(String args[]) {
+        System.out.println(
+                java.util.Arrays.deepEquals(
+                        new int[][] {
+                                { 1 },
+                                { 2, 3 },
+                        },
+                        new int[][] {
+                                { 1 },
+                                { 2, 3 },
+                        }
+                )
+        );
+
         Set<Integer> problemsToSolve = new HashSet<>(Arrays.asList(optional_problems));
         Set<Integer> solvedProblems = new HashSet<>(Arrays.asList(optional_solved_problems));
+
+        System.out.println("Total problems cnt: "+ problemsToSolve.size());
+        System.out.println("Solved problems cnt: "+ solvedProblems.size());
 
         problemsToSolve.removeAll(solvedProblems);
 
         List<Integer> ans = new ArrayList<>(problemsToSolve);
+        System.out.println("Left problems cnt: "+ans.size());
 
         Random random = new Random();
         int index = random.nextInt(ans.size());

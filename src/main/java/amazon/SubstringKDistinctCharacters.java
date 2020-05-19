@@ -55,7 +55,6 @@ public class SubstringKDistinctCharacters {
 
         }
 
-
         return set.stream().collect(Collectors.toList());
     }
 

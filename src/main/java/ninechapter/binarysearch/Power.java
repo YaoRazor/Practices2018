@@ -4,27 +4,24 @@ package ninechapter.binarysearch;
 public class Power {
 
     public double myPow(double x, int n) {
+        // Using long version is to prevent overflow issue when
+        // n is -2147483648
         return myLongPow(x, (long)n);
     }
 
-    // Using LongPow function is to handle an edge case that
-    // is n == -2147483648
     public double myLongPow(double x, long n) {
-        if(n==0) {
-            return 1;
-        } else if(n==1) {
-            return x;
-        } else if(n<0) {
-            return 1/myLongPow(x, 0l-n);
+        // n<0 is a special case.
+        if(n<0) {
+            return 1d/myLongPow(x, 0l-n);
         }
 
         double tmp = x;
         double ans = 1;
 
-        // x^n = (x^2)^(n/2)
-        while(n>0){
-            if(n%2==1)  {
-                ans *=tmp;
+        // n==0 and n==1 case will be handled by this logic
+        while(n>0) {
+            if(n%2==1) {
+                ans*=tmp;
             }
 
             tmp = tmp*tmp;

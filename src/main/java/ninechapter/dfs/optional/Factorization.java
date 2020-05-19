@@ -3,6 +3,7 @@ package ninechapter.dfs.optional;
 import java.util.*;
 
 public class Factorization {
+    // Using Divide and Conquer
     public List<List<Integer>> getFactors(int n) {
         Map<Integer, List<List<Integer>>> map = new HashMap<>();
         return getFactors(n, map);
@@ -31,7 +32,6 @@ public class Factorization {
             if(n%i==0) {
                 List<Integer> first = Arrays.asList(new Integer[]{i, n/i});
                 ans.add(first);
-
                 List<List<Integer>> cur = getFactors(n/i);
 
                 for(List<Integer> tmp: cur) {
@@ -45,7 +45,6 @@ public class Factorization {
                     ans.add(list);
                 }
             }
-
             i++;
         }
 
