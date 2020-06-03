@@ -13,7 +13,6 @@ public class MaximumSubarray {
         int ans = nums[0];
 
         for(int i=1; i<nums.length; i++) {
-
             maximumEndingHere = Math.max(maximumEndingHere+nums[i], nums[i]);
             ans = Math.max(maximumEndingHere, ans);
         }
@@ -38,4 +37,24 @@ public class MaximumSubarray {
         }
         return ans;
     }
+
+    // Another way of solving this problem
+    public int maxSubArrayAnotherWay(int[] nums) {
+        if(nums==null || nums.length==0) {
+            return 0;
+        }
+
+        int minSum = 0;
+        int sum = 0;
+        int ans = Integer.MIN_VALUE;
+
+        for(int i=0; i<nums.length; i++) {
+            sum+=nums[i];
+            ans = Math.max(sum-minSum, ans);
+            minSum = Math.min(minSum, sum);
+        }
+
+        return ans;
+    }
+
 }

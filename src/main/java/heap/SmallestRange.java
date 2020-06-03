@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 public class SmallestRange {
     public int[] smallestRange(List<List<Integer>> nums) {
 
-        PriorityQueue<Element> pq = new PriorityQueue<>((e1, e2)-> (e1.val-e2.val));
+        PriorityQueue<Element> pq = new PriorityQueue<>((e1, e2)-> e1.val-e2.val);
         int right = 0;
 
         for(int i=0; i<nums.size(); i++) {

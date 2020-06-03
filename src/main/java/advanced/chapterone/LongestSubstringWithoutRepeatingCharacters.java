@@ -1,54 +1,48 @@
-package slidingwindow;
+package advanced.chapterone;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class LongestSubstringWithoutRepeatingCharacters {
 
-    // Sliding Window
+    // Normal sliding window
     public int lengthOfLongestSubstring(String s) {
-
-        if(s==null || s.length()==0) {
-            return 0;
-        }
-
-        int end = 0;
-        int start = 0;
-
+        Map<Character, Integer> map = new HashMap<>();
+        boolean isNoRepeating = true;;
+        int j = -1;
         int ans = 0;
 
-        Map<Character, Integer> map = new HashMap<>();
+        for(int i=0; i<s.length(); i++) {
 
-        while(end<s.length()) {
-
-            while(end<s.length() && !map.containsKey(s.charAt(end))) {
-                map.put(s.charAt(end), end);
-                ans = Math.max(end-start+1, ans);
-                end++;
+            while(isNoRepeating && j+1<s.length()) {
+                j++;
+                char c = s.charAt(j);
+                map.put(c, map.getOrDefault(c, 0)+1);
+                if(map.get(c)==2) {
+                    isNoRepeating = false;
+                    break;
+                }
+                ans = Math.max(ans, j-i+1);
             }
 
-            if(end==s.length()) {
-                break;
-            }
+            char c = s.charAt(i);
 
-            int index = map.get(s.charAt(end));
-
-            while(start<=index) {
-                map.remove(s.charAt(start));
-                start++;
+            map.put(c, map.get(c)-1);
+            if(map.get(c)==1) {
+                isNoRepeating = true;
             }
         }
+
         return ans;
     }
 
-    // This method is very optimal, the first sliding window solution would be more practical
+    // Optimal sliding window
     public int lengthOfLongestSubstringTwo(String s) {
-
             if(s==null || s.length()==0) {
                 return 0;
             }
 
-            // j is used to track the nearest duplicate character's index
+            // j is an invariant which is used to track the nearest duplicate character's index in the current sliding window
             int j = -1;
             Map<Character, Integer> map = new HashMap<>();
             int ans = 1;

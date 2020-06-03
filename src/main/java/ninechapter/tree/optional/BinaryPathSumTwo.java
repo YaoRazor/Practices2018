@@ -5,6 +5,7 @@ import datastructures.TreeNode;
 import java.util.*;
 
 public class BinaryPathSumTwo {
+
     public List<List<Integer>> binaryTreePathSum2(TreeNode root, int target) {
         List<List<Integer>> ans = new ArrayList<>();
         LinkedList<Integer> cur = new LinkedList<>();

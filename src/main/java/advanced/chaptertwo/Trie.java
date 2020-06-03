@@ -1,4 +1,4 @@
-package trie;
+package advanced.chaptertwo;
 
 public class Trie {
 
