@@ -1,9 +1,9 @@
-package design;
+package advanced.chapterthree;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-// 有使用一个stack实现的版本，但是和两个stack的本质是一样的
+// All above should be in O(1) cost.
 public class MinStack {
     Deque<Integer> stack;
     Deque<Integer> minStack;
@@ -15,16 +15,13 @@ public class MinStack {
     }
 
     public void push(int x) {
-
         stack.push(x);
-
         if(minStack.isEmpty() || x<=getMin()) {
             minStack.push(x);
         }
     }
 
     public void pop() {
-
         Integer cur = stack.pop();
         if(cur==getMin()) {
             minStack.pop();

@@ -30,26 +30,28 @@ public class MinimumSizeSubarraySum {
 
     // Use left pointer as main pointer
     public int minimumSize(int[] nums, int s) {
-        // write your code here
-        int j = 0;
-        int sum = 0;
         int ans = Integer.MAX_VALUE;
-        for(int i=0; i<nums.length; i++) {
+        int sum = 0;
+        int j = 0;
 
-            while(j<nums.length && sum<s) {
-                sum+=nums[j];
-                j++;
+
+        for(int i=0; i<nums.length; i++) {
+            while(sum<s && j<nums.length) {
+                sum+=nums[j++];
             }
 
-            if(sum>=s) {
-                ans = Math.min(ans, j-i);
-            } else if(j==nums.length) {
+            if(j==nums.length && sum<s) {
                 break;
             }
 
+            if(sum>=s) {
+                ans = Math.min(j-i, ans);
+            }
+
+            ans = Math.min(j-i, ans);
             sum-=nums[i];
         }
 
-        return ans==Integer.MAX_VALUE? -1: ans;
+        return ans==Integer.MAX_VALUE? -1:ans;
     }
 }

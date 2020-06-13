@@ -1,9 +1,13 @@
-package stack;
+package advanced.chapterthree;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class DecodeString {
+
+    // There are two key points of this problem, first we need to stacks
+    // second, the thing we store in the strStack is the previous string
+    // O(N)
     public String decodeString(String s) {
         Deque<String> resstack = new ArrayDeque<>();
         Deque<Integer> countStack = new ArrayDeque<>();

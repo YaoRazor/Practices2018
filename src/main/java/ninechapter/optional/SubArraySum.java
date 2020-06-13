@@ -2,6 +2,7 @@ package ninechapter.optional;
 
 import java.util.*;
 
+// TC: O(N), SC: O(N)
 public class SubArraySum {
     public List<Integer> subarraySum(int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
