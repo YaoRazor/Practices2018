@@ -1,13 +1,13 @@
-package dp;
+package advanced.chaptersix;
 
 public class EditDistance {
 
-    // 本题是一个DP解法，http://blog.sina.com.cn/s/blog_eb52001d0102v295.html
+    // TC: O(n*m)
     public int minDistance(String word1, String word2) {
-
         int m = word1.length();
         int n = word2.length();
 
+        // We add one more dimension in each direction for easier problem set-up
         int[][] dp = new int[m+1][n+1];
 
         for(int i=0; i<=m; i++) {
@@ -32,6 +32,5 @@ public class EditDistance {
         }
 
         return dp[m][n];
-
     }
 }

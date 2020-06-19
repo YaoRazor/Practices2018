@@ -1,25 +1,25 @@
-package airbnb;
+package advanced.chapterfive;
 
 
 import java.util.Arrays;
 
 public class HouseRobber {
-    public int rob(int[] nums) {
-
+    // TC: O(N), SC: O(1)
+    public long rob(int[] nums) {
         if(nums == null || nums.length == 0) {
             return 0;
         }
 
-        int dp[] = new int[nums.length+1];
+        long dp[] = new long[3];
 
         dp[0] = 0;
         dp[1] = nums[0];
 
         for(int i=2; i<=nums.length; i++) {
-            dp[i] = Math.max(dp[i-2]+nums[i-1], dp[i-1]);
+            dp[i%3] = Math.max(dp[(i-2)%3]+nums[i-1], dp[(i-1)%3]);
         }
 
-        return dp[nums.length];
+        return dp[nums.length%3];
     }
 
 

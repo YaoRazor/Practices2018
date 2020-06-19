@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class LongestIncreasingSubsequences {
 
+    // TC: O(n^2), SC: O(n)
     public int lengthOfLISDP(int[] nums) {
         if(nums==null || nums.length==0) {
             return 0;
@@ -17,10 +18,13 @@ public class LongestIncreasingSubsequences {
         for(int i=1; i<n; i++) {
             for(int j=0; j<i; j++) {
                 if(nums[j]<nums[i]) {
+                    // key point no.1: recursion formula
                     dp[i] = Math.max(dp[i], dp[j]+1);
-
                 }
             }
+            // Another key part of this question is that
+            // the answer is the maximum of all dp[i]s,
+            // not dp[n-1]
             ans = Math.max(dp[i], ans);
         }
 
