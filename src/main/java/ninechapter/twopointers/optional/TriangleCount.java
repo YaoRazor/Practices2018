@@ -2,6 +2,7 @@ package ninechapter.twopointers.optional;
 
 import java.util.Arrays;
 
+// TC: O(n^2)
 public class TriangleCount {
     public int triangleCount(int[] S) {
         if(S==null || S.length<3) {

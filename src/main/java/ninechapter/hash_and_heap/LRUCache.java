@@ -6,14 +6,14 @@ import java.util.Map;
 // This solution is awesome, just remember it and practice it every week
 // Also you will talk a lot about cache in your project, so be prepared to
 // face problems of cache
-class LRUCache {
+class LRUCache <K, V>{
     class Node {
-        public int key;
-        public int value;
+        public K key;
+        public V value;
         public Node pre;
         public Node next;
 
-        public Node(int key, int value) {
+        public Node(K key, V value) {
             this.key = key;
             this.value = value;
         }
@@ -22,7 +22,7 @@ class LRUCache {
     private int capacity;
     private Node head;
     private Node tail;
-    private Map<Integer, Node> map;
+    private Map<K, Node> map;
 
     /*
      * @param capacity: An integer
@@ -30,8 +30,8 @@ class LRUCache {
         this.capacity = capacity;
         map = new HashMap<>();
 
-        head = new Node(-1, -1);
-        tail = new Node(-1, -1);
+        head = new Node(null, null);
+        tail = new Node(null, null);
 
         head.next = tail;
         tail.pre = head;
@@ -42,9 +42,9 @@ class LRUCache {
      * @param key: An integer
      * @return: An integer
      */
-    public int get(int key) {
+    public V get(K key) {
         if(!map.containsKey(key)) {
-            return -1;
+            return null;
         }
 
         Node cur = map.get(key);
@@ -58,7 +58,7 @@ class LRUCache {
         moveToHead(cur);
     }
 
-    public void set(int key, int value) {
+    public void set(K key, V value) {
         if(map.containsKey(key)) {
             Node cur = map.get(key);
             cur.value = value;

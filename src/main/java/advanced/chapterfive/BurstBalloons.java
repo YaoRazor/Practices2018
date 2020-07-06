@@ -19,12 +19,13 @@ public class BurstBalloons {
 
         n+=2;
 
-        // dp[i][j] meaning the maxcore to
+        // dp[i][j] meaning the max score to
         // burst ballons between i and j but
         // not including i and j. This is the key point
         int[][] dp = new int[n][n];
 
         for(int i=0; i<n-1; i++) {
+            dp[i][i] = 0;
             dp[i][i+1] = 0;
         }
 

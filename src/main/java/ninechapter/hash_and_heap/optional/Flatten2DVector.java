@@ -2,38 +2,38 @@ package ninechapter.hash_and_heap.optional;
 
 import java.util.*;
 
-public class Flatten2DVector {
+public class Flatten2DVector implements Iterator<Integer> {
 
-    Iterator<List<Integer>> row;
-    Iterator<Integer> col;
+    Iterator<List<Integer>> i1;
+    Iterator<Integer> i2;
 
     public Flatten2DVector(List<List<Integer>> vec2d) {
-        row = vec2d.iterator();
+        i1 = vec2d.iterator();
+        // Initialize your data structure here
     }
 
-    private void iteratorRow() {
-        while(row.hasNext()) {
-            col = row.next().iterator();
-            if(col.hasNext()) {
-                break;
+    @Override
+    public Integer next() {
+        return i2.next();
+    }
+
+    private void getNextElement() {
+        if(i2==null || !i2.hasNext()) {
+            while(i1.hasNext()) {
+                i2 = i1.next().iterator();
+                if(i2.hasNext()) {
+                    break;
+                }
             }
         }
     }
 
-    public Integer next() {
-        return col.next();
-    }
-
+    @Override
     public boolean hasNext() {
-        if(col==null || !col.hasNext()) {
-            iteratorRow();
-        }
-
-        if(col!=null && col.hasNext()) {
-            return true;
-        } else {
-            return false;
-        }
-        // Write your code here
+        getNextElement();
+        return i2!=null && i2.hasNext();
     }
+
+    @Override
+    public void remove() {}
 }

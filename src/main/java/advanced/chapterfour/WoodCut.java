@@ -2,7 +2,7 @@ package advanced.chapterfour;
 
 public class WoodCut {
 
-    // TC: O(n log Len), where Len is the longest length of the wood.
+    // TC: O(n log Len), where Len is the len length of the wood.
     public int woodCut(int[] L, int k) {
         if(L==null || L.length==0) {
             return 0;

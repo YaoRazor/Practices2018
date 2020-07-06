@@ -2,7 +2,7 @@ package ninechapter.binarysearch;
 
 public class FindMinimumInRotatedSortedArray {
 
-    // Nine chapter ooxx approach, the goal is to find the first element that is smaller than the rightmost element
+    // Nine chapter ooxx approach, the goal is to find the first element that is smaller than the rightmost(end) element
     public int findMin(int[] nums) {
         int start = 0;
         int end = nums.length-1;
@@ -10,7 +10,7 @@ public class FindMinimumInRotatedSortedArray {
         while(start+1<end) {
             int mid = start+(end-start)/2;
 
-            if(nums[mid]>nums[nums.length-1]) {
+            if(nums[mid]>nums[end]) {
                 start = mid+1;
             } else {
                 end = mid;

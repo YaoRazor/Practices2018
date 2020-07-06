@@ -45,12 +45,15 @@ public class FindPeakElementTwo {
 
     int[][] dirs = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
-    // TC: O(n+m)，每次找到相交的中线的最大值，然后把矩阵切成四块，然后进去一个子块
+    // TC: O(n+m)，key point one: 每次找到相交的两条中线里面的最大值，然后把矩阵切成四块，然后进去一个子块
     public List<Integer> findPeakIIOptimized(int[][] A) {
+        // key point two: from 1 to A.length-2
         return helper(A, 1,A.length - 2, 1, A[0].length - 2);
     }
 
     private List<Integer> helper(int[][] A, int x1, int x2, int y1, int y2) {
+        // 这一题的base case是x1==x2, y1==y2, 但是还是需要在两条对角线上找到最大值，不能直接
+        // 找到最大值
         int max = Integer.MIN_VALUE;
 
         int midX = (x1+x2)/2;

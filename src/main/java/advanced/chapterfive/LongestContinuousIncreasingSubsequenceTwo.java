@@ -16,7 +16,7 @@ public class LongestContinuousIncreasingSubsequenceTwo {
         int n = matrix.length;
         int m = matrix[0].length;
 
-        // dp[i][j] represents the longest increaseing subsequence ending at i,j
+        // dp[i][j] represents the len increaseing subsequence ending at i,j
         int[][] dp = new int[n][m];
         int ans = 1;
 

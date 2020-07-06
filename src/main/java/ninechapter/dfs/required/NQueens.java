@@ -18,7 +18,6 @@ public class NQueens {
     }
 
     private boolean isValid(int col, List<Integer> cur) {
-
         int position = cur.size();
 
         for(int row=0; row<position; row++) {

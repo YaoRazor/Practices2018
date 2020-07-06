@@ -1,15 +1,14 @@
 package ninechapter.binarysearch;
 
-
+// TC: O(logn)
 public class FirstBadVersion {
 
     public int findFirstBadVersion(int n) {
-        int start = 0;
+        int start = 1;
         int end = n;
 
-        while(start+1<end) {
-            int mid = start+(end-start)/2;
-
+        while(start<end) {
+            int mid = (end-start)/2+start;
             if(isBadVersion(mid)) {
                 end = mid;
             } else {
@@ -17,7 +16,7 @@ public class FirstBadVersion {
             }
         }
 
-        return isBadVersion(start)? start:end;
+        return start;
     }
 
     boolean isBadVersion(int version) {
