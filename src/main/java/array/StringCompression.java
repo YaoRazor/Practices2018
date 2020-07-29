@@ -2,29 +2,29 @@ package array;
 
 public class StringCompression {
     public int compress(char[] chars) {
-        int cnt = 0;
-        int cur = 1;
+        int index = -1;
+        char cur = chars[0];
+        int cnt = 1;
 
         for(int i=1; i<=chars.length; i++) {
-
-            if(i==chars.length || chars[i]!=chars[i-1]) {
-                chars[cnt++]  = chars[i-1];
-
-                if(cur>1) {
-                    String tmp = String.valueOf(cur);
-                    for(int j=0; j<tmp.length();j++) {
-                        chars[cnt++] = tmp.charAt(j);
+            if(i!=chars.length && chars[i]==cur) {
+                cnt++;
+            } else {
+                chars[++index] = cur;
+                if(cnt!=1) {
+                    String str = String.valueOf(cnt);
+                    char[] tmp = str.toCharArray();
+                    for(int j=0; j<tmp.length; j++) {
+                        chars[++index] = tmp[j];
                     }
                 }
-
-                cur = 1;
-
-            } else {
-                cur++;
+                if(i!=chars.length) {
+                    cur = chars[i];
+                    cnt = 1;
+                }
             }
-
         }
 
-        return cnt;
+        return index+1;
     }
 }

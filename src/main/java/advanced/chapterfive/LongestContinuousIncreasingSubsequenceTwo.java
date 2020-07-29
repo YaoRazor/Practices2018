@@ -6,7 +6,7 @@ package advanced.chapterfive;
  */
 public class LongestContinuousIncreasingSubsequenceTwo {
 
-    int[][] dirs = {{0,1}, {0, -1}, {1,0}, {-1, 0}};
+    private static int[][] dirs = {{0,1}, {0, -1}, {1,0}, {-1, 0}};
 
     public int longestContinuousIncreasingSubsequence2(int[][] matrix) {
         if(matrix==null || matrix.length==0 || matrix[0]==null || matrix[0].length==0) {

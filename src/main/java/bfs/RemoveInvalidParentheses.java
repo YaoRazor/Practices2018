@@ -9,9 +9,7 @@ import java.util.Set;
 
 public class RemoveInvalidParentheses {
 
-
     public List<String> removeInvalidParentheses(String s) {
-
         List<String> ans = new ArrayList<>();
 
         if(s==null || s.length()==0) {
@@ -51,15 +49,10 @@ public class RemoveInvalidParentheses {
                     }
 
                 }
-
-
             }
-
         }
 
         return ans;
-
-
     }
 
 

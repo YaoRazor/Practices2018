@@ -59,7 +59,6 @@ public class GraphValidTree {
 
     // DFS解法, 二个条件: 1. 全联通，2，无环
     public boolean validTreeDFS(int n, int[][] edges) {
-
         Map<Integer, Set<Integer>> map = getAllNodes(n, edges);
 
         Set<Integer> visited = new HashSet<>();
@@ -72,15 +71,12 @@ public class GraphValidTree {
 
         // 检查是否全联通
         return visited.size()==n;
-
     }
 
     // 一般情况下DFS是不需要parent节点的，因为结果都记录在map里，直接从里面取就行了，但是本题因为依赖于
     // 是否从前访问这个条件来检查环，对于DFS而言，只要不从子节点主动向父节点访问，那么就没有环的问题
     private boolean hasCycle(Map<Integer, Set<Integer>> map, Set<Integer> visited, int node, int parent) {
-
         for(Integer i: map.get(node)) {
-
             if(i==parent) {
                 continue;
             }
@@ -96,9 +92,7 @@ public class GraphValidTree {
             }
 
         }
-
         return false;
-
     }
 
 
@@ -125,8 +119,20 @@ public class GraphValidTree {
     }
 
     int find(int nums[], int i) {
-        if (nums[i] == -1) return i;
-        return find(nums, nums[i]);
+        int ans = 0;
+
+        try {
+
+            if (nums[i] == -1) {
+                ans = i;
+//                return i;
+            }
+            return find(nums, nums[i]);
+        } catch (Exception ex) {
+
+        }
+
+        return ans;
     }
 
 }

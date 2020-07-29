@@ -1,11 +1,10 @@
 package twodimensionarray;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class SpiralMatrixTwo {
-    public int[][] generateMatrix(int n) {
 
+    public int[][] generateMatrix(int n) {
         int[][] matrix = new int[n][n];
 
         int top = 0; int down = n-1;
@@ -53,6 +52,5 @@ public class SpiralMatrixTwo {
         }
 
         return matrix;
-
     }
 }

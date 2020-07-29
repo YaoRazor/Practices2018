@@ -12,7 +12,6 @@ public class LongestSubstringWithAtMostTwoDistinctCharacters {
         Map<Character, Integer> map = new HashMap<>();
         int ans = 0;
         for(int i=0; i<s.length(); i++) {
-
             while(j<s.length() && map.size()<=2) {
                 char c = s.charAt(j);
 
@@ -35,12 +34,9 @@ public class LongestSubstringWithAtMostTwoDistinctCharacters {
             if(map.get(cur) == 0) {
                 map.remove(cur);
             }
-
-
         }
 
         return ans;
-
     }
 
 }

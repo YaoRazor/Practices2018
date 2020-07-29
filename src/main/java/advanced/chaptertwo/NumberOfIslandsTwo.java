@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.*;
 import java.util.List;
 
+// TC: 路径压缩后可以倾向于认为Union find的操作都是log*(n)或者O(1). 所以TC=0(N).
+// N是operator的长度
 public class NumberOfIslandsTwo {
 
     class Point {
@@ -93,6 +95,7 @@ public class NumberOfIslandsTwo {
 
             }
 
+            // 注意加cnt要放在最后
             ans.add(cnt);
         }
 

@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.Random;
 
 public class InsertDeleteGetRandom {
+
     HashMap<Integer, Integer> map = new HashMap<>();
     LinkedList<Integer> list = new LinkedList<>();
 
@@ -49,6 +50,5 @@ public class InsertDeleteGetRandom {
 
         int index = random.nextInt(list.size());
         return list.get(index);
-
     }
 }

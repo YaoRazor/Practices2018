@@ -1,12 +1,11 @@
 package airbnb;
 
 public class PourOfWater {
-    public int[] pourWater(int[] heights, int V, int K) {
 
+    public int[] pourWater(int[] heights, int V, int K) {
         if(heights==null || heights.length==0 || V==0) {
             return heights;
         }
-
 
         int[] waters = new int[heights.length];
 
@@ -14,20 +13,15 @@ public class PourOfWater {
             waters[i] = heights[i];
         }
 
-
         while (V>0) {
-
             int index = K;
 
-
             for(int i=K-1; i>=0; i--) {
-
                 if(waters[i]<waters[index]) {
                     index = i;
                 } else if(waters[i]>waters[index]){
                     break;
                 }
-
             }
 
             if(index!=K) {
@@ -36,26 +30,21 @@ public class PourOfWater {
                 continue;
             }
 
-
             for(int i=K+1; i<waters.length; i++) {
-
                 if(waters[i]<waters[index]) {
                     index = i;
                 } else if(waters[i]>waters[index]){
                     break;
                 }
-
             }
 
             waters[index]++;
             V--;
-
         }
 
         print(heights, waters);
 
         return waters;
-
     }
 
     private void print(int[] heights, int[] waters) {

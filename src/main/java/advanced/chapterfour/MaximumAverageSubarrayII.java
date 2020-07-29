@@ -2,7 +2,7 @@ package advanced.chapterfour;
 
 public class MaximumAverageSubarrayII {
 
-    // BinarySearch on result
+    // BinarySearch on result(这一题因为只要结果，所以可以二分答案，如果要求具体的数列，这种方法就没有那么好)
     // TC: O(nlog(range)), as this is double, so actually it is not log(range) anymore
     // it also depends on the the accuracy specified
     public double maxAverage(int[] nums, int k) {

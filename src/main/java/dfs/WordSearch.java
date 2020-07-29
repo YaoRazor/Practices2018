@@ -1,40 +1,51 @@
 package dfs;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class WordSearch {
 
     public boolean exist(char[][] board, String word) {
-        boolean[][] isVisited = new boolean[board.length][board[0].length];
-
-        for(int i=0; i<board.length; i++) {
-            for(int j=0; j<board[0].length; j++) {
-                if(isExist(board, isVisited, word, 0, i, j)) {
-                    return true;
-                }
-            }
-
-        }
-        return false;
-    }
-
-    private boolean isExist(char[][] board, boolean[][] isVisited, String word, int start, int i, int j) {
-        if(start == word.length()) {
-            return true;
-        }
-
-        if(i<0 || i>=board.length || j<0 || j>=board[0].length || isVisited[i][j] || board[i][j]!=word.charAt(start)) {
+        if(board==null || board.length==0 || board[0]==null || board[0].length==0) {
             return false;
         }
 
-        isVisited[i][j] = true;
+        Set<Integer> visited = new HashSet<>();
+        for(int i=0; i<board.length; i++) {
+            for(int j=0; j<board[0].length; j++) {
+                if(dfs(board, word, 0, i, j, visited)) {
+                    return true;
+                }
+            }
+        }
 
-        if(isExist(board, isVisited, word, start+1, i+1, j) ||
-                isExist(board, isVisited, word, start+1, i-1, j) ||
-                isExist(board, isVisited, word, start+1, i, j+1) ||
-                isExist(board, isVisited, word, start+1, i, j-1) ) {
+        return false;
+    }
+
+    private int[][] dirs = {{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
+
+    boolean dfs(char[][] board, String word, int k, int i, int j, Set<Integer> visited)  {
+        if(k==word.length()) {
             return true;
         }
 
-        isVisited[i][j] = false;
+        if(i<0 || i>=board.length || j<0 || j>=board[0].length ||
+                visited.contains(i*board[0].length+j) || word.charAt(k)!=board[i][j]) {
+            return false;
+        }
+
+        int index = i*board[0].length+j;
+        visited.add(index);
+
+        for(int[] dir: dirs) {
+            int x= i+dir[0];
+            int y = j+dir[1];
+            if(dfs(board, word, k+1, x, y, visited)) {
+                return true;
+            }
+        }
+
+        visited.remove(index);
         return false;
     }
 }

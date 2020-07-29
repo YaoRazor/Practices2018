@@ -3,6 +3,7 @@ package ninechapter.optional;
 import java.util.*;
 
 public class MergeKSortedArrays {
+
     class Position {
         public int row;
         public int col;

@@ -5,55 +5,55 @@ import java.util.Map;
 
 public class MinimumWindowSubstring {
 
-    // 这是一道稍微有所变化的Sliding Window，就是说两个指针都是
-    // while循环，一般主指针是for循环，辅指针是while循环，所以
-    // 说面试的时候遇到题目也要灵活，不要拘泥于模板
+    // 这是一道稍微有所变化的Sliding Window，
     public String minWindow(String s, String t) {
-        Map<Character, Integer> map = new HashMap<>();
-        String ans = "";
-
-        for(char c: t.toCharArray()) {
-            map.put(c, map.getOrDefault(c, 0) + 1);
+        if(s==null || t==null || s.length()<t.length()) {
+            return "";
         }
 
+        Map<Character, Integer> map = new HashMap<>();
+        for(char c: t.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0)+1);
+        }
+
+        int[] ans = new int[2];
+        int cnt = Integer.MAX_VALUE;
+
         int start = 0;
-        int end = 0;
-        // extra variable to track state
-        int cnt = map.size();
-        int minimumWindowLength = Integer.MAX_VALUE;
+        int k = 0;
 
-        while(end< s.length()) {
-            Character cur = s.charAt(end);
-
-            if(map.containsKey(cur)) {
-                map.put(cur, map.get(cur)-1);
-                if(map.get(cur)==0) {
-                    cnt--;
+        for(int end=0; end<s.length(); end++) {
+            char c = s.charAt(end);
+            if(map.containsKey(c)) {
+                map.put(c, map.get(c)-1);
+                if(map.get(c)==0) {
+                    k++;
                 }
             }
 
-            // cnt等于0表示满足了条件
-            while(cnt==0) {
-                if(end-start+1<minimumWindowLength) {
-                    ans = s.substring(start, end+1);
-                    minimumWindowLength = end-start+1;
+            while(k==map.size()) {
+                if(end-start+1<cnt) {
+                    ans[0] = start;
+                    ans[1] = end;
+                    cnt = end-start+1;
                 }
 
-                cur = s.charAt(start);
-                if(map.containsKey(cur)) {
-                    map.put(cur, map.get(cur)+1);
-                    if(map.get(cur)>0) {
-                        cnt++;
+                char tmp = s.charAt(start);
+                if(map.containsKey(tmp)) {
+                    map.put(tmp, map.get(tmp)+1);
+                    if(map.get(tmp)==1) {
+                        k--;
                     }
-
                 }
 
                 start++;
             }
-
-            end++;
         }
 
-        return minimumWindowLength==Integer.MAX_VALUE? "" : ans;
+        if(cnt==Integer.MAX_VALUE) {
+            return "";
+        } else {
+            return s.substring(ans[0], ans[1]+1);
+        }
     }
 }

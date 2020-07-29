@@ -3,13 +3,10 @@ package dfs;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by yawang on 3/11/18.
- */
+
 public class LetterCasePermutation {
 
     public List<String> letterCasePermutation(String S) {
-
         List<String> ret = new ArrayList<>();
         if(S == null || S.length() == 0) {
             return ret;
@@ -30,7 +27,6 @@ public class LetterCasePermutation {
 
         Character c = S.charAt(start);
 
-
         if(Character.isLetter(c)) {
             sb.append(Character.toLowerCase(c));
             dfs(S, start+1, ret, new StringBuilder(sb));
@@ -41,6 +37,5 @@ public class LetterCasePermutation {
             sb.append(c);
             dfs(S, start+1, ret, sb);
         }
-
     }
 }
