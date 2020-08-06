@@ -5,7 +5,6 @@ import java.util.List;
 
 public class InsertInterval {
     public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
-
         if(newInterval==null) {
             return intervals;
         }
@@ -27,12 +26,10 @@ public class InsertInterval {
                 //这个i--很重要
                 i--;
             }
-
         }
 
         intervals.add(i, newInterval);
         return intervals;
-
     }
 
     private class Interval {

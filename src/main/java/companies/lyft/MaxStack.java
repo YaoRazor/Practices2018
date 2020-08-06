@@ -1,4 +1,4 @@
-package design;
+package companies.lyft;
 
 import java.util.Stack;
 
@@ -21,7 +21,6 @@ public class MaxStack {
         if(maxStack.isEmpty() || x>=peekMax()) {
             maxStack.push(x);
         }
-
     }
 
     public int pop() {
@@ -30,7 +29,6 @@ public class MaxStack {
             maxStack.pop();
         }
         return cur;
-
     }
 
     public int top() {

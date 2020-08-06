@@ -6,7 +6,6 @@ import java.util.Queue;
 import datastructures.TreeNode;
 
 public class SerializeAndDeserializeBinaryTree {
-
     public String serialize(TreeNode root) {
         StringBuilder sb = new StringBuilder();
         if(root==null) {
@@ -18,6 +17,9 @@ public class SerializeAndDeserializeBinaryTree {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
 
+        // One of the key thing here is that null also needs to be
+        // added to the queue. Just check the test case of this
+        // class to have a better understanding here
         while(!queue.isEmpty()) {
             TreeNode cur = queue.poll();
             if(cur==null) {
@@ -30,7 +32,6 @@ public class SerializeAndDeserializeBinaryTree {
         }
 
         sb.deleteCharAt(sb.length()-1);
-
         return sb.toString();
     }
 
@@ -54,10 +55,14 @@ public class SerializeAndDeserializeBinaryTree {
         int index = 1;
 
         while(!queue.isEmpty()) {
+            // One valid node will correspond to two nodes
+            // however those two nodes can be null nodes.
             TreeNode cur = queue.poll();
 
             TreeNode left = buildTreeNode(treeStr[index]);
             cur.left = left;
+            // Only add to the queue when the node is not null,
+            // this is different with how we serialize the tree
             if(left!=null) {
                 queue.offer(left);
             }

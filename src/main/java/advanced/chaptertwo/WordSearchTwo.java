@@ -7,7 +7,6 @@ import java.util.Set;
 
 // This is a classic problem for DFS and Trie, need to practice a lot!
 public class WordSearchTwo {
-
     class TrieNode {
         char c;
         TrieNode[] children;
@@ -63,7 +62,7 @@ public class WordSearchTwo {
         return new ArrayList<>(set);
     }
 
-    private int[][] dirs = {{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
+    private static final int[][] dirs = {{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
 
     // 本题递归的定义是找出从二维矩阵上某点开始符合特定的TrieNode为根节点的所有String的组合
     private void dfs(char[][] board, int i, int j, TrieNode cur, Set<String> set, boolean[][] visited) {

@@ -21,6 +21,9 @@ public class SlidingWindowMedian {
                 minHeap.offer(nums[i]);
             }
 
+            // 这一步必须放在balance之前，防止k==2的时候，如果放在后面remove了
+            // maxHeap里的值导致在19行把更大的值加入了maxHeap，使得maxHeap里的
+            // 值必须要比minHeap小的这个invariant给break了
             if(i-k>=0) {
                 if(nums[i-k]>maxHeap.peek()) {
                     minHeap.remove(nums[i-k]);

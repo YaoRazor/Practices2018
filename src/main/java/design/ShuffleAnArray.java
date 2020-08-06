@@ -1,13 +1,8 @@
 package design;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
-/**
- * Created by yawang on 5/31/18.
- */
 public class ShuffleAnArray {
-
     private int[] nums;
 
     public ShuffleAnArray(int[] nums) {
@@ -21,12 +16,9 @@ public class ShuffleAnArray {
 
     /** Returns a random shuffling of the array. */
     public int[] shuffle() {
-
-
         int[] newArray = nums.clone();
 
         for(int i=0; i<newArray.length; i++) {
-
             int index = getRand(i, newArray.length);
 
             int tmp = newArray[index];
@@ -35,9 +27,7 @@ public class ShuffleAnArray {
         }
 
         return newArray;
-
     }
-
 
     private int getRand(int min, int max) {
         return new Random().nextInt(max-min) + min;

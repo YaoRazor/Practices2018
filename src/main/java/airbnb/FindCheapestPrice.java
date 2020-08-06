@@ -6,7 +6,6 @@ import java.util.*;
 public class FindCheapestPrice {
 
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
-
         Map<Integer, Map<Integer, Integer>> prices = new HashMap<>();
 
         for(int[] flight: flights) {
@@ -23,7 +22,6 @@ public class FindCheapestPrice {
         int steps = 0;
 
         while(!deque.isEmpty()) {
-
             if(steps>k+1) {
                 break;
             }

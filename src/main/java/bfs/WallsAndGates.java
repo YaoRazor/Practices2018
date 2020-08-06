@@ -6,7 +6,6 @@ import java.util.Queue;
 // 从多个Gate同时向Room做BFS，而且只有当前点是Room，且距离是Integer.MAX_VALUE的时候才更新值
 // 这样确保了每个点最多只被更新了一次，所以Time complexity是O(m*n)
 public class WallsAndGates {
-
     private static int[][] dirs = {{0,1}, {0, -1}, {1,0}, {-1, 0}};
 
     public void wallsAndGates(int[][] rooms) {
@@ -51,6 +50,4 @@ public class WallsAndGates {
             this.y = y;
         }
     }
-
-
 }
