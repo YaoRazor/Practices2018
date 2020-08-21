@@ -12,20 +12,17 @@ public class LongestSubstringWithAtMostKDistinctCharacters {
         int j = -1;
 
         for(int i=0; i<s.length(); i++) {
-
             while(cnt<=k && j+1<s.length()) {
-                // ans = Math.max(ans, j-i+1);
+                // Increment j first, this is key of this problem
                 j++;
                 char c = s.charAt(j);
                 map.put(c, map.getOrDefault(c, 0)+1);
                 if(map.get(c)==1) {
                     cnt++;
                 }
-
             }
 
             ans = Math.max(ans, j-i);
-
             if(j+1==s.length()) {
                 if(cnt<=k) {
                     ans = Math.max(ans, j-i+1);

@@ -3,19 +3,11 @@ package array;
 public class AddBinary {
 
     public String addBinary(String a, String b) {
-
-        // Trick one
-        if(a==null || b==null) {
-            return a==null?b:a;
-        }
-
         int i = a.length()-1; int j = b.length() -1;
         int carry = 0;
         StringBuilder sb = new StringBuilder();
 
-
         while(i>=0 || j>=0) {
-
             int sum = carry;
             if(i>=0) {
                 sum+=a.charAt(i--)-'0';
@@ -37,7 +29,6 @@ public class AddBinary {
 
         // trick three
         return sb.reverse().toString();
-
     }
 
 }

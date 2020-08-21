@@ -5,64 +5,72 @@ import java.util.*;
 public class AllienDictionary {
 
     public String alienOrder(String[] words) {
-        Map<Character, Set<Character>> map=new HashMap<Character, Set<Character>>();
-        Map<Character, Integer> degree=new HashMap<Character, Integer>();
-        String result="";
-        if(words==null || words.length==0) return result;
-        for(String s: words){
-            for(char c: s.toCharArray()){
-                // This way, you will get all characters
-                degree.put(c,0);
+        Map<Character, Set<Character>> graph = new HashMap<>();
+        Map<Character, Integer> indegree = new HashMap<>();
+
+        for (String word : words) {
+            for (char c : word.toCharArray()) {
+                graph.putIfAbsent(c, new HashSet<>());
+                indegree.putIfAbsent(c, 0);
             }
         }
-        for(int i=0; i<words.length-1; i++){
-            String cur=words[i];
-            String next=words[i+1];
 
-            // This is only needed for LeetCode OJ
-            if(cur.length()>next.length() && cur.startsWith(next)) {
+        for (int i = 0; i < words.length - 1; i++) {
+            String from = words[i];
+            String to = words[i + 1];
+
+            // invalid dictionary order
+            if (from.length() > to.length() && from.startsWith(to)) {
                 return "";
             }
 
-            int length=Math.min(cur.length(), next.length());
-            for(int j=0; j<length; j++){
-                char c1=cur.charAt(j);
-                char c2=next.charAt(j);
-                if(c1!=c2){
-                    Set<Character> set=new HashSet<>();
-                    if(map.containsKey(c1)) set=map.get(c1);
-                    // This is key, otherwise, there can be duplicated indegree,
-                    // See example ["za","zb","ca","cb"]
-                    if(!set.contains(c2)){
-                        set.add(c2);
-                        map.put(c1, set);
-                        degree.put(c2, degree.get(c2)+1);
-                    }
-                    // This break is also key
+            for (int j = 0; j < from.length() && j < to.length(); j++) {
+                char p = from.charAt(j);
+                char c = to.charAt(j);
+                if (p == c) {
+                    continue;
+                }
+
+                // avoid double counting, this is very important for this
+                // solution.
+                if (graph.get(p).contains(c)) {
                     break;
                 }
+                graph.get(p).add(c);
+                indegree.put(c, indegree.get(c) + 1);
+                break;
             }
         }
 
-        // For LintCode OJ, we need to change ArrayDeque to PriorityQueue,
-        // I think that is wrong
-        Queue<Character> q=new ArrayDeque<>();
+        StringBuilder sb = new StringBuilder();
+        Queue<Character> queue = new ArrayDeque<>();
 
-        for(char c: degree.keySet()){
-            if(degree.get(c)==0) q.add(c);
+        for (char c : indegree.keySet()) {
+            if (indegree.get(c) == 0) {
+                queue.offer(c);
+            }
         }
-        while(!q.isEmpty()){
-            char c=q.remove();
-            result+=c;
-            if(map.containsKey(c)){
-                for(char c2: map.get(c)){
-                    degree.put(c2,degree.get(c2)-1);
-                    if(degree.get(c2)==0) q.add(c2);
+
+        while (!queue.isEmpty()) {
+            char cur = queue.poll();
+            sb.append(cur);
+
+            if (!graph.containsKey(cur)) {
+                continue;
+            }
+
+            for (char neighbor : graph.get(cur)) {
+                indegree.put(neighbor, indegree.get(neighbor) - 1);
+                if (indegree.get(neighbor) == 0) {
+                    queue.offer(neighbor);
                 }
             }
         }
-        if(result.length()!=degree.size()) return "";
-        return result;
-    }
 
+        if (sb.length() == indegree.size()) {
+            return sb.toString();
+        } else {
+            return "";
+        }
+    }
 }

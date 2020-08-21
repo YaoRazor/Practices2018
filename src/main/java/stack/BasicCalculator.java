@@ -9,41 +9,50 @@ public class BasicCalculator {
             return 0;
         }
 
-        // 假设所有的表达式之前都有一个 0+ (current expression)
-        int ans = 0;
-        int sign = 1; // This sign is used to store the previous operator
         Stack<Integer> stack = new Stack<>();
-        int i = 0;
 
-        while(i<s.length()) {
+        int result = 0;
+        int sign = 1;
+
+        int num = 0;
+
+        for(int i=0; i<s.length(); i++) {
             char c = s.charAt(i);
             if(c==' ') {
-                i++;
                 continue;
-            } else if(Character.isDigit(c)) {
-                int tmp = 0;
-                while(i<s.length() && Character.isDigit(s.charAt(i))) {
-                    tmp = tmp*10+ (int)(s.charAt(i)-'0');
-                    i++;
-                }
-                ans += tmp*sign;
-                continue;
-            } else if(c=='(') { // 每次遇到'('就压栈，栈里存储的是之前的结果以及(之前的符号, 相当于开始evaluate新的子表达式
-                stack.push(ans);
-                stack.push(sign);
-                ans = 0; // ans清零用来存储现有的()括号中的结果
-                sign = 1; // sign needs to be reset, this is a key point
-            } else if(c==')') {
-                ans*=stack.pop();
-                ans+=stack.pop();
-            } else if(c=='+') {
-                sign = 1;
-            } else {
-                sign = -1;
             }
-            i++;
+
+            if(Character.isDigit(c)) {
+                num = num*10+c-'0';
+            } else if(c=='+') {
+                // 这里的sign是前一个sign
+                result += num*sign;
+                sign = 1;
+                num = 0;
+            } else if(c=='-') {
+                result += num*sign;
+                sign = -1;
+                num = 0;
+            } else if(c=='(') {
+                stack.push(result);
+                stack.push(sign);
+                sign = 1;
+                result = 0; // 这里需要reset result = 0, 因为要evaluate新的表达式了，这是一个key point
+                num = 0;
+            } else {
+                result+= num*sign;
+                result*=stack.pop();
+                result+=stack.pop();
+                sign = 1; //每个表达式前面default有一个'+'
+                num = 0;
+            }
         }
 
-        return ans;
+        // 这里需要收尾，这也是一个key point
+        if(num>0) {
+            result += sign*num;
+        }
+
+        return result;
     }
 }

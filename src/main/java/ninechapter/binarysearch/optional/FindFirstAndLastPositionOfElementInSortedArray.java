@@ -1,48 +1,38 @@
 package ninechapter.binarysearch.optional;
 
 public class FindFirstAndLastPositionOfElementInSortedArray {
-    public int[] searchRange(int[] A, int target) {
-        int[] ans = new int[]{-1, -1};
 
-        if (A == null || A.length == 0) {
-            return ans;
+    public int[] searchRange(int[] nums, int target) {
+        if(nums==null || nums.length==0) {
+            return new int[]{-1, -1};
         }
 
-        int n = A.length;
+        int start = findFirstIndexThatisBiggerOrEqualThanTarget(nums, target);
+        if(start==nums.length || nums[start]>target) {
+            return new int[]{-1, -1};
+        }
 
-        int start = 0;
-        int end = n - 1;
+        int end = findFirstIndexThatisBiggerOrEqualThanTarget(nums, target+1)-1;
 
-        while (start + 1 < end) {
-            int mid = (start + end) / 2;
+        return new int[]{start, end};
+    }
 
-            if (A[mid] < target) {
-                start = mid + 1;
+    private int findFirstIndexThatisBiggerOrEqualThanTarget(int[] nums, int target) {
+        int left = 0;
+        // Set right as nums.length, this is the key to this problem
+        // because (left+right)/2 will lean towards to left, therefore
+        // you will find meet outofindex exception.
+        int right = nums.length;
+
+        while(left<right) {
+            int mid = (left+right)/2;
+            if(nums[mid]>=target) {
+                right = mid;
             } else {
-                end = mid;
+                left = mid+1;
             }
         }
 
-        if (A[start] != target && A[end] != target) {
-            return ans;
-        }
-
-        ans[0] = A[start] == target ? start : end;
-
-        start = ans[0];
-        end = n - 1;
-
-        while (start + 1 < end) {
-            int mid = (start + end) / 2;
-
-            if (A[mid] > target) {
-                end = mid - 1;
-            } else {
-                start = mid;
-            }
-        }
-
-        ans[1] = A[end] == target ? end : start;
-        return ans;
+        return left;
     }
 }

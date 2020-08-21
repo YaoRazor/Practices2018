@@ -46,42 +46,28 @@ public class MergeKSortedLists {
         return dummyNode.next;
     }
 
-
     // Prefer heap solution as it is simpler
-    public ListNode mergeKListsUsingHeap(List<ListNode> lists) {
-        ListNode dummyNode = new ListNode(-1);
-        ListNode head = dummyNode;
+    // TC: nlog(k), k is the number of lists, n is total number of nodes
+    public ListNode mergeKLists(ListNode[] lists) {
+        PriorityQueue<ListNode> pq = new PriorityQueue<>((l1, l2)-> l1.val-l2.val);
 
-        PriorityQueue<ListNode> pq = new PriorityQueue<>(new NodeComparator());
-
-        for(ListNode node: lists) {
-            populatePriorityQueue(node, pq);
+        ListNode dummyHead = new ListNode(-1);
+        ListNode head = dummyHead;
+        for(ListNode list: lists) {
+            if(list!=null) {
+                pq.offer(list);
+            }
         }
 
         while(!pq.isEmpty()) {
-            head.next = pq.poll();
+            ListNode cur = pq.poll();
+            head.next = cur;
             head = head.next;
+            if(cur.next!=null) {
+                pq.offer(cur.next);
+            }
         }
 
-        return dummyNode.next;
+        return dummyHead.next;
     }
-
-
-    class NodeComparator implements Comparator<ListNode> {
-        @Override
-        public int compare(ListNode n1, ListNode n2) {
-            return n1.val - n2.val;
-        }
-    }
-
-
-    private void populatePriorityQueue(ListNode node, PriorityQueue<ListNode> pq) {
-        ListNode cur = node;
-        while(cur!=null) {
-            pq.offer(cur);
-            cur = cur.next;
-        }
-    }
-
-
 }

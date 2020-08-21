@@ -1,44 +1,41 @@
 package ninechapter.dp_topdown;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class WordBreak {
-    public boolean wordBreak(String s, Set<String> dict) {
-        boolean[] dp = new boolean[s.length()+1];
-        int maxLength = getMaxLength(dict);
-        return isBreak(s, 0, dict, dp, maxLength);
-    }
 
-    private boolean isBreak(String s, int start, Set<String> dict, boolean[] dp, int maxLength) {
-        if(start==s.length()) {
-            return true;
-        }
+    public boolean wordBreak(String s, List<String> wordDict) {
+        Set<String> set = new HashSet<>(wordDict);
+        int maxLength = getMaxLength(set);
+        int n = s.length();
+        boolean[] dp = new boolean[n+1];
+        dp[n] = true;
 
-        if(dp[start]) {
-            return true;
-        }
+        for(int i=n-1; i>=0; i--) {
+            for(int j=i+1; j<=n; j++) {
+                if(j-i>maxLength) {
+                    break;
+                }
 
-        for(int i=start+1; i<=s.length() && i<=start+maxLength; i++) {
-            String tmp = s.substring(start, i);
-            if(!dict.contains(tmp)) {
-                continue;
-            }
-
-            if(isBreak(s, i, dict, dp, maxLength)) {
-                dp[start] = true;
-                return true;
+                if(set.contains(s.substring(i, j)) && dp[j]) {
+                    dp[i] = true;
+                    break;
+                }
             }
         }
-        return false;
+
+        return dp[0];
     }
 
-    private int getMaxLength(Set<String> dict) {
-        int size = 0;
-
-        for(String tmp: dict) {
-            size = Math.max(size, tmp.length());
+    private int getMaxLength(Set<String> set) {
+        int ans = 0;
+        for(String word: set) {
+            ans = Math.max(ans, word.length());
         }
 
-        return size;
+        return ans;
     }
+
 }

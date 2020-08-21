@@ -26,7 +26,6 @@ public class SearchInRotatedArray {
                     end = mid-1;
                 }
             }
-
         }
 
         if(A[start]==target) {

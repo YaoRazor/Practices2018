@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
 public class LetterCombinationsOfPhoneNumber {
-    private static List<String> phoneTab =
+
+    private static final List<String> phoneTab =
             Arrays.asList("abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz");
 
     public List<String> letterCombinations(String digits) {
@@ -14,22 +14,24 @@ public class LetterCombinationsOfPhoneNumber {
         if(digits==null || digits.length()==0) {
             return ans;
         }
-        dfs(new StringBuilder(), 0, ans, digits);
+
+        dfs(ans, new StringBuilder(), 0, digits);
         return ans;
     }
 
-    private void dfs(StringBuilder cur, int index, List<String> ans, String digits) {
+    private void dfs(List<String> ans, StringBuilder sb, int index, String digits) {
         if(index==digits.length()) {
-            ans.add(cur.toString());
+            ans.add(sb.toString());
             return;
         }
 
-        String potential = phoneTab.get(digits.charAt(index)-'0'-2);
+        char c = digits.charAt(index);
+        String candidates = phoneTab.get(c-'2');
 
-        for(int i=0; i<potential.length(); i++) {
-            cur.append(potential.charAt(i));
-            dfs(cur, index+1, ans, digits);
-            cur.deleteCharAt(cur.length() - 1);
+        for(char tmp: candidates.toCharArray()) {
+            sb.append(tmp);
+            dfs(ans, sb, index+1, digits);
+            sb.deleteCharAt(sb.length()-1);
         }
     }
 }

@@ -24,7 +24,6 @@ public class IntersectionOfArrays {
         public int compare(Position p1, Position p2) {
             return arrays[p1.row][p1.col] - arrays[p2.row][p2.col];
         }
-
     }
 
 
@@ -64,7 +63,6 @@ public class IntersectionOfArrays {
 
             if(pre==curVal) {
                 cnt++;
-
                 if(cnt==arrs.length) {
                     ans++;
                 }

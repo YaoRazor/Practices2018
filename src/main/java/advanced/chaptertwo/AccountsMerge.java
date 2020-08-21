@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeSet;
 
-// This is a classic problem of union find!
+// This is a classic problem of union find
 public class AccountsMerge {
 
     Map<String, String> map;

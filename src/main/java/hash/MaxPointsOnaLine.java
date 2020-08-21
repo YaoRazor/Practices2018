@@ -18,7 +18,6 @@ public class MaxPointsOnaLine {
         int ans = 0;
 
         for(int i=0; i<n-1; i++) {
-
             Map<String, Integer> map = new HashMap<>();
             int x1 = points[i][0];
             int y1 = points[i][1];
@@ -26,7 +25,6 @@ public class MaxPointsOnaLine {
             int max = 0;
 
             for(int j=i+1; j<n; j++) {
-
                 int x2 = points[j][0];
                 int y2 = points[j][1];
                 if(x2==x1 && y2==y1) {

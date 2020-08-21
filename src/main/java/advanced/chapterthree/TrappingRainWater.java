@@ -10,6 +10,9 @@ public class TrappingRainWater {
             return 0;
         }
 
+        // leftMax represents the biggest value to the left of
+        // current index including current index; rightMax is
+        // similar
         int leftMax = height[0];
         int rightMax = height[height.length-1];
 
@@ -30,29 +33,6 @@ public class TrappingRainWater {
                 left++;
                 leftMax = Math.max(height[left], leftMax);
             }
-        }
-
-        return ans;
-    }
-
-    // TC: O(N)
-    public int trapRainWater(int[] heights) {
-        if(heights==null || heights.length<3) {
-            return 0;
-        }
-
-        int[] leftMost = new int[heights.length];
-        int maxLeft = 0;
-        int ans = 0;
-        for(int i=0; i<heights.length; i++) {
-            leftMost[i] = maxLeft;
-            maxLeft = Math.max(heights[i], maxLeft);
-        }
-
-        int maxRight = 0;
-        for(int i=heights.length-1; i>=0; i--) {
-            ans+= Math.max(Math.min(maxRight, leftMost[i])-heights[i], 0);
-            maxRight = Math.max(maxRight, heights[i]);
         }
 
         return ans;

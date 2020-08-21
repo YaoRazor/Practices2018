@@ -5,9 +5,7 @@ import java.util.List;
 
 public class CSVParser {
 
-
     public String parseString(final String str) {
-
         if(str==null || str.length()==0) {
             return "";
         }
@@ -44,6 +42,5 @@ public class CSVParser {
             list.add(sb.toString());
         }
         return String.join("|", list);
-
     }
 }

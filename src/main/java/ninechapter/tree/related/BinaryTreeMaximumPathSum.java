@@ -3,29 +3,24 @@ package ninechapter.tree.related;
 import datastructures.TreeNode;
 
 public class BinaryTreeMaximumPathSum {
-
     int maxPathSum = Integer.MIN_VALUE;
 
     public int maxPathSum(TreeNode root) {
-        helper(root);
+        getMaxPathDown(root);
         return maxPathSum;
     }
 
-
-    private int helper(TreeNode root) {
+    private int getMaxPathDown(TreeNode root) {
         if(root==null) {
             return 0;
         }
 
-        int left = helper(root.left);
-        int right = helper(root.right);
+        // 这个和0比较非常重要，这个相当于可以舍去负的branch，
+        // 这个实际上是这一道题的核心
+        int left = Math.max(0, getMaxPathDown(root.left));
+        int right = Math.max(0, getMaxPathDown(root.right));
 
-        int leftRes = root.val, rightRes = root.val;
-        leftRes = Math.max(leftRes, leftRes+left);
-        rightRes = Math.max(rightRes, rightRes+right);
-
-        maxPathSum = Math.max(leftRes+rightRes-root.val, maxPathSum);
-
-        return leftRes>rightRes? leftRes: rightRes;
+        maxPathSum = Math.max(maxPathSum, left+right+root.val);
+        return Math.max(left, right)+root.val;
     }
 }

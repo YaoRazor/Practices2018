@@ -23,7 +23,7 @@ public class TestBinaryTreeVerticalOrderTraversal {
         root.left = new TreeNode(1);
         root.right = new TreeNode(-1);
 
-        List<List<Integer>> ans = binaryTreeVerticalOrderTraversal.verticalOrder(root);
+        List<List<Integer>> ans = binaryTreeVerticalOrderTraversal.verticalTraversal(root);
 
         return;
 

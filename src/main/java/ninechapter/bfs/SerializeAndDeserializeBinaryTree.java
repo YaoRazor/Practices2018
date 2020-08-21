@@ -5,13 +5,14 @@ import java.util.Queue;
 
 import datastructures.TreeNode;
 
+// key point of this problem is that when serializing, we need to
+// put null elements in the queue. While when deserializing, we will
+// not put null elements in the queue.
 public class SerializeAndDeserializeBinaryTree {
+
+    // root is null will also be handled by this implementation
     public String serialize(TreeNode root) {
         StringBuilder sb = new StringBuilder();
-        if(root==null) {
-            return sb.toString();
-        }
-
         // We have to use LinkedList here because LinkedList supports null value
         // while Deque does not
         Queue<TreeNode> queue = new LinkedList<>();
@@ -43,10 +44,6 @@ public class SerializeAndDeserializeBinaryTree {
      * "serialize" method.
      */
     public TreeNode deserialize(String data) {
-        if(data==null || data.length()==0) {
-            return null;
-        }
-
         String[] treeStr = data.split(",");
         TreeNode root = buildTreeNode(treeStr[0]);
 

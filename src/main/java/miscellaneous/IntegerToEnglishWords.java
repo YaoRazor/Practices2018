@@ -6,7 +6,6 @@ public class IntegerToEnglishWords {
     private final String[] THOUSANDS = {"", "Thousand", "Million", "Billion"};
 
     public String numberToWords(int num) {
-
         if(num==0) {
             return "Zero";
         }
@@ -15,24 +14,20 @@ public class IntegerToEnglishWords {
         String ans = "";
 
         while(num>0) {
-
             if(num%1000>0) {
                 ans = helper(num%1000) + THOUSANDS[i] + " " + ans;
             }
 
             num/=1000;
             i++;
-
         }
 
         return ans.trim();
-
     }
 
     private String helper(int num) {
-
         if(num==0) {
-            return "";  // Avoid recursive call which will generate trailing 0 from helper
+            return "";  // Avoid recursive call which will generate trailing " " from helper
         } else if(num<20) {
             return LESS_THAN_20[num] + " ";
         } else if(num<100) {
@@ -40,6 +35,5 @@ public class IntegerToEnglishWords {
         } else {
             return LESS_THAN_20[num/100] + " Hundred " + helper(num%100);
         }
-
     }
 }

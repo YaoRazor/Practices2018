@@ -3,8 +3,8 @@ package heap;
 import java.util.*;
 
 public class TaskScheduler {
-    public int leastInterval(char[] tasks, int n) {
 
+    public int leastInterval(char[] tasks, int n) {
         Arrays.sort(tasks);
         Map<Character, Integer> map = new HashMap<>();
 
@@ -23,7 +23,6 @@ public class TaskScheduler {
         int count = n+1;
 
         while(!pq.isEmpty()) {
-
             Queue<Element> queue = new ArrayDeque<>();
 
             while(pq.size()>0 && count>0) {
@@ -53,7 +52,6 @@ public class TaskScheduler {
 
 
     class Element {
-
         public char val;
         public int count;
 
@@ -61,12 +59,9 @@ public class TaskScheduler {
             this.val = val;
             this.count = count;
         }
-
     }
 
-
     public int leastIntervalTwo(char[] tasks, int n) {
-
         int[] map = new int[26];
 
         for(char c: tasks) {
@@ -82,8 +77,6 @@ public class TaskScheduler {
             idol-= Math.min(map[i], map[25]-1);
         }
 
-
         return idol>0? idol+tasks.length: tasks.length;
-
     }
 }

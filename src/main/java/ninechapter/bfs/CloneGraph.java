@@ -1,21 +1,17 @@
 package ninechapter.bfs;
 
-
 import java.util.ArrayDeque;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Queue;
-import java.util.Set;
-
-import datastructures.UndirectedGraphNode;
 
 public class CloneGraph {
     class Node {
         public int val;
         public List<Node> neighbors;
 
-        public Node() {}
+        public Node(int val) {}
 
         public Node(int _val,List<Node> _neighbors) {
             val = _val;
@@ -24,10 +20,10 @@ public class CloneGraph {
     };
 
     // DFS解法，DFS当然会有重复子问题，对于重复子问题，进行记忆就可以了
-    public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
+    public Node cloneGraphDFS(Node node) {
         return clone(node, new HashMap<>());
     }
-    private UndirectedGraphNode clone(UndirectedGraphNode src, HashMap<UndirectedGraphNode, UndirectedGraphNode> map) {
+    private Node clone(Node src, HashMap<Node, Node> map) {
         if(src == null) {
             return null;
         }
@@ -36,62 +32,43 @@ public class CloneGraph {
             return map.get(src);
         }
 
-        UndirectedGraphNode cur = new UndirectedGraphNode(src.label);
+        Node cur = new Node(src.val);
         // This has to be put before neighbors loop because
         // If a node has itself as neighbor, put it in the last will result infinite loop
         map.put(src, cur);
 
-        for(UndirectedGraphNode neighboor: src.neighbors) {
-            cur.neighbors.add(clone(neighboor, map));
+        for(Node neighbor: src.neighbors) {
+            cur.neighbors.add(clone(neighbor, map));
         }
 
         return cur;
     }
 
-    // For this problem, there can be a way of doing three steps at the same time, but
-    // it is not intuitive and error prune. So we break it into three sub steps there
-    public UndirectedGraphNode cloneGraphBFS(UndirectedGraphNode node) {
-        if(node==null) {
-            return null;
-        }
-
-        // get all nodes
-        Set<UndirectedGraphNode> set = getAllNodes(node);
-        HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<>();
-
-        // get mapping
-        for(UndirectedGraphNode cur: set) {
-            UndirectedGraphNode copyNode = new UndirectedGraphNode(cur.label);
-            map.put(cur, copyNode);
-        }
-
-        // Clone topology
-        for(UndirectedGraphNode cur: set) {
-            UndirectedGraphNode copyNode = map.get(cur);
-            for(UndirectedGraphNode neighbor: cur.neighbors) {
-                copyNode.neighbors.add(map.get(neighbor));
+    // We can clone and BFS at the same time, in this solution.
+    // Basically Map serves as both the mapping and dedup
+    public Node cloneGraph(Node node) {
+            if(node==null) {
+                return null;
             }
-        }
+            Map<Node, Node> map = new HashMap<>();
+            Queue<Node> queue = new ArrayDeque<>();
 
-        return map.get(node);
-    }
+            queue.offer(node);
+            map.put(node, new Node(node.val));
 
-    private Set<UndirectedGraphNode> getAllNodes(UndirectedGraphNode node) {
-        Queue<UndirectedGraphNode> queue = new ArrayDeque<>();
-        Set<UndirectedGraphNode> set = new HashSet<>();
-        queue.offer(node);
-        set.add(node);
+            while(!queue.isEmpty()) {
+                Node cur = queue.poll();
 
-        while(!queue.isEmpty()) {
-            UndirectedGraphNode cur = queue.poll();
-            for(UndirectedGraphNode neighbor: cur.neighbors) {
-                if(!set.contains(neighbor)) {
-                    queue.offer(neighbor);
-                    set.add(neighbor);
+                for(Node neighbor: cur.neighbors) {
+                    if(!map.containsKey(neighbor)) {
+                        map.put(neighbor, new Node(neighbor.val));
+                        queue.offer(neighbor);
+                    }
+
+                    map.get(cur).neighbors.add(map.get(neighbor));
                 }
             }
-        }
 
-        return set;
-    }
+            return map.get(node);
+        }
 }

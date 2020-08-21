@@ -7,95 +7,64 @@ import java.util.List;
 // TC: 路径压缩后可以倾向于认为Union find的操作都是log*(n)或者O(1). 所以TC=0(N).
 // N是operator的长度
 public class NumberOfIslandsTwo {
+    private int[] father;
 
-    class Point {
-          int x;
-          int y;
-          Point() { x = 0; y = 0; }
-          Point(int a, int b) { x = a; y = b; }
+    private int find(int x) {
+        int ans = x;
+        while(father[ans]!=ans) {
+            ans = father[ans];
+        }
+
+        int tmp = x;
+        while(father[tmp]!=ans) {
+            int next = father[tmp];
+            father[tmp] = ans;
+            tmp = next;
+        }
+
+        return ans;
     }
 
-    class UnionFind {
-        int[] father;
+    private static final int[][] dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
-        UnionFind(int n) {
-            father = new int[n+1];
-            for(int i=1; i<=n; i++) {
-                father[i] = i;
-            }
-        }
-
-        private void union(int x, int y) {
-            int fx = find(x);
-            int fy = find(y);
-
-            if(fx!=fy) {
-                father[fx] = fy;
-            }
-        }
-
-        private int find(int x) {
-            int tmp = x;
-            while(father[x]!=x) {
-                x = father[x];
-            }
-
-            while(father[tmp]!=x) {
-                int a = father[tmp];
-                father[tmp] = x;
-                tmp = a;
-            }
-
-            return x;
-        }
-
-    }
-
-    int[][] dirs = {{0,1}, {0, -1}, {1,0}, {-1, 0}};
-
-    public List<Integer> numIslands2(int n, int m, Point[] operators) {
+    public List<Integer> numIslands2(int m, int n, int[][] positions) {
         List<Integer> ans = new ArrayList<>();
-        if(operators==null || operators.length==0) {
-            return ans;
+        int cnt = 0;
+        father = new int[m*n];
+        for(int i=0; i<m*n; i++) {
+            father[i] = i;
         }
 
-        // track which points are 1
-        Set<Integer> set = new HashSet<>();
-        UnionFind unionFind = new UnionFind(n*m);
-        int cnt = 0;
+        Set<Integer> visited = new HashSet<>();
 
-        for(Point point: operators) {
-            int x = point.x;
-            int y = point.y;
+        for(int[] position: positions) {
+            int x = position[0];
+            int y = position[1];
 
-            // prevent duplicated input
-            if(set.contains(x*m+y)) {
+            if(visited.contains(x*n+y)) {
                 ans.add(cnt);
                 continue;
             }
 
             cnt++;
-            int cur = x*m+y;
-            set.add(cur);
+            visited.add(x*n+y);
 
             for(int[] dir: dirs) {
-                int nx = x+dir[0];
-                int ny = y+dir[1];
+                int newX = x+dir[0];
+                int newY = y+dir[1];
 
-                if(nx<0 || nx>=n || ny<0 || ny>=m || !set.contains(nx*m+ny)) {
+                if(newX<0 || newX==m || newY<0 || newY==n || !visited.contains(newX*n+newY)) {
                     continue;
                 }
 
-                int fx = unionFind.find(cur);
-                int fy = unionFind.find(nx*m+ny);
+                int fx = find(x*n+y);
+                int fy = find(newX*n+newY);
+
                 if(fx!=fy) {
-                    unionFind.union(cur, nx*m+ny);
                     cnt--;
+                    father[fx] = fy;
                 }
-
             }
-
-            // 注意加cnt要放在最后
             ans.add(cnt);
         }
 

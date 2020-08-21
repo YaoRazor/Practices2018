@@ -24,7 +24,6 @@ public class JumpGameTwo {
         return dp[nums.length-1];
     }
 
-
     // BFS
     public int jumpBFS(int[] nums) {
         if(nums.length<2) {
@@ -47,7 +46,6 @@ public class JumpGameTwo {
             }
 
             curMax = nextMax;
-
         }
 
         return -1;

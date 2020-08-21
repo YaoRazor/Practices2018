@@ -4,50 +4,43 @@ import java.util.Arrays;
 
 // You get LintCode leaderboard for this problem
 public class NextPermutation {
-    public int[] nextPermutation(int[] nums) {
-        if(nums==null || nums.length<2) {
-            return nums;
-        }
-
+    public void nextPermutation(int[] nums) {
         int n = nums.length;
-
-        int index = -1;
-
-        for(int i=n-2; i>=0; i--) {
-            if(nums[i]<nums[i+1]) {
-                index = i;
+        int k = n-2;
+        int l = n-1;
+        for (k = n - 2; k >= 0; k--) {
+            if (nums[k] < nums[k + 1]) {
+                // 从右往左找，找到的是第一个比右边小的
                 break;
             }
         }
+        if (k < 0) {
+            reverse(nums, 0);
+        } else {
+            // 从右往左找，找到的肯定是最小的比index k大的
+            for (l = n - 1; l > k; l--) {
+                if (nums[l] > nums[k]) {
+                    break;
+                }
+            }
 
-        if(index==-1) {
-            Arrays.sort(nums);
-            return nums;
+            swap(nums, k, l);
+            reverse(nums,  k + 1);
         }
 
-        int postion = findIndexThatIsSmallest(nums, index);
-        swap(nums, index, postion);
+    }
 
-        Arrays.sort(nums, index+1, n);
-        return nums;
+    private void reverse(int[] nums, int start) {
+        int end = nums.length-1;
+        while(start<end) {
+            swap(nums, start++, end--);
+        }
     }
 
     private void swap(int[] nums, int i, int j) {
         int tmp = nums[j];
         nums[j] = nums[i];
         nums[i] = tmp;
-    }
-
-
-    private int findIndexThatIsSmallest(int[] nums, int index) {
-        int ans = index+1;
-        for(int i=index+2; i<nums.length; i++) {
-            if(nums[i]>nums[index] && nums[i]<nums[ans]) {
-                ans = i;
-            }
-        }
-
-        return ans;
     }
 
 }

@@ -18,7 +18,6 @@ public class ContinuousSubarraySum {
         int curMax = Integer.MIN_VALUE;
         int curSum = 0;
 
-
         for(int i=0; i<A.length; i++) {
             curSum+=A[i];
             if(curSum-minSum>curMax) {

@@ -11,7 +11,6 @@ public class CopyListWithRandomPointer {
     // Basically some random pointer can point to the nodes before current node, if you decouple at the same time, that
     // relationship is already lost
     public Node copyRandomList(Node head) {
-
         if (head == null) {
             return null;
         }

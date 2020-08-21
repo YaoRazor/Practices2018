@@ -1,7 +1,9 @@
 package advanced.chapterseven;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 
 interface NestedInteger {
   // @return true if this NestedInteger holds a single integer,
@@ -35,5 +37,31 @@ public class FlattenList {
         }
 
         return ans;
+    }
+
+    public int depthSumUsingBFS(List<NestedInteger> nestedList) {
+        if(nestedList==null || nestedList.size()==0) {
+            return 0;
+        }
+
+        Queue<NestedInteger> queue = new ArrayDeque<>(nestedList);
+        int depth = 1;
+        int sum = 0;
+
+        while(!queue.isEmpty()) {
+            int size = queue.size();
+            for(int i=0; i<size; i++) {
+                NestedInteger cur = queue.poll();
+                if(cur.isInteger()) {
+                    sum+=depth*cur.getInteger();
+                } else {
+                    queue.addAll(cur.getList());
+                }
+            }
+
+            depth++;
+        }
+
+        return sum;
     }
 }

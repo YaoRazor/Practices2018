@@ -1,75 +1,67 @@
 package tree;
 
 
-import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Deque;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import datastructures.TreeNode;
 
-// Level order traversal is used to solve this problem, we also need to store the
-// col for each node in order to add it to the right list, the index doex not have
-// to start from 0, it can start from negative numbers
+
 public class BinaryTreeVerticalOrderTraversal {
-    public List<List<Integer>> verticalOrder(TreeNode root) {
+    class Element {
+        int value;
+        int level;
+        Element(int value, int level) {
+            this.value = value;
+            this.level = level;
+        }
+    }
+
+    public List<List<Integer>> verticalTraversal(TreeNode root) {
+        Map<Integer, List<Element>> map = new HashMap<>();
+        if(root==null) {
+            return new ArrayList<>();
+        }
+        dfs(map, root, 0, 0);
+        int min = 0;
+        int max = 0;
 
         List<List<Integer>> ans = new ArrayList<>();
-        if(root==null) {
-            return ans;
+        for(int key: map.keySet()) {
+            min = Math.min(min, key);
+            max = Math.max(max, key);
         }
 
-        Deque<Pair> deque = new ArrayDeque<>();
-        Map<Integer, List<Integer>> map = new HashMap<>();
-        deque.addLast(new Pair(root, 0));
-        int min = 0;
+        for(int i=min; i<=max; i++) {
+            if(map.containsKey(i)) {
+                Collections.sort(map.get(i), (e1, e2)-> {
+                    if(e1.level==e2.level) {
+                        return e1.value - e2.value;
+                    } else {
+                        return e1.level - e2.level;
+                    }
+                });
 
-        while(!deque.isEmpty()) {
-
-            Pair cur = deque.pollFirst();
-            TreeNode node = cur.node;
-            int col = cur.col;
-
-            if(!map.containsKey(col)) {
-                map.put(col, new ArrayList<>());
+                List<Integer> tmp = map.get(i).stream().map(e->e.value).collect(Collectors.toList());;
+                ans.add(tmp);
             }
-
-            map.get(col).add(node.val);
-
-            if(node.left!=null) {
-
-                deque.addLast(new Pair(node.left, col-1));
-                min = Math.min(min, col-1);
-            }
-
-            if(node.right!=null) {
-
-                deque.addLast(new Pair(node.right, col+1));
-            }
-
-
-        }
-
-
-        while(map.containsKey(min)) {
-            ans.add(map.get(min++));
         }
 
         return ans;
-
     }
 
-
-    class Pair {
-
-        public TreeNode node;
-        public int col;
-
-        public Pair(TreeNode node, int col) {
-            this.node = node;
-            this.col = col;
+    private void dfs(Map<Integer, List<Element>> map, TreeNode root, int level, int order) {
+        if(root==null) {
+            return;
         }
+
+        map.putIfAbsent(order, new ArrayList<>());
+        map.get(order).add(new Element(root.val, level));
+        dfs(map, root.left, level+1, order-1);
+        dfs(map, root.right, level+1, order+1);
     }
 }

@@ -23,7 +23,6 @@ public class WordLadder {
         return res;
     }
 
-
     public int ladderLength(String start, String end, Set<String> dict) {
         Queue<String> queue = new ArrayDeque<>();
         Set<String> visited = new HashSet<>();
