@@ -3,43 +3,41 @@ package ninechapter.dp_topdown;
 import java.util.List;
 import java.util.*;
 
+// 时间复杂度在加了DP之后仍然是指数级，因为在最坏情况，每一个分割都是解，那么总共
+// 有2^n个解. https://www.jiuzhang.com/qa/2994/
 public class WordBreakTwo {
 
     public List<String> wordBreak(String s, List<String> wordDict) {
         List<String> ans = new ArrayList<>();
-        if(s==null || s.length()==0 || wordDict==null || wordDict.size()==0) {
-            return ans;
-        }
-
-        int n = s.length();
+        Set<String> set = new HashSet<>(wordDict);
         Map<Integer, List<String>> map = new HashMap<>();
         List<String> tmp = new ArrayList<>();
         tmp.add("");
-        map.put(n, tmp);
+        map.put(s.length(), tmp);
+        int maxLength = getMaxLength(wordDict);
 
-        return dfs(s, map, 0, new HashSet<>(wordDict), getMaxLength(wordDict));
+        return dfs(s, 0, set, map, maxLength);
     }
 
-    private List<String> dfs(String s, Map<Integer, List<String>> map, int start, Set<String> wordDict, int maxLength) {
+    private List<String> dfs(String s, int start, Set<String> set, Map<Integer, List<String>> map, int maxLength) {
         if(map.containsKey(start)) {
             return map.get(start);
         }
 
         List<String> ans = new ArrayList<>();
 
-        for(int i=start+1; i<=s.length(); i++) {
-            String curString = s.substring(start, i);
-            if(!wordDict.contains(curString)) {
+        for(int i=start+1; i<=start+maxLength && i<=s.length(); i++) {
+            String cur = s.substring(start, i);
+            if(!set.contains(cur)) {
                 continue;
             }
 
-            List<String> tmp = dfs(s, map, i, wordDict, maxLength);
-
-            for(String str: tmp) {
-                if(str.equals("")) {
-                    ans.add(curString);
+            List<String> next = dfs(s, i, set, map, maxLength);
+            for(String tmp: next) {
+                if(tmp.length()==0) {
+                    ans.add(cur);
                 } else {
-                    ans.add(curString+" "+str);
+                    ans.add(cur+" "+tmp);
                 }
             }
         }
@@ -48,12 +46,11 @@ public class WordBreakTwo {
         return ans;
     }
 
-    private int getMaxLength(List<String> set) {
+    private int getMaxLength(final List<String> wordDict) {
         int ans = 0;
-        for(String word: set) {
-            ans = Math.max(ans, word.length());
+        for(String str: wordDict) {
+            ans = Math.max(ans, str.length());
         }
-
         return ans;
     }
 }

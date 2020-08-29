@@ -1,4 +1,4 @@
-package twodimensionarray;
+package matrix;
 
 public class DiagonalTraverse {
 
@@ -11,9 +11,7 @@ public class DiagonalTraverse {
         int n = matrix.length;
 
         int[] ans = new int[m*n];
-
         int index = 0;
-
 
         for(int i=0; i<m+n; i++) {
             int row = Math.min(i, m-1);
@@ -37,7 +35,6 @@ public class DiagonalTraverse {
                     ans[index++] = matrix[j--][k++];
                 }
             }
-
         }
 
         return ans;

@@ -57,6 +57,7 @@ public class NumberOfIslandsTwo {
                     continue;
                 }
 
+                // 这一句不能提到外面去，因为fx在这个循环中是可能一直在变化的
                 int fx = find(x*n+y);
                 int fy = find(newX*n+newY);
 

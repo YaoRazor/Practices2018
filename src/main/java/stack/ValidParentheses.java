@@ -8,24 +8,22 @@ import java.util.Stack;
 public class ValidParentheses {
 
     public boolean isValid(String s) {
-        if(s==null || s.length()==0) {
-            return true;
+        if(s==null ) {
+            return false;
         }
-
+        Stack<Character> stack = new Stack<>();
         Map<Character, Character> map = new HashMap<>();
         map.put(')', '(');
+        map.put(']', '[');
         map.put('}', '{');
-        map.put(']','[');
 
-        Stack<Character> stack = new Stack<>();
         for(char c: s.toCharArray()) {
-            if(c=='(' || c=='{' || c=='[') {
+            if(c=='(' || c=='[' || c=='{') {
                 stack.push(c);
-                continue;
-            }
-
-            if(stack.isEmpty() || stack.pop()!=map.get(c)) {
-                return false;
+            } else {
+                if(stack.isEmpty() || stack.pop()!=map.get(c)) {
+                    return false;
+                }
             }
         }
 

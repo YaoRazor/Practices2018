@@ -7,9 +7,7 @@ public class RansomNote {
 
     // The key point is to loop through magazine first
     public boolean canConstruct(String ransomNote, String magazine) {
-        if(ransomNote==null || magazine==null) {
-            return false;
-        }else if(ransomNote.length()>magazine.length()) {
+        if(ransomNote==null || magazine==null || ransomNote.length()>magazine.length()) {
             return false;
         }
 

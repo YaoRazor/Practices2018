@@ -1,4 +1,4 @@
-package twodimensionarray;
+package matrix;
 
 import org.junit.Test;
 

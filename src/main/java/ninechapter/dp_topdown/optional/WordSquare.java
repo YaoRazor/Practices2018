@@ -27,11 +27,9 @@ public class WordSquare {
             if(cur.children[c-'a']==null) {
                 cur.children[c-'a'] = new TrieNode(c);
             }
-            cur.words.add(s);
             cur = cur.children[c-'a'];
+            cur.words.add(s);
         }
-
-        cur.words.add(s);
     }
 
     private List<String> search(String s) {

@@ -1,4 +1,4 @@
-package twodimensionarray;
+package matrix;
 
 public class RotateImage {
 

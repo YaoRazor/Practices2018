@@ -5,17 +5,16 @@ import java.util.LinkedList;
 public class PlusOne {
     public int[] plusOne(int[] digits) {
         LinkedList<Integer> ans = new LinkedList<>();
-        boolean isCarry = true;
+        int carry = 1;
 
         for(int i=digits.length-1; i>=0; i--) {
-            int cur = digits[i] + (isCarry? 1:0);
-            isCarry = cur>=10;
-            cur%=10;
-            ans.addFirst(cur);
+            int cur = digits[i] + carry;
+            ans.addFirst(cur%10);
+            carry = cur/10;
         }
 
-        if(isCarry) {
-            ans.addFirst(1);
+        if(carry > 0) {
+            ans.addFirst(carry);
         }
 
         int[] ret = new int[ans.size()];

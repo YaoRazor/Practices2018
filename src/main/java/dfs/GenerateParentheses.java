@@ -7,25 +7,30 @@ public class GenerateParentheses {
 
     public List<String> generateParenthesis(int n) {
         List<String> ans = new ArrayList<>();
-        dfs(ans, new StringBuilder(), 0, 0, n);
+        if(n<=0) {
+            return ans;
+        }
+
+        dfs(ans, new StringBuilder(), n, n);
+
         return ans;
     }
 
-    private void dfs(List<String> ans, StringBuilder sb, int left, int right, int n) {
-        if(left==right && left==n) {
+    private void dfs(List<String> ans, StringBuilder sb, int open, int close) {
+        if(open==0 && close==0) {
             ans.add(sb.toString());
             return;
         }
 
-        if(left<n) {
+        if(open>0) {
             sb.append('(');
-            dfs(ans, sb, left+1, right, n);
+            dfs(ans, sb, open-1, close);
             sb.deleteCharAt(sb.length()-1);
         }
 
-        if(right<left) {
+        if(close>open) {
             sb.append(')');
-            dfs(ans, sb, left, right+1, n);
+            dfs(ans, sb, open, close-1);
             sb.deleteCharAt(sb.length()-1);
         }
     }

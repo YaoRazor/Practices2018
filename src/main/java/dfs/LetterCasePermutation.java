@@ -6,36 +6,34 @@ import java.util.List;
 
 public class LetterCasePermutation {
 
-    public List<String> letterCasePermutation(String S) {
-        List<String> ret = new ArrayList<>();
-        if(S == null || S.length() == 0) {
-            return ret;
+    public List<String> letterCasePermutation(String s) {
+        List<String> ans = new ArrayList<>();
+        if(s==null || s.length()==0) {
+            return ans;
         }
 
-        StringBuilder sb = new StringBuilder();
-        dfs(S, 0, ret, sb);
-
-        return ret;
+        dfs(ans, new StringBuilder(), 0, s);
+        return ans;
     }
 
-
-    private void dfs(String S, int start, List<String> ret, StringBuilder sb) {
-        if(start == S.length()) {
-            ret.add(sb.toString());
+    private void dfs(List<String> ans, StringBuilder sb, int index, String s) {
+        if(index==s.length()) {
+            ans.add(sb.toString());
             return;
         }
 
-        Character c = S.charAt(start);
-
-        if(Character.isLetter(c)) {
+        char c = s.charAt(index);
+        if(Character.isDigit(c)) {
+            sb.append(c);
+            dfs(ans, sb, index+1, s);
+            sb.deleteCharAt(sb.length()-1);
+        } else {
             sb.append(Character.toLowerCase(c));
-            dfs(S, start+1, ret, new StringBuilder(sb));
+            dfs(ans, sb, index+1, s);
             sb.deleteCharAt(sb.length()-1);
             sb.append(Character.toUpperCase(c));
-            dfs(S, start+1, ret, new StringBuilder(sb));
-        } else {
-            sb.append(c);
-            dfs(S, start+1, ret, sb);
+            dfs(ans, sb, index+1, s);
+            sb.deleteCharAt(sb.length()-1);
         }
     }
 }

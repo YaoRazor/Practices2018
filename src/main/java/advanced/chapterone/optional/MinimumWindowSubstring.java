@@ -5,7 +5,6 @@ import java.util.Map;
 
 public class MinimumWindowSubstring {
 
-    // 这是一道稍微有所变化的Sliding Window，
     public String minWindow(String s, String t) {
         if(s==null || t==null || s.length()<t.length()) {
             return "";
@@ -16,6 +15,8 @@ public class MinimumWindowSubstring {
             map.put(c, map.getOrDefault(c, 0)+1);
         }
 
+        // 可以不要ans，直接用s.substring()函数，code会简单一些，但是
+        // 算法复杂度会高一些
         int[] ans = new int[2];
         int cnt = Integer.MAX_VALUE;
 

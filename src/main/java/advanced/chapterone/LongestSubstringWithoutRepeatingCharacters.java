@@ -3,6 +3,7 @@ package advanced.chapterone;
 import java.util.HashMap;
 import java.util.Map;
 
+// prefer to optimal solution for this problem
 public class LongestSubstringWithoutRepeatingCharacters {
 
     // Normal sliding window

@@ -29,7 +29,6 @@ public class SentenceScreenFitting {
             if(cnt==sentence.length) {
                 ans++;
             }
-            cnt = 0;
         }
 
         return ans;

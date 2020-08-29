@@ -10,38 +10,28 @@ import java.util.Stack;
 // The space complexity is O(h), h is the height of the tree
 public class BinarySearchTreeIterator {
 
-    Stack<TreeNode> stack;
+    Stack<TreeNode> stack = new Stack<>();
 
-    /*
-     * @param root: The root of binary tree.
-     */
     public BinarySearchTreeIterator(TreeNode root) {
-        stack = new Stack<>();
-        getNexteElement(root);
+        getNextElement(root);
     }
 
-    private void getNexteElement(TreeNode cur) {
-        while(cur!=null) {
-            stack.push(cur);
-            cur = cur.left;
+    private void getNextElement(TreeNode root) {
+        while(root!=null) {
+            stack.push(root);
+            root = root.left;
         }
     }
 
-    /*
-     * @return: True if there has next node, or false
-     */
+    /** @return the next smallest number */
+    public int next() {
+        TreeNode cur = stack.pop();
+        getNextElement(cur.right);
+        return cur.val;
+    }
+
+    /** @return whether we have a next smallest number */
     public boolean hasNext() {
         return !stack.isEmpty();
-    }
-
-    /*
-     * @return: return next node
-     */
-    public TreeNode next() {
-        TreeNode cur = stack.pop();
-        if(cur.right!=null) {
-            getNexteElement(cur.right);
-        }
-        return cur;
     }
 }
