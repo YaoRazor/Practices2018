@@ -6,38 +6,29 @@ public class SearchInRotatedArrayTwo {
             return false;
         }
 
-
         int start = 0;
         int end = nums.length-1;
 
-        while(start<=end) {
-
+        while(start<end) {
             int mid = (start+end)/2;
-            if(nums[mid]==target) {
-                return true;
-            } else if(nums[mid] > nums[end]) {
-
-                if(target<nums[mid] && target>=nums[start]) {
-                    end = mid-1;
+            if(nums[mid]>nums[end]) {
+                if(target>=nums[start] && target<=nums[mid]) {
+                    end = mid;
                 } else {
                     start = mid+1;
                 }
 
-            } else if(nums[mid] < nums[end]) {
-
+            } else if(nums[mid]<nums[end]){
                 if(target>nums[mid] && target<=nums[end]) {
                     start = mid+1;
-                } else {
-                    end = mid-1;
+                }  else {
+                    end = mid;
                 }
-
             } else {
                 end--;
             }
-
         }
 
-
-        return false;
+        return nums[start]==target;
     }
 }

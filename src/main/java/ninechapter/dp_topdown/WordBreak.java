@@ -4,10 +4,12 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+// TC: 0(N^3) because s.substring() cost also O(n) time
 public class WordBreak {
 
     public boolean wordBreak(String s, List<String> wordDict) {
         Set<String> set = new HashSet<>(wordDict);
+        // This can speed up the process when s is quite long
         int maxLength = getMaxLength(set);
         int n = s.length();
         boolean[] dp = new boolean[n+1];
@@ -19,7 +21,9 @@ public class WordBreak {
                     break;
                 }
 
-                if(set.contains(s.substring(i, j)) && dp[j]) {
+                // Put dp[j] before set.contains(s.substring(i, j)
+                // can speed up the process
+                if(dp[j] && set.contains(s.substring(i, j))) {
                     dp[i] = true;
                     break;
                 }

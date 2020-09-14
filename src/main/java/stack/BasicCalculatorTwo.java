@@ -7,56 +7,51 @@ import java.util.Stack;
 // 多个operand合成一个
 public class BasicCalculatorTwo {
     public int calculate(String s) {
-        int ans = 0;
-
         if(s==null || s.length()==0) {
-            return ans;
+            return 0;
         }
 
         Stack<Integer> stack = new Stack<>();
-        // sign is used to store the previous operator, for initialization, we can assume
-        // There is a '+' before the expression
+        int num = 0;
         char sign = '+';
-        int i =0;
 
-        while(i<s.length()) {
+        for(int i=0; i<s.length(); i++) {
             if(s.charAt(i)==' ') {
-                i++;
-                continue;
+                // key point here, this is used to handle last number
+                if(i!=s.length()-1) {
+                    continue;
+                }
             }
 
-            // store current number
-            int number = 0;
-            while(i<s.length() && Character.isDigit(s.charAt(i))) {
-                number = number*10+ (int)(s.charAt(i)-'0');
-                i++;
+            if(Character.isDigit(s.charAt(i))) {
+                num = num*10+(s.charAt(i)-'0');
+                if(i!=s.length()-1) {
+                    continue;
+                }
             }
 
-            // This sign is previous sign
+            // when reaching here, two possibilities
+            // i=s.length()-1 or s.charAt(i) is one of four operators
             if(sign=='+') {
-                stack.push(number);
-
+                stack.push(num);
             } else if(sign=='-') {
-                stack.push(-number);
-
+                stack.push(-num);
             } else if(sign=='*') {
-                stack.push(stack.pop()*number);
-
-            } else if(sign=='/'){
-                stack.push(stack.pop()/number);
+                stack.push(stack.pop()*num);
+            } else {
+                stack.push(stack.pop()/num);
             }
 
-            if(i==s.length()) {
-                break;
-            } else {
+            num = 0;
+
+            if(i!=s.length()-1) {
                 sign = s.charAt(i);
             }
-
-            i++;
         }
 
-        for(Integer cur: stack) {
-            ans+=cur;
+        int ans = 0;
+        for(int tmp: stack) {
+            ans+=tmp;
         }
 
         return ans;

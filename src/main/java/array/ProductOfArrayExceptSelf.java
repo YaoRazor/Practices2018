@@ -4,6 +4,7 @@ package array;
 public class ProductOfArrayExceptSelf {
 
     // This is an optimized version that reuse the output array as buffer
+    // TC: O(N)
     public int[] productExceptSelf(int[] nums) {
         int[] ans = new int[nums.length];
         ans[0] = 1;

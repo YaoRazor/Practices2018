@@ -2,8 +2,7 @@ package ninechapter.warmup;
 
 public class LongestPalindromicSubstring {
 
-    // Two dimensional DP would be more intuitive, but this method can save some space
-    // TC: O(N), SC: O(N)
+
     public String longestPalindromeUsingDP(String s) {
         if(s==null || s.length()==0) {
             return "";
@@ -35,6 +34,8 @@ public class LongestPalindromicSubstring {
 
     private int lo, maxLen;
 
+    // Two dimensional DP would be more intuitive, but this method can save some space
+    // TC: O(N^2), SC: O(N)
     public String longestPalindrome(String s) {
         int len = s.length();
         if (len < 2)

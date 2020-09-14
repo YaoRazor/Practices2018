@@ -50,6 +50,7 @@ public class CloneGraph {
             if(node==null) {
                 return null;
             }
+            // 这里的map就充当了BFS dedup的作用
             Map<Node, Node> map = new HashMap<>();
             Queue<Node> queue = new ArrayDeque<>();
 

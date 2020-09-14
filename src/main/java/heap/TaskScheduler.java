@@ -5,7 +5,6 @@ import java.util.*;
 public class TaskScheduler {
 
     public int leastInterval(char[] tasks, int n) {
-        Arrays.sort(tasks);
         Map<Character, Integer> map = new HashMap<>();
 
         for(int i=0; i<tasks.length; i++) {
@@ -27,7 +26,6 @@ public class TaskScheduler {
 
             while(pq.size()>0 && count>0) {
                 Element cur = pq.poll();
-//                System.out.println("Put "+ cur.val+ " in\n");
                 cur.count--;
                 if(cur.count!=0) {
                     queue.offer(cur);
@@ -35,21 +33,20 @@ public class TaskScheduler {
                 count--;
             }
 
-            if(queue.size()>0) {
+
+            pq.addAll(queue);
+
+            if(pq.size()>0) {
                 ans+=n+1;
             } else {
                 ans+=n+1-count;
             }
 
             count = n+1;
-
-            pq.addAll(queue);
         }
 
         return ans;
     }
-
-
 
     class Element {
         public char val;

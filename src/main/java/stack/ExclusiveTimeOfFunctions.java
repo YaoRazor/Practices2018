@@ -3,38 +3,33 @@ package stack;
 import java.util.List;
 import java.util.Stack;
 
+// TC: O(N), SC: O(N)
 public class ExclusiveTimeOfFunctions {
 
     public int[] exclusiveTime(int n, List<String> logs) {
+        Stack<Integer> stack = new Stack<>();
         int[] ans = new int[n];
-
-        if(logs==null || logs.size()==0) {
+        if(logs==null) {
             return ans;
         }
+        int last = 0;
 
-        Stack<Integer> stack = new Stack<>();
-        int pre = 0;
-
-        for(int i=0; i<logs.size(); i++) {
-            String[] array = logs.get(i).split(":");
-            String action = array[1];
+        for(String log: logs) {
+            String[] array = log.split(":");
             int id = Integer.parseInt(array[0]);
-            int cur = Integer.parseInt(array[2]);
+            String event = array[1];
+            int time = Integer.parseInt(array[2]);
 
-            // 每次都结算当前时间与当上一次action的时间的差
-            if("start".equals(action)) {
+            if("start".equals(event)) {
                 if(!stack.isEmpty()) {
-                    ans[stack.peek()] +=cur-pre;
+                    ans[stack.peek()]+=time-last;
                 }
-
                 stack.push(id);
+                last = time;
             } else {
-                cur+=1;  //当action是end的时候，timestamp的定义比较奇葩
-                ans[id]+=cur-pre;
-                stack.pop(); //这里的id和stack.pop()出来的值是一样的
+                ans[stack.pop()]+=time-last+1;
+                last = time+1; // end的时候的时间定义比较奇葩
             }
-
-            pre = cur;
         }
 
         return ans;

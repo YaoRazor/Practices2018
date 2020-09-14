@@ -3,44 +3,22 @@ package advanced.chaptertwo;
 public class WordDictionary {
     class TrieNode {
         char c;
+        TrieNode[] children;
         boolean isWord;
-        TrieNode[] children = new TrieNode[26];
-
         TrieNode(char c) {
             this.c = c;
+            children = new TrieNode[26];
         }
     }
 
-    private boolean searchNode(String word, int index, TrieNode cur) {
-        if(index==word.length()) {
-            return cur.isWord;
-        }
+    private TrieNode root;
 
-        char c = word.charAt(index);
-
-        if(c=='.') {
-            for(int i=0; i<26; i++) {
-                if(cur.children[i]!=null && searchNode(word, index+1, cur.children[i])) {
-                    return true;
-                }
-            }
-
-            return false;
-        } else {
-            if(cur.children[c-'a']==null) {
-                return false;
-            } else {
-                return searchNode(word, index+1, cur.children[c-'a']);
-            }
-        }
+    /** Initialize your data structure here. */
+    public WordDictionary() {
+        root = new TrieNode(' ');
     }
 
-    private TrieNode root = new TrieNode(' ');
-
-    /*
-     * @param word: Adds a word into the data structure.
-     * @return: nothing
-     */
+    /** Adds a word into the data structure. */
     public void addWord(String word) {
         TrieNode cur = root;
         for(int i=0; i<word.length(); i++) {
@@ -55,11 +33,35 @@ public class WordDictionary {
         cur.isWord = true;
     }
 
-    /*
-     * @param word: A word could contain the dot character '.' to represent any one letter.
-     * @return: if the word is in the data structure.
-     */
+    /** Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. */
     public boolean search(String word) {
-        return searchNode(word, 0, root);
+        return search(word, root, 0);
+    }
+
+    public boolean search(String word, TrieNode cur, int index) {
+        if(index==word.length()) {
+            return cur.isWord;
+        }
+
+        char c = word.charAt(index);
+        if(c!='.') {
+            if(cur.children[c-'a']==null) {
+                return false;
+            } else {
+                cur = cur.children[c-'a'];
+                return search(word, cur, index+1);
+            }
+        } else {
+            for(TrieNode next: cur.children) {
+                if(next==null) {
+                    continue;
+                }
+                if(search(word, next, index+1)) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

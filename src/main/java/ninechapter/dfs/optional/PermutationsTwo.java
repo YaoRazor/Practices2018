@@ -14,7 +14,6 @@ public class PermutationsTwo {
         }
 
         Arrays.sort(nums);
-
         LinkedList<Integer> cur = new LinkedList<>();
 
         boolean[] visited = new boolean[nums.length];

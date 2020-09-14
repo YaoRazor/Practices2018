@@ -3,7 +3,8 @@ package advanced.chapterseven;
 import java.util.*;
 
 
-// Average TC is O(1) for hasNext and next
+// 这一题不用stack，直接在队头展开也是可以的，只是用stack展开要
+// 方便一些，否则的话需要recursive来展开。有空研究一下时间复杂度
 public class FlattenNestedListIterator implements Iterator<Integer> {
     Stack<NestedInteger> stack = new Stack<>();
 

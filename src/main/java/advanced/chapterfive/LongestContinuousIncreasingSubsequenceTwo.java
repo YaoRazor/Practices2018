@@ -16,7 +16,7 @@ public class LongestContinuousIncreasingSubsequenceTwo {
         int n = matrix.length;
         int m = matrix[0].length;
 
-        // dp[i][j] represents the len increaseing subsequence ending at i,j
+        // dp[i][j] represents the longest increasing subsequence ending at i,j
         int[][] dp = new int[n][m];
         int ans = 1;
 
@@ -41,8 +41,8 @@ public class LongestContinuousIncreasingSubsequenceTwo {
             int ny = j+dir[1];
 
             // Usually for a search in the matrix, we will need to use a set to prevent revisiting
-            // the previous position, however, because we are looking for postitions with increasing
-            // value, there will not be possibility of revisiting previous postion, but there are
+            // the previous position, however, because we are looking for positions with increasing
+            // value, there will not be possibility of revisiting previous position, but there are
             // still duplicated sub-problems, that is why we are use memorization here.
             if(nx<0 || nx>=matrix.length || ny<0 || ny>=matrix[0].length || matrix[i][j]<=matrix[nx][ny]) {
                 continue;

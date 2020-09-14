@@ -8,6 +8,9 @@ public class IsGraphBipartite {
     public boolean isBipartite(int[][] graph) {
         int[] colors = new int[graph.length];
 
+        // 这一题的问题是图有可能不是全联通的
+        // 这其实另一种形式的BFS，对于非全联通图的BFS
+        // 以前我们的BFS，都是连通图
         for(int i=0; i<graph.length; i++) {
             if(colors[i]!=0) {
                 continue;

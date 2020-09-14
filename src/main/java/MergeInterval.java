@@ -9,44 +9,34 @@ import java.util.stream.Collectors;
 public class MergeInterval {
 
     public int[][] merge(int[][] intervals) {
-
-        if(intervals==null || intervals.length==0) {
+        if(intervals==null || intervals.length<2) {
             return intervals;
         }
 
-        Arrays.sort(intervals, Comparator.comparingInt(o -> o[0]));
+        Arrays.sort(intervals, (i1, i2)-> i1[0]-i2[0]);
 
         List<int[]> ans = new ArrayList<>();
-
-        int curStart = intervals[0][0];
-        int curEnd = intervals[0][1];
+        int[] pre = intervals[0];
 
         for(int i=1; i<intervals.length; i++) {
-
             int[] cur = intervals[i];
-
-            if(cur[0]<=curEnd) {
-                curEnd = Math.max(curEnd, cur[1]);
+            if(cur[0]>pre[1]) {
+                ans.add(pre);
+                pre = cur;
             } else {
-                ans.add(new int[]{curStart, curEnd});
-                curStart = cur[0];
-                curEnd = cur[1];
+                pre[1] = Math.max(pre[1], cur[1]);
             }
-
         }
 
-        ans.add(new int[]{curStart, curEnd});
+        ans.add(pre);
 
-        int[][] arr = new int[ans.size()][2];
-
-        // ArrayList to Array Conversion
-        for (int i =0; i < ans.size(); i++)  {
-            arr[i] = ans.get(i);
+        int[][] ret = new int[ans.size()][2];
+        for(int i=0; i<ret.length; i++) {
+            ret[i] = ans.get(i);
         }
 
-        return arr;
+        return ret;
     }
-
 
 }
 

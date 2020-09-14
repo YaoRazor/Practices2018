@@ -19,7 +19,6 @@ public class BinaryTreePreorderTraversal {
         formerNodes.push(root);
 
         while (!formerNodes.isEmpty()) {
-
             TreeNode cur = formerNodes.pop();
             integerList.add(cur.val);
 

@@ -1,51 +1,40 @@
 package advanced.chapterthree;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.*;
 
 public class DecodeString {
 
-    // There are two key points of this problem, first we need to stacks
+    // There are two key points of this problem, first we need two stacks
     // second, the thing we store in the strStack is the previous string
     // O(N)
     public String decodeString(String s) {
-        Deque<String> resstack = new ArrayDeque<>();
-        Deque<Integer> countStack = new ArrayDeque<>();
-        int n = s.length();
-        int i=0;
-        String res = "";
+        Stack<Integer> stack = new Stack<>();
+        Stack<String> pre = new Stack<>();
+        int cnt = 0;
+        String cur = "";
 
-        while(i<n) {
+        for(int i=0; i<s.length(); i++) {
             char c = s.charAt(i);
             if(Character.isDigit(c)) {
-                int cnt = 0;
-                while(Character.isDigit(s.charAt(i))) {
-                    cnt = cnt*10+s.charAt(i)-'0';
-                    i++;
-                }
-
-                countStack.push(cnt);
-                continue;
+                cnt = cnt*10+c-'0';
+            } else if(Character.isLetter(c)) {
+                cur+=c;
             } else if(c=='[') {
-                resstack.push(res);
-                res = "";
-
-            } else if(c==']') {
-                StringBuilder sb = new StringBuilder(resstack.pop());
-                int cnt = countStack.pop();
-                for(int j=0; j<cnt; j++) {
-                    sb.append(res);
-                }
-
-                res = sb.toString();
-
+                pre.push(cur);
+                cur = "";
+                stack.push(cnt);
+                cnt = 0;
             } else {
-                res += s.charAt(i);
+                StringBuilder sb = new StringBuilder(pre.pop());
+                cnt = stack.pop();
+                for(int j=0; j<cnt; j++) {
+                    sb.append(cur);
+                }
+                cnt = 0;
+                cur = sb.toString();
             }
-
-            i++;
         }
 
-        return res;
+        return cur;
     }
 }

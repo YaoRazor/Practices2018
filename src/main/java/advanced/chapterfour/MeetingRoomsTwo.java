@@ -3,6 +3,7 @@ package advanced.chapterfour;
 import java.util.*;
 
 public class MeetingRoomsTwo {
+
     class Interval {
         int start, end;
         Interval(int start, int end) {
@@ -13,11 +14,11 @@ public class MeetingRoomsTwo {
 
     class MeetingEvent {
         int time;
-        int eventType;  // 0 means end, 1 means start
+        int type;  // 0 means end, 1 means start
 
-        public MeetingEvent(int time, int eventType) {
+        public MeetingEvent(int time, int type) {
             this.time = time;
-            this.eventType = eventType;
+            this.type = type;
         }
     }
 
@@ -31,7 +32,7 @@ public class MeetingRoomsTwo {
         PriorityQueue<MeetingEvent> pq = new PriorityQueue<>(
                 (a, b) -> {
                     if(a.time==b.time) {
-                        return a.eventType-b.eventType;
+                        return a.type -b.type;
                     } else {
                         return a.time-b.time;
                     }
@@ -49,7 +50,7 @@ public class MeetingRoomsTwo {
         while(!pq.isEmpty()) {
             MeetingEvent event = pq.poll();
 
-            if(event.eventType==1) {
+            if(event.type ==1) {
                 cnt++;
                 ans = Math.max(ans, cnt);
             } else {
@@ -62,17 +63,13 @@ public class MeetingRoomsTwo {
 
     public int minMeetingRooms(Interval[] intervals) {
         PriorityQueue<Integer> queue = new PriorityQueue<>();
-
         List<Interval> intervalList = Arrays.asList(intervals);
-
         Collections.sort(intervalList, Comparator.comparingInt(o -> o.start));
 
         int ans = 0;
 
         for(Interval interval: intervalList) {
-
                 while (!queue.isEmpty()) {
-
                     if(queue.peek()<interval.start) {
                         queue.poll();
                     } else {
@@ -81,7 +78,6 @@ public class MeetingRoomsTwo {
                 }
 
                 queue.add(interval.end);
-
                 ans = Math.max(ans, queue.size());
         }
 

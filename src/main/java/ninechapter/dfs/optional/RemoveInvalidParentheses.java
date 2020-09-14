@@ -2,6 +2,11 @@ package ninechapter.dfs.optional;
 
 import java.util.*;
 
+// TC: O(n*k), n is string length, k is total result.
+// Please see below comments from LeetCode discussion, its analysis is similar to nine chapter
+// The program only generates valid answers. Every path in the search generates one valid answer. The whole search space is a tree with k leaves. The number of nodes in the tree is roughly O(k). But this is not always true, for example a degenerated tree.
+//To generate one node it requires O(n) time from the string concatenation among other things. So roughly O(nk). Accurately O(nm) where m is the total "number of recursive calls" or "nodes in the search tree". Then you need to relate m to n in the worst case.
+//I wouldn't worry too much about the accurate complexity analysis of this problem. It would require more mathematics than an interview cares.
 public class RemoveInvalidParentheses {
     private char[][] patterns = {{'(', ')'}, {')', '('}};
 
@@ -14,7 +19,6 @@ public class RemoveInvalidParentheses {
         dfs(ans, s, 0, 0, patterns[0]);
         return ans;
     }
-
 
     // DFS solution
     private void dfs(List<String> ans, String s, int lastI, int lastJ, char[] pattern) {

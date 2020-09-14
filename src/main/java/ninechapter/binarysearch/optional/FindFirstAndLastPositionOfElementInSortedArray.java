@@ -17,11 +17,12 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
         return new int[]{start, end};
     }
 
+    // This function is used to find the first index that is bigger or equal to target
     private int findFirstIndexThatisBiggerOrEqualThanTarget(int[] nums, int target) {
         int left = 0;
         // Set right as nums.length, this is the key to this problem
         // because (left+right)/2 will lean towards to left, therefore
-        // you will find meet outofindex exception.
+        // you will not meet out of index exception.
         int right = nums.length;
 
         while(left<right) {

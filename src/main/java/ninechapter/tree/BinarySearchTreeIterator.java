@@ -1,18 +1,15 @@
 package ninechapter.tree;
 
 import datastructures.TreeNode;
-
-
 import java.util.Stack;
 
-
-// Because every node will be visited twice, therefore next() and hasNext() should run in average O(1) time
-// The space complexity is O(h), h is the height of the tree
+// Because every node will be visited twice, therefore next() and hasNext() should run in
+// amortized O(1) time. The space complexity is O(h), h is the height of the tree
 public class BinarySearchTreeIterator {
-
-    Stack<TreeNode> stack = new Stack<>();
+    private Stack<TreeNode> stack;
 
     public BinarySearchTreeIterator(TreeNode root) {
+        stack = new Stack<>();
         getNextElement(root);
     }
 

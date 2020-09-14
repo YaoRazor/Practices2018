@@ -1,4 +1,4 @@
-package array;
+package companies.facebook;
 
 public class AddBinary {
 
@@ -7,11 +7,11 @@ public class AddBinary {
         int carry = 0;
         StringBuilder sb = new StringBuilder();
 
+        // trick one
         while(i>=0 || j>=0) {
             int sum = carry;
             if(i>=0) {
                 sum+=a.charAt(i--)-'0';
-
             }
 
             if(j>=0) {

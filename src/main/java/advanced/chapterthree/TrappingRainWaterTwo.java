@@ -26,6 +26,7 @@ import java.util.*;
 public class TrappingRainWaterTwo {
 
     int[][] dirs = new int[][]{{0,1}, {0, -1}, {1,0}, {-1, 0}};
+
     public int trapRainWater(int[][] heights) {
         if(heights==null || heights.length==0 || heights[0]==null || heights[0].length==0) {
             return 0;

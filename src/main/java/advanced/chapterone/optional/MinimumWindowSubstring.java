@@ -15,46 +15,36 @@ public class MinimumWindowSubstring {
             map.put(c, map.getOrDefault(c, 0)+1);
         }
 
-        // 可以不要ans，直接用s.substring()函数，code会简单一些，但是
-        // 算法复杂度会高一些
-        int[] ans = new int[2];
-        int cnt = Integer.MAX_VALUE;
+        int min = Integer.MAX_VALUE;
+        String ans = "";
+        int cnt = 0;
 
-        int start = 0;
-        int k = 0;
-
-        for(int end=0; end<s.length(); end++) {
-            char c = s.charAt(end);
+        int j = 0;
+        for(int i=0; i<s.length(); i++) {
+            //先算i，再算j，否则会漏解
+            char c = s.charAt(i);
             if(map.containsKey(c)) {
                 map.put(c, map.get(c)-1);
                 if(map.get(c)==0) {
-                    k++;
+                    cnt++;
                 }
             }
-
-            while(k==map.size()) {
-                if(end-start+1<cnt) {
-                    ans[0] = start;
-                    ans[1] = end;
-                    cnt = end-start+1;
+            while(cnt==map.size()) {
+                if(i-j+1<min) {
+                    min = i-j+1;
+                    ans = s.substring(j, i+1);
                 }
-
-                char tmp = s.charAt(start);
+                char tmp = s.charAt(j);
                 if(map.containsKey(tmp)) {
                     map.put(tmp, map.get(tmp)+1);
                     if(map.get(tmp)==1) {
-                        k--;
+                        cnt--;
                     }
                 }
-
-                start++;
+                j++;
             }
         }
 
-        if(cnt==Integer.MAX_VALUE) {
-            return "";
-        } else {
-            return s.substring(ans[0], ans[1]+1);
-        }
+        return ans;
     }
 }

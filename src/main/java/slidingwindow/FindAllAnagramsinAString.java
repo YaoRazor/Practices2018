@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// sliding window. TC: O(N)
 public class FindAllAnagramsinAString {
 
-    // 本题的解法是Sliding window
     public List<Integer> findAnagrams(String s, String p) {
         List<Integer> ans = new ArrayList<>();
         if(s==null || s.length()<p.length()) {
