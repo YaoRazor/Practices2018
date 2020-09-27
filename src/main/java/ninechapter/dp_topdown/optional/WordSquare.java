@@ -3,8 +3,7 @@ package ninechapter.dp_topdown.optional;
 import java.util.*;
 
 // 最坏情况时间复杂度是O(N^L*L)，但是用了Trie之后，因为剪枝，时间复杂度会远小于这个理论最大值
-// N是总共word的数量，L是每一个word的长度
-
+// N是总共word的数量，L是每一个word的长度. 后面乘以L是因为每次recursion需要花这么久
 public class WordSquare {
 
     class TrieNode {
@@ -68,7 +67,7 @@ public class WordSquare {
     }
 
     // 这一题和wordsearch还是有一点区别，那就是prefix是每次dfs的时候临时assemble的，
-    // 和之前的path没有关系，wordsearch中，prefix是和DFS一起增长的
+    // 和之前的path没有关系，word search中，prefix是和DFS一起增长的
     private void dfs(List<List<String>> ans, LinkedList<String> cur, int n) {
         if(cur.size()==n) {
             ans.add(new LinkedList<>(cur));
@@ -84,7 +83,7 @@ public class WordSquare {
         List<String> words = search(prefix.toString());
 
         for(String word: words) {
-            // 注意这里又一个backtrack
+            // backtrack
             cur.add(word);
             dfs(ans, cur, n);
             cur.removeLast();

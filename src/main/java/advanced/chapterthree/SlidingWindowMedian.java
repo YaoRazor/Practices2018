@@ -2,6 +2,7 @@ package advanced.chapterthree;
 
 import java.util.*;
 
+// TC:O(nk), because the remove operation in heap is O(k)
 public class SlidingWindowMedian {
 
     // 这里必须要用reverseOrder不能用(i1, i2)-> i2-i1，因为测试数据

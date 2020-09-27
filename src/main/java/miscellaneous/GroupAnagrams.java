@@ -18,31 +18,14 @@ public class GroupAnagrams {
         Map<String, List<String>> map = new HashMap<>();
 
         for(String str: strs) {
-
-            String sortedString = getSortedString(str);
-            if(map.containsKey(sortedString)) {
-                map.get(sortedString).add(str);
-
-            } else {
-                List<String> tmp = new ArrayList<>();
-                tmp.add(str);
-                map.put(sortedString, tmp);
-            }
+            char[] charArray = str.toCharArray();
+            Arrays.sort(charArray);
+            String key = new String(charArray);
+            map.putIfAbsent(key, new ArrayList<>());
+            map.get(key).add(str);
         }
 
-        for(String key: map.keySet()) {
-            ans.add(map.get(key));
-        }
-
-        return ans;
-
+        return new ArrayList<>(map.values());
     }
-
-    private String getSortedString(final String input) {
-        char[] sortedCharArray = input.toCharArray();
-        Arrays.sort(sortedCharArray);
-        return String.valueOf(sortedCharArray);
-    }
-
 
 }

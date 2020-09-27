@@ -2,12 +2,14 @@ package dp;
 
 import java.util.Arrays;
 
+// TC: O(amount*coins.length)
 public class CoinChange {
 
     public int coinChange(int[] coins, int amount) {
         int[] dp = new int[amount+1]; // This is a keypoint that set the initial value as amount+1
 
         Arrays.fill(dp, amount+1);
+        // this is optional.
         Arrays.sort(coins);
         dp[0] = 0;
 

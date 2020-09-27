@@ -35,33 +35,29 @@ public class WordDictionary {
 
     /** Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. */
     public boolean search(String word) {
-        return search(word, root, 0);
+        return search(word, 0, root);
     }
 
-    public boolean search(String word, TrieNode cur, int index) {
+    private boolean search(String word, int index, TrieNode cur) {
         if(index==word.length()) {
             return cur.isWord;
         }
 
         char c = word.charAt(index);
-        if(c!='.') {
-            if(cur.children[c-'a']==null) {
-                return false;
-            } else {
-                cur = cur.children[c-'a'];
-                return search(word, cur, index+1);
-            }
-        } else {
-            for(TrieNode next: cur.children) {
-                if(next==null) {
-                    continue;
-                }
-                if(search(word, next, index+1)) {
+        if('.'==c) {
+            for(TrieNode node: cur.children) {
+                if(node!=null && search(word, index+1, node)) {
                     return true;
                 }
             }
 
             return false;
+        } else {
+            if(cur.children[c-'a']==null) {
+                return false;
+            } else {
+                return search(word, index+1, cur.children[c-'a']);
+            }
         }
     }
 }

@@ -20,7 +20,8 @@ public class SearchInRotatedArray {
                 }
 
             } else {
-                if(target>nums[mid] && target<=nums[end]) {
+                // 这里有一个小技巧，这样写的话，就可以使得start = mid+1了
+                if(target>=nums[mid+1] && target<=nums[end]) {
                     start = mid+1;
                 }  else {
                     end = mid;

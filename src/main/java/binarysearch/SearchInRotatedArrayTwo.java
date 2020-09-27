@@ -14,12 +14,11 @@ public class SearchInRotatedArrayTwo {
             if(nums[mid]>nums[end]) {
                 if(target>=nums[start] && target<=nums[mid]) {
                     end = mid;
-                } else {
+                }   else {
                     start = mid+1;
                 }
-
             } else if(nums[mid]<nums[end]){
-                if(target>nums[mid] && target<=nums[end]) {
+                if(target>=nums[mid+1] && target<=nums[end]) {
                     start = mid+1;
                 }  else {
                     end = mid;

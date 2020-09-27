@@ -1,6 +1,7 @@
 package bfs;
 
 import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Queue;
 
 // 从多个Gate同时向Room做BFS，而且只有当前点是Room，且距离是Integer.MAX_VALUE的时候才更新值
@@ -9,45 +10,37 @@ public class WallsAndGates {
     private static int[][] dirs = {{0,1}, {0, -1}, {1,0}, {-1, 0}};
 
     public void wallsAndGates(int[][] rooms) {
-        if(rooms==null || rooms.length==0 || rooms[0]==null || rooms[0].length==0) {
+        Deque<Integer> queue = new ArrayDeque<>();
+        int n = rooms.length;
+        if(rooms.length==0) {
             return;
         }
+        int m = rooms[0].length;
 
-        Queue<Point> queue = new ArrayDeque<>();
-
-        for(int i=0; i<rooms.length; i++) {
-            for(int j=0; j<rooms[0].length; j++) {
+        for(int i=0; i<n; i++) {
+            for(int j=0; j<m; j++) {
                 if(rooms[i][j]==0) {
-                    queue.offer(new Point(i, j));
+                    queue.offer(i*m+j);
                 }
             }
         }
 
-        int n = rooms.length;
-        int m = rooms[0].length;
-
         while(!queue.isEmpty()) {
-            Point cur = queue.poll();
+            int cur = queue.poll();
+            int x = cur/m;
+            int y = cur%m;
 
             for(int[] dir: dirs) {
-                int x = cur.x+dir[0];
-                int y = cur.y+dir[1];
-                if(x<0 || x==n || y<0 || y==m || rooms[x][y]!=Integer.MAX_VALUE) {
+                int newX = x+dir[0];
+                int newY = y+dir[1];
+
+                if(newX<0 || newX==n || newY<0 || newY==m || rooms[newX][newY]!=Integer.MAX_VALUE) {
                     continue;
                 }
 
-                rooms[x][y] = rooms[cur.x][cur.y]+1;
-                queue.offer(new Point(x, y));
+                queue.offer(newX*m+newY);
+                rooms[newX][newY] = 1+ rooms[x][y];
             }
-        }
-    }
-
-    class Point {
-        int x;
-        int y;
-        Point(final int x, final int y) {
-            this.x = x;
-            this.y = y;
         }
     }
 }

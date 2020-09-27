@@ -15,6 +15,7 @@ public class FindKClosestElements {
 
         while(k>0) {
             if(left>=0 && (right==nums.length || Math.abs(nums[left]-x)<=Math.abs(nums[right]-x))) {
+                //因为有了LinkedList，所以就可以使用addFirst这个方法
                 ans.addFirst(nums[left--]);
             } else {
                 ans.add(nums[right++]);
@@ -39,10 +40,6 @@ public class FindKClosestElements {
             }
         }
 
-        if(nums[end]<=target) {
-            return end;
-        } else {
-            return start;
-        }
+        return nums[end]<=target? end: start;
     }
 }

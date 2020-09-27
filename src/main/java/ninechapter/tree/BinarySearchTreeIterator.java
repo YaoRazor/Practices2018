@@ -20,14 +20,12 @@ public class BinarySearchTreeIterator {
         }
     }
 
-    /** @return the next smallest number */
     public int next() {
         TreeNode cur = stack.pop();
         getNextElement(cur.right);
         return cur.val;
     }
 
-    /** @return whether we have a next smallest number */
     public boolean hasNext() {
         return !stack.isEmpty();
     }

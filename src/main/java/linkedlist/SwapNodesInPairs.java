@@ -2,8 +2,8 @@ package linkedlist;
 
 import datastructures.ListNode;
 
-
 public class SwapNodesInPairs {
+    // This method is O(n)
     public ListNode swapPairs(ListNode head) {
         ListNode cur = head;
         ListNode dummyHead = new ListNode(-1);
@@ -20,5 +20,18 @@ public class SwapNodesInPairs {
         }
 
         return dummyHead.next;
+    }
+
+    // This method is O(nlogn)
+    public ListNode swapPairsRecursive(ListNode head) {
+        if(head==null || head.next==null) {
+            return head;
+        }
+
+        ListNode next = head.next.next;
+        head.next.next = head;
+        ListNode ans = head.next;
+        head.next = swapPairsRecursive(next);
+        return ans;
     }
 }

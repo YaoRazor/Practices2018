@@ -3,34 +3,35 @@ package binarysearch;
 import java.util.Random;
 
 public class RandomPickWithWeight {
-    int[] nums;
+    private int[] w;
+    private int sum;
     Random random = new Random();
 
     public RandomPickWithWeight(int[] w) {
-        nums = new int[w.length];
-        int cnt = w[0];
-        nums[0] = cnt;
-        for(int i=1; i<w.length; i++) {
-            cnt+=w[i];
-            nums[i] = cnt;
+        this.w = new int[w.length];
+        int sum = 0;
+        for(int i=0; i<w.length; i++) {
+            sum+=w[i];
+            this.w[i] = sum;
         }
+
+        this.sum = sum;
     }
 
     public int pickIndex() {
-        int index = random.nextInt(nums[nums.length-1]);
+        int index = random.nextInt(this.sum);
+        int start = 0;
+        int end = this.w.length-1;
 
-        int left = 0;
-        int right = nums.length-1;
-
-        while(left<right) {
-            int mid = (left+right)/2;
-            if(index<nums[mid]) {
-                right = mid;
+        while(start<end) {
+            int mid = (start+end)/2;
+            if(index>=this.w[mid]) {
+                start = mid+1;
             } else {
-                left = mid+1;
+                end = mid;
             }
         }
 
-        return left;
+        return start;
     }
 }

@@ -1,31 +1,23 @@
 package advanced.chapterfour.related;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
-
-class Interval {
-    int start;
-    int end;
-    Interval() { start = 0; end = 0; }
-    Interval(int s, int e) { start = s; end = e; }
-}
+import java.util.Arrays;
 
 // TC: O(nlogn)
 public class MeetingRooms {
 
-    public boolean canAttendMeetings(List<Interval> intervals) {
-        if(intervals == null || intervals.size() <= 1) {
-            return true;
-        }
+    public boolean canAttendMeetings(int[][] intervals) {
+         if(intervals==null || intervals.length==0) {
+             return true;
+         }
 
-        Collections.sort(intervals, Comparator.comparingInt(o -> o.start));
+        Arrays.sort(intervals, (i1, i2)-> i1[0]-i2[0]);
+        int last = -1;
 
-        for(int i=1; i<intervals.size(); i++) {
-            if(intervals.get(i).start<intervals.get(i-1).end) {
+        for(int[] interval: intervals) {
+            if(interval[0]<last) {
                 return false;
             }
+            last = interval[1];
         }
 
         return true;

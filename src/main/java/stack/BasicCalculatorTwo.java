@@ -32,6 +32,7 @@ public class BasicCalculatorTwo {
 
             // when reaching here, two possibilities
             // i=s.length()-1 or s.charAt(i) is one of four operators
+            // One thing to note is that sign here is last sign
             if(sign=='+') {
                 stack.push(num);
             } else if(sign=='-') {
@@ -42,10 +43,9 @@ public class BasicCalculatorTwo {
                 stack.push(stack.pop()/num);
             }
 
-            num = 0;
-
             if(i!=s.length()-1) {
                 sign = s.charAt(i);
+                num = 0;
             }
         }
 

@@ -27,7 +27,6 @@ public class NextPermutation {
             swap(nums, k, l);
             reverse(nums,  k + 1);
         }
-
     }
 
     private void reverse(int[] nums, int start) {

@@ -3,6 +3,8 @@
     <words>
       <w>anagramsin</w>
       <w>dedup</w>
+      <w>nlogn</w>
+      <w>sweepline</w>
     </words>
   </dictionary>
 </component>
