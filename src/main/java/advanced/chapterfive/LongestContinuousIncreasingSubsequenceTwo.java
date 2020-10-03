@@ -1,9 +1,9 @@
 package advanced.chapterfive;
 
-
-/*
-  This problem is solved by dynamically programming using memorization
- */
+//Time complexity : O(mn). Each vertex/cell will be calculated once and only once,
+// and each edge will be visited once and only once. The total time complexity is then
+// O(V+E). VV is the total number of vertices and EE is the total number of edges.
+// In our problem, O(V) = O(mn), O(E) <= O(4V)(<= is because there is a constraint that next node has to be bigger) = O(mn).
 public class LongestContinuousIncreasingSubsequenceTwo {
 
     private static int[][] dirs = {{0,1}, {0, -1}, {1,0}, {-1, 0}};

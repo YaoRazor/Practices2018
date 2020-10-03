@@ -1,4 +1,4 @@
-package companies;
+package companies.facebook;
 
 public class ToeplitzMatrix {
 

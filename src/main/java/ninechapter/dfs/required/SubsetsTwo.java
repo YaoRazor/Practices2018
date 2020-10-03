@@ -9,6 +9,7 @@ public class SubsetsTwo {
 
     // Time complexity: O(2^n)
     // Consider this as a binary tree, every node denotes whether to choose current number or not
+    // 以[1, 2, 2]为例子画一个binary tree的图，就比较容易解释清楚了
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         if(nums==null) {

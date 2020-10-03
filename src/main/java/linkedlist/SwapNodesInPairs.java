@@ -22,7 +22,7 @@ public class SwapNodesInPairs {
         return dummyHead.next;
     }
 
-    // This method is O(nlogn)
+    // TC: O(N). SC: 也是0(N)，因为需要压栈N/2次
     public ListNode swapPairsRecursive(ListNode head) {
         if(head==null || head.next==null) {
             return head;

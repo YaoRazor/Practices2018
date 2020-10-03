@@ -1,50 +1,44 @@
 package ninechapter.dfs.optional;
 
 public class SudokuSolver {
-    public void solveSudoku(int[][] board) {
-        isSolvable(board);
+    public void solveSudoku(char[][] board) {
+        solvaable(board, 0, 0);
     }
 
-    private boolean isSolvable(int[][] board) {
-        for(int i=0; i<board.length; i++) {
-            for(int j=0; j<board[0].length; j++) {
-
-                if(board[i][j]!=0) {
+    private boolean solvaable(char[][] board, int row, int col) {
+        // small optimization to always start with the next possible position
+        for(int i=row; i<9; i++, col=0) {
+            for(int j=col; j<9; j++) {
+                if(board[i][j]!='.') {
                     continue;
                 }
 
-                for(int k=1; k<=9; k++) {
-                    if(isValid(board, i, j, k)) {
-                        board[i][j] = k;
-                        if(isSolvable(board)) {
-                            return true;
-                        }
-                        // Do not forget backtracking here
-                        board[i][j] = 0;
+                for(char num='1'; num<='9'; num++)   {
+                    if(!isValid(board, i, j, num)) {
+                        continue;
                     }
+
+                    board[i][j] = num;
+                    if(solvaable(board, i, j+1)) {
+                        return true;
+                    }
+                    board[i][j] = '.';
                 }
 
                 return false;
             }
-
         }
 
         return true;
     }
 
-    private boolean isValid(int[][] board, int i, int j, int value) {
+    private boolean isValid(char[][] board, int i, int j, char num) {
         for(int k=0; k<9; k++) {
-            if(board[i][k]==value || board[k][j]==value) {
+            if(board[k][j]==num || board[i][k]==num) {
                 return false;
             }
 
-            // This is used to get the index within each subbox
-            int x = k/3;
-            int y = k%3;
-
-            // i/3*3 will localte subbox horizontally
-            // j/3*3 will locate subbox vertically
-            if(board[i/3*3+x][j/3*3+y]==value) {
+            if(board[i/3*3+k/3][j/3*3+k%3]==num) {
                 return false;
             }
         }

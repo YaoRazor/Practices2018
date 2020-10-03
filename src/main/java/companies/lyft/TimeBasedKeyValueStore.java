@@ -17,7 +17,6 @@ public class TimeBasedKeyValueStore {
 
     Map<String, List<Data>> map;
 
-
     /** Initialize your data structure here. */
     public TimeBasedKeyValueStore() {
         map = new HashMap<>();

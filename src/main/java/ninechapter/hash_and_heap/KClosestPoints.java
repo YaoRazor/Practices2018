@@ -12,12 +12,6 @@ public class KClosestPoints {
       Point(int a, int b) { x = a; y = b; }
     }
 
-    /**
-     * @param points: a list of points
-     * @param origin: a point
-     * @param k: An integer
-     * @return: the k closest points
-     */
     public Point[] kClosest(Point[] points, Point origin, int k) {
         PriorityQueue<Point> pq = new PriorityQueue<>(new PointComparator(origin));
         for(Point point: points) {
@@ -31,7 +25,6 @@ public class KClosestPoints {
         while (!pq.isEmpty())
             ret[--k] = pq.poll();
         return ret;
-        // write your code here
     }
 
     class PointComparator implements Comparator<Point> {
@@ -54,11 +47,11 @@ public class KClosestPoints {
         }
     }
 
-    // This method is Quickselect, it is O(n) algorithm
-    public int[][] kClosest(int[][] points, int K) {
-        quickSelect(K, points, 0, points.length-1);
-        int[][] ans = new int[K][2];
-        for(int i=0; i<K; i++) {
+    // This method is quick select, it is O(n) algorithm
+    public int[][] kClosest(int[][] points, int k) {
+        quickSelect(k, points, 0, points.length-1);
+        int[][] ans = new int[k][2];
+        for(int i=0; i<k; i++) {
             ans[i] = points[i];
         }
         return ans;

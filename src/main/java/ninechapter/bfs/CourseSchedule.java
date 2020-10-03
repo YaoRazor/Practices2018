@@ -54,4 +54,47 @@ public class CourseSchedule {
 
         return cnt==numCourses;
     }
+
+    public boolean canFinishUsingDFS(int numCourses, int[][] prerequisites) {
+        Map<Integer, Set<Integer>> graph = new HashMap<>();
+
+        for(int i=0; i<numCourses; i++){
+            graph.put(i, new HashSet<>());
+        }
+
+        for(int[] prerequisite: prerequisites) {
+            graph.get(prerequisite[1]).add(prerequisite[0]);
+        }
+
+        int[] courses = new int[numCourses];
+
+        for(int i=0; i<numCourses; i++) {
+            if(!canFinish(i, courses, graph)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private boolean canFinish(int course, int[] courses, Map<Integer, Set<Integer>> graph) {
+        if(courses[course]==1) {
+            return true;
+        }
+
+        if(courses[course]==-1) {
+            return false;
+        }
+
+        courses[course] = -1;
+
+        for(int neighbor: graph.get(course)) {
+            if(!canFinish(neighbor, courses, graph)) {
+                return false;
+            }
+        }
+
+        courses[course] = 1;
+        return true;
+    }
 }
