@@ -2,7 +2,8 @@ package ninechapter.optional.optiional;
 
 
 // The key point is to maintain a min value of previous array
-public class BestTimeToBuyAndSellStock {
+public class
+BestTimeToBuyAndSellStock {
     public int maxProfit(int[] prices) {
         if(prices==null || prices.length<2) {
             return 0;

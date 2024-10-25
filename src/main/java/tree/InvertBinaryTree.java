@@ -4,18 +4,18 @@ import datastructures.TreeNode;
 
 public class InvertBinaryTree {
 
-    // 典型的Divide and Conquer
+    // Typical Divide and Conquer
+    // time complexity O(n), space complexity O(n)
     public TreeNode invertTree(TreeNode root) {
         if(root==null) {
             return root;
         }
 
-        invertTree(root.left);
-        invertTree(root.right);
+        TreeNode tmp = root.right;
 
-        TreeNode left = root.left;
-        root.left = root.right;
-        root.right = left;
+        root.right = invertTree(root.left);
+        root.left = invertTree(tmp);
+
         return root;
     }
 

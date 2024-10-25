@@ -2,8 +2,9 @@ package ninechapter.warmup;
 
 public class ValidPalindrome {
 
-    public boolean isPalindrome(String s) {
-        if(s==null || s.length()==0) {
+    public boolean
+    isPalindrome(String s) {
+        if(s==null || s.isEmpty()) {
             return true;
         }
 

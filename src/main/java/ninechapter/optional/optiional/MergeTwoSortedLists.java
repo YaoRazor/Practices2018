@@ -2,7 +2,8 @@ package ninechapter.optional.optiional;
 
 import datastructures.ListNode;
 
-public class MergeTwoSortedLists {
+public class
+MergeTwoSortedLists {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode dummyNode = new ListNode(-1);
         ListNode head = dummyNode;
