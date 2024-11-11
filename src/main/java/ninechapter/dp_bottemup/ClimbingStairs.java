@@ -21,7 +21,10 @@ public class ClimbingStairs {
 
     // Take a look at how to solve this problem
     // using rolling array, but do not spend too
-    // much time on this
+    // much time on this. This solution is trying to
+    // minimize the space usage by reusing the int array as
+    // at any moment, we just need 3 number: current step, 1 step
+    // preceding current step and two steps preceding current step
     public int climbStairsRollingArray(int n) {
         if(n<=0) {
             return 0;

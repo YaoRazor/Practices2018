@@ -1,5 +1,7 @@
 package advanced.chaptertwo;
 
+
+// Trie basically is a 26-tree with root node of empty char
 public class Trie {
 
     TrieNode root;

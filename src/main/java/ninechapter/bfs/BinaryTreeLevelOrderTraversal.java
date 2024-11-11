@@ -18,12 +18,14 @@ public class BinaryTreeLevelOrderTraversal {
         }
 
         Queue<TreeNode> queue = new LinkedList<>();
-
         queue.add(root);
-
 
         while(!queue.isEmpty()) {
             List<Integer> tmp = new ArrayList<>();
+            // Using this way, we don't need to record
+            // the size of each level and this makes it
+            // more clear that the bfs traverses the graph
+            // level by level
             int size = queue.size();
 
             for(int i=0; i< size; i++) {

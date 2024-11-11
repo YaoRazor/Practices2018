@@ -3,6 +3,7 @@ package linkedlist;
 import datastructures.ListNode;
 
 public class ReverseLinkedList {
+        // Using pre will make the solution more elegant
         public ListNode reverseList(ListNode head) {
             ListNode pre=null;
             ListNode cur = head;

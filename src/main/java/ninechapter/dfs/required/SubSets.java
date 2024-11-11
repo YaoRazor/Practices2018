@@ -7,6 +7,7 @@ import java.util.List;
 public class SubSets {
 
     // Consider this as a binary tree, every node denotes whether to choose current number or not
+    // Time complexity: O(2^n)
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         if(nums==null) {

@@ -9,11 +9,14 @@ import datastructures.TreeNode;
 public class MaximumDepthOfBinaryTree {
 
     public int maxDepthDFS(TreeNode root) {
-        if(root == null) {
+        if(root==null) {
             return 0;
         }
 
-        return Math.max(maxDepthDFS(root.left), maxDepthDFS(root.right)) + 1;
+        int left = maxDepthDFS(root.left);
+        int right = maxDepthDFS(root.right);
+
+        return Math.max(left, right)+1;
     }
 
     public int maxDepthBFS(TreeNode root) {

@@ -5,46 +5,26 @@ import java.util.PriorityQueue;
 
 public class KClosestPoints {
 
-    class Point {
-      int x;
-      int y;
-      Point() { x = 0; y = 0; }
-      Point(int a, int b) { x = a; y = b; }
-    }
+    // Time complexity is O(nlogk)
+    public int[][] kClosestWithPriorityQueue(int[][] points, int k) {
+        // Default pq is a min queue, using the comparator definition
+        // changes it to a max queue
+        PriorityQueue<int[]> pq = new PriorityQueue<>((p1, p2)-> {return p2[0]*p2[0]+p2[1]*p2[1]-p1[0]*p1[0]-p1[1]*p1[1];});
 
-    public Point[] kClosest(Point[] points, Point origin, int k) {
-        PriorityQueue<Point> pq = new PriorityQueue<>(new PointComparator(origin));
-        for(Point point: points) {
+        for(int[] point: points) {
             pq.offer(point);
             if(pq.size()>k) {
                 pq.poll();
             }
         }
 
-        Point[] ret = new Point[k];
-        while (!pq.isEmpty())
-            ret[--k] = pq.poll();
-        return ret;
-    }
+        int[][] ans = new int[k][2];
 
-    class PointComparator implements Comparator<Point> {
-        private Point o;
-        public PointComparator(Point origin) {
-            this.o = origin;
+        for(int i=k-1; i>=0; i--) {
+            ans[i] = pq.poll();
         }
 
-        @Override
-        public int compare(Point p1, Point p2) {
-            if( Math.pow(p2.x-o.x, 2) + Math.pow(p2.y-o.y, 2)-Math.pow(p1.x-o.x, 2) - Math.pow(p1.y-o.y, 2) ==0) {
-                if(p1.x==p2.x) {
-                    return p2.y-p1.y;
-                } else {
-                    return p2.x-p1.x;
-                }
-            } else {
-                return (int)(Math.pow(p2.x-o.x, 2) + Math.pow(p2.y-o.y, 2)-Math.pow(p1.x-o.x, 2) - Math.pow(p1.y-o.y, 2));
-            }
-        }
+        return ans;
     }
 
     // This method is quick select, it is O(n) algorithm

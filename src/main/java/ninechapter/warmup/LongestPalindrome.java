@@ -8,7 +8,7 @@ import java.util.Set;
 public class LongestPalindrome {
 
     public int longestPalindrome(String s) {
-        if(s==null || s.length() == 0) {
+        if(s==null || s.isEmpty()) {
             return 0;
         }
 
@@ -34,6 +34,13 @@ public class LongestPalindrome {
         // characters in the string, in this case, we can not use cnt+1 anymore
         // because it can surpass the total number of characters in the string
         return Math.min(cnt+1, s.length());
+
+        // Alternatively if below is easier to understand
+//        if(s.length()>cnt) {
+//            return cnt+1;
+//        } else {
+//            return cnt;
+//        }
     }
 
     // This is simplified version of the first algorithm, but the

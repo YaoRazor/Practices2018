@@ -2,9 +2,8 @@ package tree;
 
 import datastructures.TreeNode;
 
-/**
- * Created by yawang on 5/30/18.
- */
+// The average time complexity is O(n*logn) when tree is balanced
+// The worst case is O(n^2) when tree is not balanced
 public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
 
     public TreeNode buildTree(int[] inorder, int[] postorder) {
@@ -32,17 +31,12 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
         return root;
     }
 
-
     private int findIndex(int[] inorder, int start, int end, int value) {
-
         for(int i = start; i<=end; i++) {
-
             if(value==inorder[i]) {
                 return i;
             }
-
         }
-
         throw new RuntimeException();
     }
 }

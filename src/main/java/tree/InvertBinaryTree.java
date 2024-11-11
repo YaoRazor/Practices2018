@@ -8,7 +8,7 @@ public class InvertBinaryTree {
     // time complexity O(n), space complexity O(n)
     public TreeNode invertTree(TreeNode root) {
         if(root==null) {
-            return root;
+            return null;
         }
 
         TreeNode tmp = root.right;

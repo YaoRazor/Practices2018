@@ -1,7 +1,9 @@
 package advanced.chapterone;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 // prefer to optimal solution for this problem
 public class LongestSubstringWithoutRepeatingCharacters {
@@ -10,28 +12,26 @@ public class LongestSubstringWithoutRepeatingCharacters {
     public int lengthOfLongestSubstring(String s) {
         Map<Character, Integer> map = new HashMap<>();
         boolean isNoRepeating = true;;
-        int j = -1;
+        int i = 0;
+        int j = 0;
+
         int ans = 0;
 
-        for(int i=0; i<s.length(); i++) {
+        Set<Character> set = new HashSet<>();
 
-            while(isNoRepeating && j+1<s.length()) {
-                j++;
-                char c = s.charAt(j);
-                map.put(c, map.getOrDefault(c, 0)+1);
-                if(map.get(c)==2) {
-                    isNoRepeating = false;
-                    break;
-                }
+        while(j<s.length()) {
+            char c = s.charAt(j);
+            if(!set.contains(c)) {
                 ans = Math.max(ans, j-i+1);
-            }
 
-            char c = s.charAt(i);
-
-            map.put(c, map.get(c)-1);
-            if(map.get(c)==1) {
-                isNoRepeating = true;
+            } else {
+                while(i<j && set.contains(c)) {
+                    set.remove(s.charAt(i));
+                    i++;
+                }
             }
+            set.add(c);
+            j++;
         }
 
         return ans;
@@ -39,7 +39,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
     // Optimal sliding window
     public int lengthOfLongestSubstringTwo(String s) {
-            if(s==null || s.length()==0) {
+            if(s==null || s.isEmpty()) {
                 return 0;
             }
 

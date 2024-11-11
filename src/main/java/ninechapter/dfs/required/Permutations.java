@@ -7,7 +7,7 @@ import java.util.List;
 public class Permutations {
     List<List<Integer>> ans = new ArrayList<>();
 
-    // Time complexity: O(n!), need to ask whether there are duplicates, you
+    // Time complexity: between O(n!) and O(n^n), need to ask whether there are duplicates, you
     // can use program from Permutations two directly
     public List<List<Integer>> permute(int[] nums) {
         if (nums == null || nums.length == 0) {
@@ -27,7 +27,7 @@ public class Permutations {
         }
 
         for(int i=0; i<nums.length; i++) {
-            if(isUsed[i]==false) {
+            if(!isUsed[i]) {
                 cur.add(nums[i]);
                 isUsed[i] = true;
                 backtrack(nums, isUsed, cur);

@@ -1,6 +1,10 @@
 package ninechapter.optional;
 
 //O(n) time complexity and O(1) space complexity
+// This is an interesting algorithm question as it is
+// using a very interesting way of defining the variable for
+// dynamical programming and don't forget to do the reduce step
+// in the end as dp[n] is not the final result
 public class MaximumSubarray {
 
     // This is still dp, but with optimization of rolling array
@@ -48,9 +52,9 @@ public class MaximumSubarray {
         int sum = 0;
         int ans = Integer.MIN_VALUE;
 
-        for(int i=0; i<nums.length; i++) {
-            sum+=nums[i];
-            ans = Math.max(sum-minSum, ans);
+        for (int num : nums) {
+            sum += num;
+            ans = Math.max(sum - minSum, ans);
             minSum = Math.min(minSum, sum);
         }
 
