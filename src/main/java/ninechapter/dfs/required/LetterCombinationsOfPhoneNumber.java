@@ -11,7 +11,7 @@ public class LetterCombinationsOfPhoneNumber {
 
     public List<String> letterCombinations(String digits) {
         List<String> ans = new ArrayList<>();
-        if(digits==null || digits.length()==0) {
+        if(digits==null || digits.isEmpty()) {
             return ans;
         }
 

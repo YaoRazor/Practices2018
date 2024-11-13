@@ -13,24 +13,24 @@ public class WordBreak {
         int maxLength = getMaxLength(set);
         int n = s.length();
         boolean[] dp = new boolean[n+1];
-        dp[n] = true;
+        dp[0] = true;
 
-        for(int i=n-1; i>=0; i--) {
-            for(int j=i+1; j<=n; j++) {
-                if(j-i>maxLength) {
+        for(int i=1; i<=n; i++) {
+            for(int j=i-1; j>=0; j--) {
+                if(i-j>maxLength) {
                     break;
                 }
 
                 // Put dp[j] before set.contains(s.substring(i, j)
                 // can speed up the process
-                if(dp[j] && set.contains(s.substring(i, j))) {
+                if(dp[j] && set.contains(s.substring(j, i))) {
                     dp[i] = true;
                     break;
                 }
             }
         }
 
-        return dp[0];
+        return dp[n];
     }
 
     private int getMaxLength(Set<String> set) {
