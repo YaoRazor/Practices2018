@@ -1,64 +1,40 @@
 package array;
 
-
-
 class Solution {
-    public int myAtoi(String str) {
-        if(str==null || str.length()==0) {
-            return 0;
-        }
-
-        int i=0;
-
-        // Remove leading zeroes
-        while(i<str.length()) {
-            if(str.charAt(i)==' ') {
-                i++;
-            } else {
-                break;
-            }
-        }
-
-        // Check whether it has reached the end
-        if(i>=str.length()) {
-            return 0;
-        }
-
-        return parseInt(str, i);
-    }
-
-    private int parseInt(String s, int i) {
-        boolean isNegative = false;
+    public int myAtoi(String s) {
         long ans = 0;
+        int i = 0;
 
-        // Check sign
-        if(s.charAt(i)=='-' || s.charAt(i)=='+') {
-            isNegative = s.charAt(i)=='-'? true: false;
+        while(i<s.length() && s.charAt(i)==' ') {
             i++;
         }
 
-        // Check number
-        for(; i<s.length(); i++) {
-            if(Character.isDigit(s.charAt(i))) {
-                ans = ans*10 + (s.charAt(i)-'0');
-                // Handle overflow
-                if(ans> (long)Integer.MAX_VALUE) {
-                    break;
-                }
-            } else {
+        int sign = 1;
+
+        if(i<s.length() && (s.charAt(i)=='-' || s.charAt(i)=='+')) {
+            if(s.charAt(i)=='-') {
+                sign = -1;
+            }
+            i++;
+        }
+
+        while(i<s.length() && Character.isDigit(s.charAt(i))) {
+            ans*=10l;
+            ans+=(long)(s.charAt(i)-'0');
+            if(ans>Integer.MAX_VALUE) {
                 break;
             }
-
+            i++;
         }
 
-        ans = isNegative? -ans: ans;
+        ans = ans*sign;
 
         if(ans<Integer.MIN_VALUE) {
-            return Integer.MIN_VALUE;
+            ans = Integer.MIN_VALUE;
         } else if(ans>Integer.MAX_VALUE) {
-            return Integer.MAX_VALUE;
-        } else {
-            return (int)ans;
+            ans = Integer.MAX_VALUE;
         }
+
+        return (int) ans;
     }
 }

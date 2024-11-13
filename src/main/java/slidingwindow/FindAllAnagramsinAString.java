@@ -10,39 +10,44 @@ public class FindAllAnagramsinAString {
 
     public List<Integer> findAnagrams(String s, String p) {
         List<Integer> ans = new ArrayList<>();
-        if(s==null || s.length()<p.length()) {
-            return ans;
-        }
-
         Map<Character, Integer> map = new HashMap<>();
+
+        int i = 0;
+        int j = 0;
+
         for(char c: p.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0)+1);
         }
 
-        int count = 0;
+        // This is one of the keys, not counting total characters
+        // but only counting total distinct characters
+        int cnt = map.size();
 
-        // keep the window as length of p
-        for(int i=0; i<s.length(); i++) {
+        // Another key is to keep the window as the length of p
+        for(; i<s.length(); i++) {
             char c = s.charAt(i);
             if(map.containsKey(c)) {
                 map.put(c, map.get(c)-1);
                 if(map.get(c)==0) {
-                    count++;
-                    if(count==map.size()) {
-                        ans.add(i-p.length()+1);
+                    cnt--;
+                    if(cnt ==0) {
+                        ans.add(j);
                     }
                 }
             }
 
-            if(i>=(p.length()-1)) {
+            if(i>=p.length()-1) {
                 char toRemove = s.charAt(i-p.length()+1);
                 if(map.containsKey(toRemove)) {
                     map.put(toRemove, map.get(toRemove)+1);
+                    // only track from 0 to 1 to increase cnt
                     if(map.get(toRemove)==1) {
-                        count--;
+                        cnt++;
                     }
                 }
+                j++;
             }
+
         }
 
         return ans;

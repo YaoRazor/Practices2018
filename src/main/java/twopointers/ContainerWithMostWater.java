@@ -2,25 +2,22 @@ package twopointers;
 
 public class ContainerWithMostWater {
 
-    // 两根指针，移动木桶的短板
-    public int maxArea(int[] height) {
-        int i=0;
-        int j = height.length-1;
+    // O(n^2) solution is naive. If interviewer asks for O(n)
+    // solution, that is strong hint for two pointer solution
+    public int maxArea(int[] heights) {
+        int left = 0;
+        int right = heights.length-1;
         int ans = 0;
 
-        while(i<j) {
-            ans = Math.max(ans, (j-i)*Math.min(height[i], height[j]));
+        while(left<right) {
+            int height = Math.min(heights[left], heights[right]);
 
-            if(height[i]<height[j]) {
-                i++;
-                while(i<j && height[i]<height[i-1]) {
-                    i++;
-                }
+            ans = Math.max(ans, (right-left)*height);
+
+            if(heights[left]>heights[right]) {
+                right--;
             } else {
-                j--;
-                while(i<j && height[j]<height[j+1]) {
-                    j--;
-                }
+                left++;
             }
         }
 

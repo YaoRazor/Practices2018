@@ -49,4 +49,59 @@ public class SpiralMatrix {
 
         return ans;
     }
+
+    // This one is easier to memorize, it basically checks the edge case
+    // on every loop
+    public List<Integer> spiralOrderTwo(int[][] matrix) {
+        List<Integer> ans = new ArrayList<>();
+        int left = 0;
+        int right = matrix[0].length-1;
+
+        int top = 0;
+        int bottem = matrix.length-1;
+
+        while(left<=right && bottem>=top) {
+            for(int i=left; i<=right; i++) {
+                ans.add(matrix[top][i]);
+            }
+            top++;
+            if(top>bottem) {
+                break;
+            }
+            // System.out.println(top);
+
+            for(int i = top; i<=bottem; i++) {
+                ans.add(matrix[i][right]);
+            }
+
+            right--;
+            if(left>right) {
+                break;
+            }
+            // System.out.println(right);
+
+            for(int i=right; i>=left; i--) {
+                ans.add(matrix[bottem][i]);
+            }
+
+            bottem--;
+            if(top>bottem) {
+                break;
+            }
+            // System.out.println(bottem);
+
+            for(int i=bottem; i>=top; i--) {
+                ans.add(matrix[i][left]);
+            }
+
+            left++;
+
+            if(left>right) {
+                break;
+            }
+            // System.out.println(left);
+        }
+
+        return ans;
+    }
 }

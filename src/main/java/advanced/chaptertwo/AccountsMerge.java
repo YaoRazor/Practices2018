@@ -9,49 +9,50 @@ import java.util.TreeSet;
 // This is a classic problem of union find
 public class AccountsMerge {
 
-    Map<String, String> map;
-
-    public List<List<String>> accountsMerge(List<List<String>> accounts) {
-        List<List<String>> ans = new ArrayList<>();
-        if(accounts==null || accounts.size()==0) {
-            return ans;
-        }
-
-        map = new HashMap<>();
-        initializeGraph(accounts);
-        connectVertice(accounts);
-
-        Map<String, TreeSet<String>> tmp = new HashMap<>();
-
-        for(String email: map.keySet()) {
-            String key = find(email);
-
-            if(tmp.containsKey(key)) {
-                tmp.get(key).add(email.split("\\s+")[1]);
-            } else {
-                TreeSet<String> set = new TreeSet<>();
-                String[] tmpString = key.split("\\s+");
-                set.add(tmpString[0]);
-                set.add(email.split("\\s+")[1]);
-                tmp.put(key, set);
+    public List<List<String>> accountsMerge(List<List<String>> acts) {
+        Map<String, String> owner = new HashMap<>();
+        Map<String, String> parents = new HashMap<>();
+        Map<String, TreeSet<String>> unions = new HashMap<>();
+        for (List<String> a : acts) {
+            for (int i = 1; i < a.size(); i++) {
+                parents.put(a.get(i), a.get(i));
+                owner.put(a.get(i), a.get(0));
             }
         }
 
-        for(String key: tmp.keySet()) {
-            List<String> list = new ArrayList<>(tmp.get(key));
-            ans.add(list);
+        // grapqh set up
+        for (List<String> a : acts) {
+            for (int i = 1; i < a.size()-1; i++)
+                union(a.get(i), a.get(i+1), parents);
         }
 
-        return ans;
+        // graph union
+        for(List<String> a : acts) {
+            String p = find(a.get(1), parents);
+            if (!unions.containsKey(p)) unions.put(p, new TreeSet<>());
+            for (int i = 1; i < a.size(); i++)
+                unions.get(p).add(a.get(i));
+        }
+
+        // aggregate the results
+        List<List<String>> res = new ArrayList<>();
+        for (String p : unions.keySet()) {
+            List<String> emails = new ArrayList(unions.get(p));
+            // This is the only place that we need the owner map to get the owner of the accounts
+            emails.add(0, owner.get(p));
+            res.add(emails);
+        }
+        return res;
     }
 
-    private String find(String x) {
-        String ans =x;
+    private String find(String x, Map<String, String> map) {
+        String ans = x;
         while(!map.get(ans).equals(ans)) {
             ans = map.get(ans);
         }
 
-        while(!map.get(x).equals(ans)) {
+        // path compression
+        while(!x.equals(ans)) {
             String tmp = map.get(x);
             map.put(x, ans);
             x = tmp;
@@ -61,37 +62,10 @@ public class AccountsMerge {
     }
 
 
-    private void union(String x, String y) {
-        String fx = find(x);
-        String fy = find(y);
+    private void union(String x, String y, Map<String, String> map) {
+        String fx = find(x, map);
+        String fy = find(y, map);
 
-        if(!fx.equals(fy)) {
-            map.put(fx, fy);
-        }
-    }
-
-    private void connectVertice(List<List<String>> accounts) {
-        for(List<String> account: accounts) {
-            String name = account.get(0);
-            for(int i=1; i<account.size()-1; i++) {
-                // We can define extra data structure to store name of email alias
-                // Current method is a little bit primitive
-                union(name+" "+ account.get(i), name+" "+ account.get(i+1));
-            }
-        }
-    }
-
-    private void initializeGraph(List<List<String>> accounts) {
-        for(List<String> account: accounts) {
-            if(account.size()<=1) {
-                continue;
-            }
-
-            String name = account.get(0);
-
-            for(int i=1; i<account.size(); i++) {
-                map.put(name+" "+ account.get(i), name+" "+account.get(i));
-            }
-        }
+        map.put(fx, fy);
     }
 }
