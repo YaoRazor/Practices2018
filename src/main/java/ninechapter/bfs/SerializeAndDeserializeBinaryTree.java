@@ -5,9 +5,7 @@ import java.util.Queue;
 
 import datastructures.TreeNode;
 
-// key point of this problem is that when serializing, we need to
-// put null elements in the queue. While when deserializing, we will
-// not put null elements in the queue.
+// Use BFS in both serialization and deserialization
 public class SerializeAndDeserializeBinaryTree {
 
     // root is null will also be handled by this implementation
@@ -18,9 +16,8 @@ public class SerializeAndDeserializeBinaryTree {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
 
-        // One of the key thing here is that null also needs to be
-        // added to the queue. Just check the test case of this
-        // class to have a better understanding here
+        // Null needs to be added to the queue
+        // for serialization
         while(!queue.isEmpty()) {
             TreeNode cur = queue.poll();
             if(cur==null) {
@@ -36,13 +33,7 @@ public class SerializeAndDeserializeBinaryTree {
         return sb.toString();
     }
 
-    /**
-     * This method will be invoked second, the argument data is what exactly
-     * you serialized at method "serialize", that means the data is not given by
-     * system, it's given by your own serialize method. So the format of data is
-     * designed by yourself, and deserialize it here as you serialize it in
-     * "serialize" method.
-     */
+    // In deserialization, null won't get into the queue
     public TreeNode deserialize(String data) {
         String[] treeStr = data.split(",");
         TreeNode root = buildTreeNode(treeStr[0]);
@@ -52,8 +43,6 @@ public class SerializeAndDeserializeBinaryTree {
         int index = 1;
 
         while(!queue.isEmpty()) {
-            // One valid node will correspond to two nodes
-            // however those two nodes can be null nodes.
             TreeNode cur = queue.poll();
 
             TreeNode left = buildTreeNode(treeStr[index]);
@@ -63,6 +52,7 @@ public class SerializeAndDeserializeBinaryTree {
             if(left!=null) {
                 queue.offer(left);
             }
+            // index++ is key in the deserialization process
             index++;
 
             TreeNode right = buildTreeNode(treeStr[index]);

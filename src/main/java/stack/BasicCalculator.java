@@ -5,54 +5,49 @@ import java.util.Stack;
 public class BasicCalculator {
 
     public int calculate(String s) {
-        if(s==null || s.length()==0) {
-            return 0;
-        }
+        int i = 0;
+        int ans = 0;
+        int sign = 1;
 
         Stack<Integer> stack = new Stack<>();
 
-        int result = 0;
-        int sign = 1;
+        while (i < s.length()) {
+            while (i < s.length() && s.charAt(i) == ' ') {
+                i++;
+            }
 
-        int num = 0;
+            if (i == s.length()) {
+                break;
+            }
 
-        for(int i=0; i<s.length(); i++) {
-            char c = s.charAt(i);
-            if(c==' ') {
+            if (Character.isDigit(s.charAt(i))) {
+                int cur = 0;
+                while (i < s.length() && Character.isDigit(s.charAt(i))) {
+                    cur *= 10;
+                    cur += s.charAt(i) - '0';
+                    i++;
+                }
+                ans += cur * sign;
+                // continue to prevent i++ in the end
                 continue;
-            }
-
-            if(Character.isDigit(c)) {
-                num = num*10+c-'0';
-            } else if(c=='+') {
-                // 这里的sign是前一个sign
-                result += num*sign;
-                sign = 1;
-                num = 0;
-            } else if(c=='-') {
-                result += num*sign;
-                sign = -1;
-                num = 0;
-            } else if(c=='(') {
-                stack.push(result);
+            } else if (s.charAt(i) == '(') {
+                stack.push(ans);
                 stack.push(sign);
+                ans = 0;
+                // need to reset sign as 1 which is a key point
                 sign = 1;
-                result = 0; // 这里需要reset result = 0, 因为要evaluate新的表达式了，这是一个key point
-                num = 0;
-            } else {
-                result+= num*sign;
-                result*=stack.pop();
-                result+=stack.pop();
-                sign = 1; //每个表达式前面default有一个'+'
-                num = 0;
+            } else if (s.charAt(i) == ')') {
+                ans = ans*stack.pop();
+                ans = ans+stack.pop();
+            } else if (s.charAt(i) == '-') {
+                sign = -1;
+            } else {  // '+' case
+                sign = 1;
             }
+
+            i++;
         }
 
-        // 这里需要收尾，这也是一个key point
-        if(num>0) {
-            result += sign*num;
-        }
-
-        return result;
+        return ans;
     }
 }

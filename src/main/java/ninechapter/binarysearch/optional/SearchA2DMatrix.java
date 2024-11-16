@@ -3,30 +3,27 @@ package ninechapter.binarysearch.optional;
 public class SearchA2DMatrix {
 
     public boolean searchMatrix(int[][] matrix, int target) {
-        if(matrix==null || matrix.length==0 || matrix[0]==null || matrix[0].length==0) {
-            return false;
-        }
-
-        int start = 0;
         int m = matrix.length;
         int n = matrix[0].length;
+
+        int start = 0;
         int end = m*n-1;
 
-        while(start<=end) {
-            int mid = (end-start)/2+ start;
-            int i = mid/n;
-            int j = mid%n;
+        while(start<end) {
+            int mid = (start+end)/2;
+            int x = mid/n;
+            int y = mid%n;
 
-            if(matrix[i][j]==target) {
+            if(target == matrix[x][y]) {
                 return true;
-            } else if(matrix[i][j]<target) {
+            } else if(target>matrix[x][y]) {
                 start = mid+1;
             } else {
                 end = mid-1;
             }
         }
 
-        return false;
+        return matrix[start/n][start%n]==target;
     }
 
 }

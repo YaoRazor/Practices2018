@@ -19,7 +19,7 @@ class Solution {
         }
 
         while(i<s.length() && Character.isDigit(s.charAt(i))) {
-            ans*=10l;
+            ans*= 10L;
             ans+=(long)(s.charAt(i)-'0');
             if(ans>Integer.MAX_VALUE) {
                 break;

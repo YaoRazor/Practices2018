@@ -7,17 +7,17 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class MergeKSortedLists {
-    public ListNode mergeKLists(List<ListNode> lists) {
-        if(lists==null || lists.size()==0) {
+    public ListNode mergeKListsUsingMergeSort(ListNode[] lists) {
+        if(lists.length==0) {
             return null;
         }
 
-        return mergeKLists(lists, 0, lists.size()-1);
+        return mergeKLists(lists, 0, lists.length-1);
     }
 
-    private ListNode mergeKLists(List<ListNode> lists, int start, int end) {
+    private ListNode mergeKLists(ListNode[] lists, int start, int end) {
         if(start==end) {
-            return lists.get(start);
+            return lists[start];
         }
 
         int mid = (start+end)/2;

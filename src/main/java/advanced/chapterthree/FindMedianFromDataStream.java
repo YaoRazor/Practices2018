@@ -4,7 +4,7 @@ package advanced.chapterthree;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-// leetcode and lintcode has different forms of this problem
+
 // TC: O(nlogn)
 public class FindMedianFromDataStream {
     PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
@@ -30,6 +30,9 @@ public class FindMedianFromDataStream {
             minHeap.offer(maxHeap.poll());
         }
 
+        // this is to make sure maxHeap always have
+        // more elements than minHeap as in the findMedian
+        // method, we always try to return from maxHeap
         if(minHeap.size()>maxHeap.size()) {
             maxHeap.offer(minHeap.poll());
         }
